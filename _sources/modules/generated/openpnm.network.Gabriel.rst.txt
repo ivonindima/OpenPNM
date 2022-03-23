@@ -59,27 +59,3 @@ Gabriel
             Gabriel.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Gabriel.Np
-            Gabriel.Nt
-            Gabriel.Ps
-            Gabriel.Ts
-            Gabriel.am
-            Gabriel.conns
-            Gabriel.coords
-            Gabriel.im
-            Gabriel.models
-            Gabriel.name
-            Gabriel.network
-            Gabriel.project
-            Gabriel.settings
-            Gabriel.tri
-            Gabriel.vor
-   
-   

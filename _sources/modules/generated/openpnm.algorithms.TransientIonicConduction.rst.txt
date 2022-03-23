@@ -48,23 +48,3 @@ TransientIonicConduction
             TransientIonicConduction.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            TransientIonicConduction.A
-            TransientIonicConduction.Np
-            TransientIonicConduction.Nt
-            TransientIonicConduction.Ps
-            TransientIonicConduction.Ts
-            TransientIonicConduction.b
-            TransientIonicConduction.name
-            TransientIonicConduction.network
-            TransientIonicConduction.project
-            TransientIonicConduction.settings
-            TransientIonicConduction.x
-   
-   

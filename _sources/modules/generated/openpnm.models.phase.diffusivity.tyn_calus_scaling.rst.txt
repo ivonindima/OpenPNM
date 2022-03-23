@@ -1,0 +1,6 @@
+tyn\_calus\_scaling
+===================
+
+.. currentmodule:: openpnm.models.phase.diffusivity
+
+.. autofunction:: tyn_calus_scaling

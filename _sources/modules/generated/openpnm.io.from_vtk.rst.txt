@@ -1,0 +1,6 @@
+from\_vtk
+=========
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: from_vtk

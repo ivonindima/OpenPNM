@@ -49,20 +49,3 @@ Porosimetry
             Porosimetry.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Porosimetry.Np
-            Porosimetry.Nt
-            Porosimetry.Ps
-            Porosimetry.Ts
-            Porosimetry.name
-            Porosimetry.network
-            Porosimetry.project
-            Porosimetry.settings
-   
-   

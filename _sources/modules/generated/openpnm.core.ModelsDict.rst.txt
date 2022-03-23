@@ -31,7 +31,3 @@ ModelsDict
             ModelsDict.values
    
    
-
-   
-   
-   

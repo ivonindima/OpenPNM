@@ -36,15 +36,6 @@ Diffusive\_size\_factors
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-
-   
-      Docorator
-   
    
 
    

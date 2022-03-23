@@ -48,23 +48,3 @@ IonicConduction
             IonicConduction.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            IonicConduction.A
-            IonicConduction.Np
-            IonicConduction.Nt
-            IonicConduction.Ps
-            IonicConduction.Ts
-            IonicConduction.b
-            IonicConduction.name
-            IonicConduction.network
-            IonicConduction.project
-            IonicConduction.settings
-            IonicConduction.x
-   
-   

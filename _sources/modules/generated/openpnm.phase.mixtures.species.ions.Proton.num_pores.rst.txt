@@ -1,0 +1,8 @@
+:orphan:
+
+num_pores
+====================================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.ions
+
+.. automethod:: Proton.num_pores

@@ -1,0 +1,8 @@
+:orphan:
+
+popitem
+==================================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.ions
+
+.. automethod:: Proton.popitem

@@ -1,0 +1,6 @@
+to\_csv
+=======
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: to_csv

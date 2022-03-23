@@ -48,22 +48,3 @@ TrapezoidsAndRectangles
             TrapezoidsAndRectangles.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            TrapezoidsAndRectangles.Np
-            TrapezoidsAndRectangles.Nt
-            TrapezoidsAndRectangles.Ps
-            TrapezoidsAndRectangles.Ts
-            TrapezoidsAndRectangles.models
-            TrapezoidsAndRectangles.name
-            TrapezoidsAndRectangles.network
-            TrapezoidsAndRectangles.physics
-            TrapezoidsAndRectangles.project
-            TrapezoidsAndRectangles.settings
-   
-   

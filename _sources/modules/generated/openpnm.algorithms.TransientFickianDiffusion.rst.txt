@@ -48,23 +48,3 @@ TransientFickianDiffusion
             TransientFickianDiffusion.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            TransientFickianDiffusion.A
-            TransientFickianDiffusion.Np
-            TransientFickianDiffusion.Nt
-            TransientFickianDiffusion.Ps
-            TransientFickianDiffusion.Ts
-            TransientFickianDiffusion.b
-            TransientFickianDiffusion.name
-            TransientFickianDiffusion.network
-            TransientFickianDiffusion.project
-            TransientFickianDiffusion.settings
-            TransientFickianDiffusion.x
-   
-   

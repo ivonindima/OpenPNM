@@ -56,25 +56,3 @@ GenericNetwork
             GenericNetwork.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            GenericNetwork.Np
-            GenericNetwork.Nt
-            GenericNetwork.Ps
-            GenericNetwork.Ts
-            GenericNetwork.am
-            GenericNetwork.conns
-            GenericNetwork.coords
-            GenericNetwork.im
-            GenericNetwork.models
-            GenericNetwork.name
-            GenericNetwork.network
-            GenericNetwork.project
-            GenericNetwork.settings
-   
-   

@@ -1,0 +1,6 @@
+from\_statoil
+=============
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: from_statoil

@@ -34,20 +34,3 @@ Base
             Base.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Base.Np
-            Base.Nt
-            Base.Ps
-            Base.Ts
-            Base.name
-            Base.network
-            Base.project
-            Base.settings
-   
-   

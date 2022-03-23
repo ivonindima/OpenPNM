@@ -51,20 +51,3 @@ MixedInvasionPercolationCoop
             MixedInvasionPercolationCoop.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            MixedInvasionPercolationCoop.Np
-            MixedInvasionPercolationCoop.Nt
-            MixedInvasionPercolationCoop.Ps
-            MixedInvasionPercolationCoop.Ts
-            MixedInvasionPercolationCoop.name
-            MixedInvasionPercolationCoop.network
-            MixedInvasionPercolationCoop.project
-            MixedInvasionPercolationCoop.settings
-   
-   

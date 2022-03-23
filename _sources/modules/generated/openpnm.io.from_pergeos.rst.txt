@@ -1,0 +1,6 @@
+from\_pergeos
+=============
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: from_pergeos

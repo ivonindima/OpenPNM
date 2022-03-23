@@ -1,0 +1,6 @@
+water
+=====
+
+.. currentmodule:: openpnm.models.phase.viscosity
+
+.. autofunction:: water

@@ -1,0 +1,40 @@
+:noindex:
+
+.. raw:: html
+
+   <p hidden>This is a module</p>
+
+Mixtures
+========
+
+.. automodule:: openpnm.models.phase.mixtures
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      fuller_diffusivity
+      mole_weighted_average
+      salinity
+      wilke_fuller_diffusivity
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

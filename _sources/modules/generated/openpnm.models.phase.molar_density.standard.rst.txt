@@ -1,0 +1,6 @@
+standard
+========
+
+.. currentmodule:: openpnm.models.phase.molar_density
+
+.. autofunction:: standard

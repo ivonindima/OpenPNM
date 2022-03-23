@@ -48,22 +48,3 @@ PyramidsAndCuboids
             PyramidsAndCuboids.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            PyramidsAndCuboids.Np
-            PyramidsAndCuboids.Nt
-            PyramidsAndCuboids.Ps
-            PyramidsAndCuboids.Ts
-            PyramidsAndCuboids.models
-            PyramidsAndCuboids.name
-            PyramidsAndCuboids.network
-            PyramidsAndCuboids.physics
-            PyramidsAndCuboids.project
-            PyramidsAndCuboids.settings
-   
-   

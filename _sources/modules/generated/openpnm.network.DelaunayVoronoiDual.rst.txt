@@ -59,27 +59,3 @@ DelaunayVoronoiDual
             DelaunayVoronoiDual.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            DelaunayVoronoiDual.Np
-            DelaunayVoronoiDual.Nt
-            DelaunayVoronoiDual.Ps
-            DelaunayVoronoiDual.Ts
-            DelaunayVoronoiDual.am
-            DelaunayVoronoiDual.conns
-            DelaunayVoronoiDual.coords
-            DelaunayVoronoiDual.im
-            DelaunayVoronoiDual.models
-            DelaunayVoronoiDual.name
-            DelaunayVoronoiDual.network
-            DelaunayVoronoiDual.project
-            DelaunayVoronoiDual.settings
-            DelaunayVoronoiDual.tri
-            DelaunayVoronoiDual.vor
-   
-   

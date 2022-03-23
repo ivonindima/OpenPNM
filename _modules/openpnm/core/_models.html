@@ -5,33 +5,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>openpnm.core._models &#8212; OpenPNM 2.8.2 documentation</title>
+    <title>openpnm.core._models &#8212; OpenPNM 2.8.2.dev117 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -39,6 +39,7 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../../../_static/js/custom.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -97,7 +98,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../examples/examples.html">
+ <a class="reference internal nav-link" href="../../../examples_index.html">
   Examples
  </a>
 </li>
@@ -121,22 +122,16 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Quick Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack">
-            <span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label>
-          </a>
+          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
+            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter-square"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
+          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
       </ul>
       </div>
@@ -152,7 +147,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -160,6 +156,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -179,10 +178,11 @@
               <div>
                 
   <h1>Source code for openpnm.core._models</h1><div class="highlight"><pre>
-<span></span><span class="kn">import</span> <span class="nn">inspect</span>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">inspect</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
-<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">PrintableDict</span><span class="p">,</span> <span class="n">logging</span><span class="p">,</span> <span class="n">Workspace</span>
-<span class="kn">from</span> <span class="nn">openpnm.utils.misc</span> <span class="kn">import</span> <span class="n">is_valid_propname</span>
+<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">PrintableDict</span><span class="p">,</span> <span class="n">Workspace</span>
+<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">is_valid_propname</span>
 <span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">prettify_logger_message</span>
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">ws</span> <span class="o">=</span> <span class="n">Workspace</span><span class="p">()</span>
@@ -190,7 +190,7 @@
 <span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;ModelsDict&#39;</span><span class="p">,</span> <span class="s1">&#39;ModelsMixin&#39;</span><span class="p">]</span>
 
 
-<div class="viewcode-block" id="ModelsDict"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.html#openpnm.phases.mixtures.species.liquids.ModelsDict">[docs]</a><span class="k">class</span> <span class="nc">ModelsDict</span><span class="p">(</span><span class="n">PrintableDict</span><span class="p">):</span>
+<div class="viewcode-block" id="ModelsDict"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.html#openpnm.physics.ModelsDict">[docs]</a><span class="k">class</span> <span class="nc">ModelsDict</span><span class="p">(</span><span class="n">PrintableDict</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This subclassed dictionary is assigned to the ``models`` attribute of</span>
 <span class="sd">    all objects that inherit from the ``ModelsMixin`` class.  Each</span>
@@ -204,6 +204,11 @@
 
 <span class="sd">    &quot;&quot;&quot;</span>
 
+<div class="viewcode-block" id="ModelsDict.update"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.update.html#openpnm.physics.ModelsDict.update">[docs]</a>    <span class="k">def</span> <span class="nf">update</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">models</span><span class="p">):</span>
+        <span class="n">target</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_find_parent</span><span class="p">()</span>
+        <span class="k">for</span> <span class="n">item</span> <span class="ow">in</span> <span class="n">models</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">target</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">propname</span><span class="o">=</span><span class="n">item</span><span class="p">,</span> <span class="o">**</span><span class="n">models</span><span class="p">[</span><span class="n">item</span><span class="p">])</span></div>
+
     <span class="k">def</span> <span class="nf">_find_parent</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Finds and returns the parent object to self.</span>
@@ -215,7 +220,7 @@
                         <span class="k">return</span> <span class="n">obj</span>
         <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;No parent object found!&quot;</span><span class="p">)</span>
 
-<div class="viewcode-block" id="ModelsDict.dependency_list"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.dependency_list.html#openpnm.phases.mixtures.species.liquids.ModelsDict.dependency_list">[docs]</a>    <span class="k">def</span> <span class="nf">dependency_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<div class="viewcode-block" id="ModelsDict.dependency_list"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.dependency_list.html#openpnm.physics.ModelsDict.dependency_list">[docs]</a>    <span class="k">def</span> <span class="nf">dependency_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a list of dependencies in the order with which they should</span>
 <span class="sd">        be called to ensure data is calculated by one model before it&#39;s</span>
@@ -244,7 +249,7 @@
         <span class="n">d</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">algorithms</span><span class="o">.</span><span class="n">dag</span><span class="o">.</span><span class="n">lexicographical_topological_sort</span><span class="p">(</span><span class="n">dtree</span><span class="p">,</span> <span class="nb">sorted</span><span class="p">)</span>
         <span class="k">return</span> <span class="nb">list</span><span class="p">(</span><span class="n">d</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ModelsDict.dependency_graph"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.dependency_graph.html#openpnm.phases.mixtures.species.liquids.ModelsDict.dependency_graph">[docs]</a>    <span class="k">def</span> <span class="nf">dependency_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="ModelsDict.dependency_graph"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.dependency_graph.html#openpnm.physics.ModelsDict.dependency_graph">[docs]</a>    <span class="k">def</span> <span class="nf">dependency_graph</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Returns a NetworkX graph object of the dependencies</span>
 
@@ -321,7 +326,7 @@
 
         <span class="k">return</span> <span class="n">dtree</span></div>
 
-<div class="viewcode-block" id="ModelsDict.dependency_map"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.dependency_map.html#openpnm.phases.mixtures.species.liquids.ModelsDict.dependency_map">[docs]</a>    <span class="k">def</span> <span class="nf">dependency_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
+<div class="viewcode-block" id="ModelsDict.dependency_map"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsDict.dependency_map.html#openpnm.physics.ModelsDict.dependency_map">[docs]</a>    <span class="k">def</span> <span class="nf">dependency_map</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span>
                        <span class="n">ax</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                        <span class="n">figsize</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                        <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -436,7 +441,7 @@
         <span class="k">return</span> <span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">lines</span><span class="p">)</span>
 
 
-<div class="viewcode-block" id="ModelsMixin"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.html#openpnm.phases.mixtures.species.liquids.ModelsMixin">[docs]</a><span class="k">class</span> <span class="nc">ModelsMixin</span><span class="p">:</span>
+<div class="viewcode-block" id="ModelsMixin"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.html#openpnm.physics.ModelsMixin">[docs]</a><span class="k">class</span> <span class="nc">ModelsMixin</span><span class="p">:</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    This class is meant to be combined by the Base class in multiple</span>
 <span class="sd">    inheritence. This approach is used since Network and Algorithm do not</span>
@@ -445,7 +450,7 @@
 <span class="sd">    while the model functionality can be added only where needed.</span>
 <span class="sd">    &quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="ModelsMixin.add_model"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.add_model.html#openpnm.phases.mixtures.species.liquids.ModelsMixin.add_model">[docs]</a>    <span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">propname</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">regen_mode</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<div class="viewcode-block" id="ModelsMixin.add_model"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.add_model.html#openpnm.physics.ModelsMixin.add_model">[docs]</a>    <span class="k">def</span> <span class="nf">add_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">propname</span><span class="p">,</span> <span class="n">model</span><span class="p">,</span> <span class="n">regen_mode</span><span class="o">=</span><span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Adds a new model to the models dictionary.</span>
 
@@ -459,20 +464,23 @@
 <span class="sd">            Controls how/when the model is run (See Notes for more details).</span>
 <span class="sd">            Options are:</span>
 
-<span class="sd">            *&#39;normal&#39;* -  (default) The model is run directly upon being</span>
-<span class="sd">            assiged, and also run every time ``regenerate_models`` is called.</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;normal&#39;     The model is run directly upon being</span>
+<span class="sd">                         assigned, and also run every time ``regenerate_models``</span>
+<span class="sd">                         is called.</span>
+<span class="sd">            &#39;constant&#39;   The model is run directly upon being assigned, but</span>
+<span class="sd">                         is not called again, thus making its data act like a</span>
+<span class="sd">                         constant. If, however, the data is deleted from the</span>
+<span class="sd">                         object it will be regenerated again.</span>
+<span class="sd">            &#39;deferred&#39;   Is not run upon being assigned, but is run the first</span>
+<span class="sd">                         time that ``regenerate_models`` is called.</span>
+<span class="sd">            &#39;explicit&#39;   Is only run if the model name is explicitly passed</span>
+<span class="sd">                         to the ``regenerate_models`` method.  This allows</span>
+<span class="sd">                         full control of when the model is run.</span>
+<span class="sd">            ===========  =====================================================</span>
 
-<span class="sd">            *&#39;constant&#39;* -  The model is run directly upon being assigned, but</span>
-<span class="sd">            is not called again, thus making it&#39;s data act like a constant.</span>
-<span class="sd">            If, however, the data is deleted from the object it will be</span>
-<span class="sd">            regenerated again.</span>
-
-<span class="sd">            *&#39;deferred&#39;* - Is not run upon being assigned, but is run the first</span>
-<span class="sd">            time that ``regenerate_models`` is called.</span>
-
-<span class="sd">            *&#39;explicit&#39;* - Is only run if the model name is explicitly passed</span>
-<span class="sd">            to the ``regenerate_models`` method.  This allows full control</span>
-<span class="sd">            of when the model is run.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
         <span class="k">if</span> <span class="n">propname</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">values</span><span class="p">():</span>  <span class="c1"># Prevent infinite loops of look-ups</span>
@@ -497,7 +505,7 @@
         <span class="k">if</span> <span class="n">regen_mode</span> <span class="ow">not</span> <span class="ow">in</span> <span class="p">[</span><span class="s1">&#39;deferred&#39;</span><span class="p">,</span> <span class="s1">&#39;explicit&#39;</span><span class="p">]:</span>
             <span class="bp">self</span><span class="o">.</span><span class="n">_regen</span><span class="p">(</span><span class="n">propname</span><span class="p">)</span></div>
 
-<div class="viewcode-block" id="ModelsMixin.regenerate_models"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.regenerate_models.html#openpnm.phases.mixtures.species.liquids.ModelsMixin.regenerate_models">[docs]</a>    <span class="k">def</span> <span class="nf">regenerate_models</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">propnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="p">[],</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="ModelsMixin.regenerate_models"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.regenerate_models.html#openpnm.physics.ModelsMixin.regenerate_models">[docs]</a>    <span class="k">def</span> <span class="nf">regenerate_models</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">propnames</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">exclude</span><span class="o">=</span><span class="p">[],</span> <span class="n">deep</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Re-runs the specified model or models.</span>
 
@@ -527,8 +535,11 @@
         <span class="k">if</span> <span class="n">propnames</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>  <span class="c1"># If no props given, then regenerate them all</span>
             <span class="n">propnames</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">dependency_list</span><span class="p">()</span>
             <span class="c1"># If some props are to be excluded, remove them from list</span>
-            <span class="n">exclude</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">k</span> <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">()</span>
-                            <span class="k">if</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;regen_mode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;explicit&#39;</span><span class="p">])</span>
+            <span class="k">for</span> <span class="n">k</span><span class="p">,</span> <span class="n">v</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+                <span class="k">if</span> <span class="s1">&#39;regen_mode&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">v</span><span class="p">:</span>
+                    <span class="k">pass</span>
+                <span class="k">elif</span> <span class="n">v</span><span class="p">[</span><span class="s1">&#39;regen_mode&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;explicit&#39;</span><span class="p">:</span>
+                    <span class="n">exclude</span><span class="o">.</span><span class="n">extend</span><span class="p">([</span><span class="n">k</span><span class="p">])</span>
             <span class="n">propnames</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">propnames</span> <span class="k">if</span> <span class="n">i</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">exclude</span><span class="p">]</span>
         <span class="c1"># Re-order given propnames according to dependency tree</span>
         <span class="n">self_models</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="o">.</span><span class="n">dependency_list</span><span class="p">()</span>
@@ -580,7 +591,7 @@
                 <span class="n">logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">prettify_logger_message</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
                 <span class="bp">self</span><span class="o">.</span><span class="n">models</span><span class="p">[</span><span class="n">prop</span><span class="p">][</span><span class="s1">&#39;regen_mode&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;deferred&#39;</span>
 
-<div class="viewcode-block" id="ModelsMixin.remove_model"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.remove_model.html#openpnm.phases.mixtures.species.liquids.ModelsMixin.remove_model">[docs]</a>    <span class="k">def</span> <span class="nf">remove_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">propname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">]):</span>
+<div class="viewcode-block" id="ModelsMixin.remove_model"><a class="viewcode-back" href="../../../modules/generated/openpnm.core.ModelsMixin.remove_model.html#openpnm.physics.ModelsMixin.remove_model">[docs]</a>    <span class="k">def</span> <span class="nf">remove_model</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">propname</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;model&#39;</span><span class="p">,</span> <span class="s1">&#39;data&#39;</span><span class="p">]):</span>
         <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">        Removes model and data from object.</span>
 
@@ -591,11 +602,13 @@
 <span class="sd">        mode : list[str]</span>
 <span class="sd">            Controls what is removed. Options are:</span>
 
-<span class="sd">            *&#39;model&#39;* : Removes the model but not any numerical data that may</span>
-<span class="sd">            already exist.</span>
-
-<span class="sd">            *&#39;data&#39;* : Removes the data but leaves the model.</span>
-
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;model&#39;      Removes the model but not any numerical data that may</span>
+<span class="sd">                         already exist.</span>
+<span class="sd">            data&#39;        Removes the data but leaves the model.</span>
+<span class="sd">            ===========  =====================================================</span>
 <span class="sd">        The default is both.</span>
 
 <span class="sd">        &quot;&quot;&quot;</span>
@@ -633,19 +646,19 @@
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, PMEAL.<br>
+    &copy; Copyright 2022, PMEAL.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

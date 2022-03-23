@@ -1,0 +1,6 @@
+chung
+=====
+
+.. currentmodule:: openpnm.models.phase.viscosity
+
+.. autofunction:: chung

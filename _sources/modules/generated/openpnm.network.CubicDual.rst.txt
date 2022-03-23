@@ -57,25 +57,3 @@ CubicDual
             CubicDual.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            CubicDual.Np
-            CubicDual.Nt
-            CubicDual.Ps
-            CubicDual.Ts
-            CubicDual.am
-            CubicDual.conns
-            CubicDual.coords
-            CubicDual.im
-            CubicDual.models
-            CubicDual.name
-            CubicDual.network
-            CubicDual.project
-            CubicDual.settings
-   
-   

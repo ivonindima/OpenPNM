@@ -57,25 +57,3 @@ Cubic
             Cubic.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Cubic.Np
-            Cubic.Nt
-            Cubic.Ps
-            Cubic.Ts
-            Cubic.am
-            Cubic.conns
-            Cubic.coords
-            Cubic.im
-            Cubic.models
-            Cubic.name
-            Cubic.network
-            Cubic.project
-            Cubic.settings
-   
-   

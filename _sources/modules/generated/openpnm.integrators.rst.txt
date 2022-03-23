@@ -28,8 +28,6 @@ Integrators
    
       Integrator
       ScipyRK45
-      Solution
-      TransientSolution
    
    
 

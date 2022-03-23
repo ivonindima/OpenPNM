@@ -49,22 +49,3 @@ MercuryIntrusion
             MercuryIntrusion.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            MercuryIntrusion.Np
-            MercuryIntrusion.Nt
-            MercuryIntrusion.Ps
-            MercuryIntrusion.Ts
-            MercuryIntrusion.name
-            MercuryIntrusion.network
-            MercuryIntrusion.pc_data
-            MercuryIntrusion.project
-            MercuryIntrusion.settings
-            MercuryIntrusion.snwp_data
-   
-   

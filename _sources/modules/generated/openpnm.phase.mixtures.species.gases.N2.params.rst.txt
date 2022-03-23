@@ -1,0 +1,8 @@
+:orphan:
+
+params
+==============================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.gases
+
+.. automethod:: N2.params

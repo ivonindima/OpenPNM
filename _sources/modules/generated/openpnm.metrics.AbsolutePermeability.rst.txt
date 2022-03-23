@@ -35,20 +35,3 @@ AbsolutePermeability
             AbsolutePermeability.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            AbsolutePermeability.Np
-            AbsolutePermeability.Nt
-            AbsolutePermeability.Ps
-            AbsolutePermeability.Ts
-            AbsolutePermeability.name
-            AbsolutePermeability.network
-            AbsolutePermeability.project
-            AbsolutePermeability.settings
-   
-   

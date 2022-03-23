@@ -1,0 +1,8 @@
+:orphan:
+
+regenerate_models
+===============================================
+
+.. currentmodule:: openpnm.phase.mixtures
+
+.. automethod:: DryAir.regenerate_models

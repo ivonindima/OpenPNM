@@ -1,0 +1,6 @@
+fuller
+======
+
+.. currentmodule:: openpnm.models.phase.diffusivity
+
+.. autofunction:: fuller

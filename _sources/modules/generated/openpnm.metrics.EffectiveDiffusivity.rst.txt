@@ -35,20 +35,3 @@ EffectiveDiffusivity
             EffectiveDiffusivity.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            EffectiveDiffusivity.Np
-            EffectiveDiffusivity.Nt
-            EffectiveDiffusivity.Ps
-            EffectiveDiffusivity.Ts
-            EffectiveDiffusivity.name
-            EffectiveDiffusivity.network
-            EffectiveDiffusivity.project
-            EffectiveDiffusivity.settings
-   
-   

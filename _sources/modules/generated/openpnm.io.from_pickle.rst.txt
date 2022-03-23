@@ -1,0 +1,6 @@
+from\_pickle
+============
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: from_pickle

@@ -32,15 +32,6 @@ Throat\_length
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-
-   
-      Docorator
-   
    
 
    

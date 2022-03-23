@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Examples &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    
+    <link href="_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="_static/css/custom.css" />
+    
+    <link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Concise Overview of OpenPNM" href="examples/getting_started/concise_overview_of_openpnm.html" />
+    <link rel="prev" title="tomask" href="modules/generated/openpnm.metrics.Porosimetry.tomask.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://www.openpnm.org">
+  <img src="_static/openpnm_logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="user_guide/installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="user_guide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="modules/index.html">
+  Module Reference
+ </a>
+</li>
+
+<li class="toctree-l1 current active nav-item">
+ <a class="current reference internal nav-link" href="#">
+  Examples
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://github.com/PMEAL/OpenPNM/issues">Issue Tracker<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://github.com/PMEAL/OpenPNM/discussions">Get Help<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Quick Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
+            <label class="sr-only">Substack</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    <ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/getting_started/concise_overview_of_openpnm.html">
+   Concise Overview of OpenPNM
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/getting_started/intro_to_openpnm_basic.html">
+   Tutorial 1 - Basic
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/getting_started/intro_to_openpnm_intermediate.html">
+   Tutorial 2 - Intermediate
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/getting_started/quick_plotting_networks.html">
+   Quick Plotting Networks
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/adding_boundary_pores.html">
+   Adding Boundary Pores
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/coupling_continuum_regions_with_pore_networks.html">
+   Stitch Two Networks with Different Spacing
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/cubic_networks.html">
+   Cubic Lattice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/cubic_templates.html">
+   Cubic Template
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/dual_cubic_lattices.html">
+   Dual Cubic Lattice
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/finding_neighbor_pores_and_throats.html">
+   Querying the Topology to Find Neighbors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/manually_adding_pores_and_throats.html">
+   Manually Adding and Removing Pores and Throats
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/random_networks_based_on_delaunay_and_voronoi_tessellations.html">
+   Delaunay and Voronoi Tessalation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/network/stitching_and_merging_networks_together.html">
+   Stitching and Merging Networks
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/geometry/adjusting_pore_size_distributions.html">
+   Adjusting Pore Size Distributions
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/geometry/stick_and_ball.html">
+   The Stick and Ball Geometry
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/phase/empty_example.html">
+   Empty example!
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/tutorials/physics/pore_scale_models.html">
+   Pore Scale Models
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/A_ordinary_percolation.html">
+   Ordinary Percolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/B_invasion_percolation.html">
+   Invasion Percolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/C_mixed_invasion_percolation.html">
+   Mixed Invasion Percolation
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/D_meniscus_model_comparison.html">
+   Meniscus Model Comparison
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/capillary_pressure_curves.html">
+   Mercury Intrusion Porosimetry
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/relative_diffusivity.html">
+   Relative Diffusivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/percolation/relative_permeability_metrics.html">
+   Relative Permeability
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/steady_state/continuum_heat_transfer.html">
+   Fourier Conduction
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/steady_state/deep_dive_into_conductance_models.html">
+   Deep Dive into Conductance Models
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/steady_state/diffusion_with_concentration_dependent_diffusivity.html">
+   Fickian Diffusion with Variable Diffusivity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/steady_state/fickian_diffusion_and_tortuosity.html">
+   Fickian Diffusion and Tortuosity
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/steady_state/stokes_flow_and_permeability_tensor.html">
+   Stokes Flow and Permeability Tensor
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/reactive/diffusion_with_source_and_sink_terms.html">
+   Fickian Diffusion with Reaction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/transient/transient_advection_diffusion.html">
+   Transient Advection-Diffusion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/transient/transient_fickian_diffusion.html">
+   Transient Fickian Diffusion
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/transient/transient_fickian_diffusion_with_reaction.html">
+   Transient Fickian Diffusion with Reaction
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/simulations/multiphysics/advection_diffusion.html">
+   Advection-Diffusion
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/contrib/fibrous_media_based_on_voronoi_tessellation.html">
+   Fibrous Media with Voronoi Tessellations
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/contrib/loading_statoil_finding_permeability.html">
+   Part 1: Import Networks from Statoil Files
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/contrib/maze_solver.html">
+   Maze Solver
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/contrib/predicting_effective_permeability_of_berea.html">
+   Predicting Permeability of Berea
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/class_inheritance/creating_a_custom_phase.html">
+   Creating a Custom Phase
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/class_inheritance/overview_of_inheritance.html">
+   Overview of Inheritance
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/data_management/data_and_topology_storage.html">
+   Storage of Network Data and Topology
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/data_management/data_exchange_between_objects.html">
+   Data Exchange Between Objects
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/data_management/interleaving_data.html">
+   Interleaving Data
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/data_management/using_and_creating_labels.html">
+   Using and Creating Labels
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/settings/deep_dive_into_the_settings_attribute.html">
+   Overview of the Settings Attribute
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/settings/understanding_basic_transport_settings.html">
+   Understanding Basic Transport Settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/settings/understanding_reactive_transport_settings.html">
+   Understanding Reactive Transport Settings
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/settings/understanding_transient_transport_settings.html">
+   Understanding Transient Transport Settings
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/solvers/available_matrix_solvers.html">
+   Available Matrix Solvers
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/workspace/overview_of_subdomains.html">
+   Overview of Subdomains
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/workspace/overview_of_workspace_and_projects.html">
+   The Workspace and Projects
+  </a>
+ </li>
+</ul>
+<ul class="nav bd-sidenav">
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/uncategorized/intro_to_openpnm_advanced.html">
+   Tutorial 3 - Advanced
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/uncategorized/managing_geometrical_properties_of_imported_networks.html">
+   Geometry of Imported Networks
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/uncategorized/overview_of_shape_factors.html">
+   Overview of Shape Factors
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/uncategorized/the_problem_with_domain_length_and_area.html">
+   Problem with Domain Area and Length
+  </a>
+ </li>
+ <li class="toctree-l1">
+  <a class="reference internal" href="examples/reference/uncategorized/working_with_extracted_networks.html">
+   Working with Extracted Networks
+  </a>
+ </li>
+</ul>
+
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+              
+              <div class="toc-item">
+                
+<div class="tocsection onthispage pt-5 pb-3">
+    <i class="fas fa-list"></i> On this page
+</div>
+
+<nav id="bd-toc-nav">
+    <ul class="visible nav section-nav flex-column">
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#getting-started">
+   Getting Started
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#tutorials">
+   Tutorials
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#simulations">
+   Simulations
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#contributions">
+   Contributions
+  </a>
+ </li>
+ <li class="toc-h2 nav-item toc-entry">
+  <a class="reference internal nav-link" href="#reference">
+   Reference
+  </a>
+  <ul class="nav section-nav flex-column">
+  </ul>
+ </li>
+</ul>
+
+</nav>
+              </div>
+              
+              <div class="toc-item">
+                
+              </div>
+              
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <section id="examples">
+<span id="id1"></span><h1>Examples<a class="headerlink" href="#examples" title="Permalink to this headline">¶</a></h1>
+<p>You can download the examples in IPython format from our GitHub
+repo, which can be browsed
+<a class="reference external" href="https://github.com/PMEAL/OpenPNM/tree/dev/examples">here</a>.</p>
+<hr class="docutils" />
+<section id="getting-started">
+<h2>Getting Started<a class="headerlink" href="#getting-started" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/getting_started/concise_overview_of_openpnm.html">Concise Overview of OpenPNM</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/getting_started/intro_to_openpnm_basic.html">Tutorial 1 - Basic</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/getting_started/intro_to_openpnm_intermediate.html">Tutorial 2 - Intermediate</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/getting_started/quick_plotting_networks.html">Quick Plotting Networks</a></li>
+</ul>
+</div>
+</section>
+<section id="tutorials">
+<h2>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="1c0418c2-77de-46eb-aeab-a0610c00a45c" name="731823cc-bf3e-4e7c-8dba-2625d75f54da" type="radio">
+</input><label class="tabbed-label" for="1c0418c2-77de-46eb-aeab-a0610c00a45c">
+Network</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/adding_boundary_pores.html">Adding Boundary Pores</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/coupling_continuum_regions_with_pore_networks.html">Stitch Two Networks with Different Spacing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/cubic_networks.html">Cubic Lattice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/cubic_templates.html">Cubic Template</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/dual_cubic_lattices.html">Dual Cubic Lattice</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/finding_neighbor_pores_and_throats.html">Querying the Topology to Find Neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/manually_adding_pores_and_throats.html">Manually Adding and Removing Pores and Throats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/random_networks_based_on_delaunay_and_voronoi_tessellations.html">Delaunay and Voronoi Tessalation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/network/stitching_and_merging_networks_together.html">Stitching and Merging Networks</a></li>
+</ul>
+</div>
+</div>
+<input id="14fffeab-b03b-42f9-ab0f-c12412a8e194" name="731823cc-bf3e-4e7c-8dba-2625d75f54da" type="radio">
+</input><label class="tabbed-label" for="14fffeab-b03b-42f9-ab0f-c12412a8e194">
+Geometry</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/geometry/adjusting_pore_size_distributions.html">Adjusting Pore Size Distributions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/geometry/stick_and_ball.html">The Stick and Ball Geometry</a></li>
+</ul>
+</div>
+</div>
+<input id="903c1d03-cd1b-4620-9725-58699e0e06f1" name="731823cc-bf3e-4e7c-8dba-2625d75f54da" type="radio">
+</input><label class="tabbed-label" for="903c1d03-cd1b-4620-9725-58699e0e06f1">
+Phase</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/phase/empty_example.html">Empty example!</a></li>
+</ul>
+</div>
+</div>
+<input id="8058f817-2b80-4ce6-b772-d120a195b1c8" name="731823cc-bf3e-4e7c-8dba-2625d75f54da" type="radio">
+</input><label class="tabbed-label" for="8058f817-2b80-4ce6-b772-d120a195b1c8">
+Physics</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/tutorials/physics/pore_scale_models.html">Pore Scale Models</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="simulations">
+<h2>Simulations<a class="headerlink" href="#simulations" title="Permalink to this headline">¶</a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="79f3c497-b1ba-4fa6-9c10-d0df5abe2de0" name="2cd954a9-8ad3-456d-8b5a-de8235a72fda" type="radio">
+</input><label class="tabbed-label" for="79f3c497-b1ba-4fa6-9c10-d0df5abe2de0">
+Percolation</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/A_ordinary_percolation.html">Ordinary Percolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/B_invasion_percolation.html">Invasion Percolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/C_mixed_invasion_percolation.html">Mixed Invasion Percolation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/D_meniscus_model_comparison.html">Meniscus Model Comparison</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/capillary_pressure_curves.html">Mercury Intrusion Porosimetry</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/relative_diffusivity.html">Relative Diffusivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/percolation/relative_permeability_metrics.html">Relative Permeability</a></li>
+</ul>
+</div>
+</div>
+<input id="2c3a194e-fda2-4b3f-99a5-db64625b3de9" name="2cd954a9-8ad3-456d-8b5a-de8235a72fda" type="radio">
+</input><label class="tabbed-label" for="2c3a194e-fda2-4b3f-99a5-db64625b3de9">
+Steady State</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/continuum_heat_transfer.html">Fourier Conduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/deep_dive_into_conductance_models.html">Deep Dive into Conductance Models</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/diffusion_with_concentration_dependent_diffusivity.html">Fickian Diffusion with Variable Diffusivity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/fickian_diffusion_and_tortuosity.html">Fickian Diffusion and Tortuosity</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/fickian_diffusion_and_tortuosity.html#Performing-Fickian-diffusion">Performing Fickian diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/fickian_diffusion_and_tortuosity.html#Post-processing">Post processing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/steady_state/stokes_flow_and_permeability_tensor.html">Stokes Flow and Permeability Tensor</a></li>
+</ul>
+</div>
+</div>
+<input id="87dd6b17-89d2-4797-bc6d-690fc82cf2ce" name="2cd954a9-8ad3-456d-8b5a-de8235a72fda" type="radio">
+</input><label class="tabbed-label" for="87dd6b17-89d2-4797-bc6d-690fc82cf2ce">
+Reactive</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/reactive/diffusion_with_source_and_sink_terms.html">Fickian Diffusion with Reaction</a></li>
+</ul>
+</div>
+</div>
+<input id="17a46323-c376-4474-830b-5d4693303c8b" name="2cd954a9-8ad3-456d-8b5a-de8235a72fda" type="radio">
+</input><label class="tabbed-label" for="17a46323-c376-4474-830b-5d4693303c8b">
+Transient</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/transient/transient_advection_diffusion.html">Transient Advection-Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/transient/transient_fickian_diffusion.html">Transient Fickian Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/transient/transient_fickian_diffusion_with_reaction.html">Transient Fickian Diffusion with Reaction</a></li>
+</ul>
+</div>
+</div>
+<input id="32c1938b-a37f-4678-b946-6f6fd0cf30b9" name="2cd954a9-8ad3-456d-8b5a-de8235a72fda" type="radio">
+</input><label class="tabbed-label" for="32c1938b-a37f-4678-b946-6f6fd0cf30b9">
+Multiphysics</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/multiphysics/advection_diffusion.html">Advection-Diffusion</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/multiphysics/advection_diffusion.html#Performing-Stokes-flow">Performing Stokes flow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/simulations/multiphysics/advection_diffusion.html#Post-processing">Post processing</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="contributions">
+<h2>Contributions<a class="headerlink" href="#contributions" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/contrib/fibrous_media_based_on_voronoi_tessellation.html">Fibrous Media with Voronoi Tessellations</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/contrib/loading_statoil_finding_permeability.html">Part 1: Import Networks from Statoil Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/contrib/loading_statoil_finding_permeability.html#Part-2:-Calculating-Permeability-of-the-Network">Part 2: Calculating Permeability of the Network</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/contrib/maze_solver.html">Maze Solver</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/contrib/predicting_effective_permeability_of_berea.html">Predicting Permeability of Berea</a></li>
+</ul>
+</div>
+</section>
+<section id="reference">
+<h2>Reference<a class="headerlink" href="#reference" title="Permalink to this headline">¶</a></h2>
+<div class="tabbed-set docutils">
+<input checked="checked" id="bbdee7a2-3191-46f6-b9ed-0102606b5368" name="a5266370-9301-4909-a009-7457727d5f34" type="radio">
+</input><label class="tabbed-label" for="bbdee7a2-3191-46f6-b9ed-0102606b5368">
+Class Inheritance</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/class_inheritance/creating_a_custom_phase.html">Creating a Custom Phase</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/class_inheritance/overview_of_inheritance.html">Overview of Inheritance</a></li>
+</ul>
+</div>
+</div>
+<input id="201f433f-a081-4ef0-b673-bc3ad1101981" name="a5266370-9301-4909-a009-7457727d5f34" type="radio">
+</input><label class="tabbed-label" for="201f433f-a081-4ef0-b673-bc3ad1101981">
+Data Management</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/data_management/data_and_topology_storage.html">Storage of Network Data and Topology</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/data_management/data_exchange_between_objects.html">Data Exchange Between Objects</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/data_management/interleaving_data.html">Interleaving Data</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/data_management/using_and_creating_labels.html">Using and Creating Labels</a></li>
+</ul>
+</div>
+</div>
+<input id="b6fe4951-f376-4166-9837-ec0a316be78f" name="a5266370-9301-4909-a009-7457727d5f34" type="radio">
+</input><label class="tabbed-label" for="b6fe4951-f376-4166-9837-ec0a316be78f">
+Settings</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/settings/deep_dive_into_the_settings_attribute.html">Overview of the Settings Attribute</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/settings/understanding_basic_transport_settings.html">Understanding Basic Transport Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/settings/understanding_reactive_transport_settings.html">Understanding Reactive Transport Settings</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/settings/understanding_transient_transport_settings.html">Understanding Transient Transport Settings</a></li>
+</ul>
+</div>
+</div>
+<input id="2c9ed5fa-7c17-4f0b-86c7-67b6eb1dafc2" name="a5266370-9301-4909-a009-7457727d5f34" type="radio">
+</input><label class="tabbed-label" for="2c9ed5fa-7c17-4f0b-86c7-67b6eb1dafc2">
+Solvers</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/solvers/available_matrix_solvers.html">Available Matrix Solvers</a></li>
+</ul>
+</div>
+</div>
+<input id="3e9d0347-7b5c-4e90-ab2a-90b307836233" name="a5266370-9301-4909-a009-7457727d5f34" type="radio">
+</input><label class="tabbed-label" for="3e9d0347-7b5c-4e90-ab2a-90b307836233">
+Workspace</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/workspace/overview_of_subdomains.html">Overview of Subdomains</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/workspace/overview_of_workspace_and_projects.html">The Workspace and Projects</a></li>
+</ul>
+</div>
+</div>
+<input id="4f992b35-7772-4092-83b6-f794a522050a" name="a5266370-9301-4909-a009-7457727d5f34" type="radio">
+</input><label class="tabbed-label" for="4f992b35-7772-4092-83b6-f794a522050a">
+Uncategorized</label><div class="tabbed-content docutils">
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/uncategorized/intro_to_openpnm_advanced.html">Tutorial 3 - Advanced</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/uncategorized/managing_geometrical_properties_of_imported_networks.html">Geometry of Imported Networks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/uncategorized/overview_of_shape_factors.html">Overview of Shape Factors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/uncategorized/the_problem_with_domain_length_and_area.html">Problem with Domain Area and Length</a></li>
+<li class="toctree-l1"><a class="reference internal" href="examples/reference/uncategorized/working_with_extracted_networks.html">Working with Extracted Networks</a></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+</section>
+
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, PMEAL.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

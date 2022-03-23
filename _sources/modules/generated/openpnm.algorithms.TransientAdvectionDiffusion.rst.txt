@@ -49,23 +49,3 @@ TransientAdvectionDiffusion
             TransientAdvectionDiffusion.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            TransientAdvectionDiffusion.A
-            TransientAdvectionDiffusion.Np
-            TransientAdvectionDiffusion.Nt
-            TransientAdvectionDiffusion.Ps
-            TransientAdvectionDiffusion.Ts
-            TransientAdvectionDiffusion.b
-            TransientAdvectionDiffusion.name
-            TransientAdvectionDiffusion.network
-            TransientAdvectionDiffusion.project
-            TransientAdvectionDiffusion.settings
-            TransientAdvectionDiffusion.x
-   
-   

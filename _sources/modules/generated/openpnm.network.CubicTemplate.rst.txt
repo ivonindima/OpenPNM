@@ -57,25 +57,3 @@ CubicTemplate
             CubicTemplate.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            CubicTemplate.Np
-            CubicTemplate.Nt
-            CubicTemplate.Ps
-            CubicTemplate.Ts
-            CubicTemplate.am
-            CubicTemplate.conns
-            CubicTemplate.coords
-            CubicTemplate.im
-            CubicTemplate.models
-            CubicTemplate.name
-            CubicTemplate.network
-            CubicTemplate.project
-            CubicTemplate.settings
-   
-   

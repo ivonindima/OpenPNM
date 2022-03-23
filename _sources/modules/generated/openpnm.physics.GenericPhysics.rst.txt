@@ -50,23 +50,3 @@ GenericPhysics
             GenericPhysics.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            GenericPhysics.Np
-            GenericPhysics.Nt
-            GenericPhysics.Ps
-            GenericPhysics.Ts
-            GenericPhysics.geometry
-            GenericPhysics.models
-            GenericPhysics.name
-            GenericPhysics.network
-            GenericPhysics.phase
-            GenericPhysics.project
-            GenericPhysics.settings
-   
-   

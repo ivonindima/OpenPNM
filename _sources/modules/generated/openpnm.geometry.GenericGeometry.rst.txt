@@ -48,22 +48,3 @@ GenericGeometry
             GenericGeometry.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            GenericGeometry.Np
-            GenericGeometry.Nt
-            GenericGeometry.Ps
-            GenericGeometry.Ts
-            GenericGeometry.models
-            GenericGeometry.name
-            GenericGeometry.network
-            GenericGeometry.physics
-            GenericGeometry.project
-            GenericGeometry.settings
-   
-   

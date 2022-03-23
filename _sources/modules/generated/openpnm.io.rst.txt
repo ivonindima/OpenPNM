@@ -15,6 +15,38 @@ Io
 
    
    
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      from_csv
+      from_jsongraph
+      from_marock
+      from_matlab
+      from_networkx
+      from_pergeos
+      from_pickle
+      from_porespy
+      from_statoil
+      from_vtk
+      print_hdf5
+      to_comsol
+      to_csv
+      to_hdf5
+      to_jsongraph
+      to_matlab
+      to_networkx
+      to_pandas
+      to_paraview
+      to_pergeos
+      to_pickle
+      to_salome
+      to_statoil
+      to_stl
+      to_vtk
+      to_xdmf
+   
    
 
    
@@ -26,27 +58,11 @@ Io
       :toctree:
 
    
-      COMSOL
-      CSV
       Dict
       GenericIO
-      HDF5
-      JSONGraphFormat
-      MARock
-      MAT
-      NetworkX
       PNM
-      Pandas
       ParaView
-      PerGeos
       Pickle
-      PoreSpy
-      STL
-      Salome
-      Statoil
-      VTK
-      XDMF
-      iMorph
    
    
 

@@ -1,0 +1,6 @@
+reynolds
+========
+
+.. currentmodule:: openpnm.models.phase.viscosity
+
+.. autofunction:: reynolds

@@ -48,23 +48,3 @@ ReactiveTransport
             ReactiveTransport.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            ReactiveTransport.A
-            ReactiveTransport.Np
-            ReactiveTransport.Nt
-            ReactiveTransport.Ps
-            ReactiveTransport.Ts
-            ReactiveTransport.b
-            ReactiveTransport.name
-            ReactiveTransport.network
-            ReactiveTransport.project
-            ReactiveTransport.settings
-            ReactiveTransport.x
-   
-   

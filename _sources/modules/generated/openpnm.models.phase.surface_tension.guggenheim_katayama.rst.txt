@@ -1,0 +1,6 @@
+guggenheim\_katayama
+====================
+
+.. currentmodule:: openpnm.models.phase.surface_tension
+
+.. autofunction:: guggenheim_katayama

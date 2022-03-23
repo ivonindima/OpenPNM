@@ -31,15 +31,6 @@ Throat\_volume
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-
-   
-      Docorator
-   
    
 
    

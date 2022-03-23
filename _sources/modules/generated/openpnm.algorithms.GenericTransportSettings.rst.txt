@@ -16,19 +16,3 @@ GenericTransportSettings
          
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            GenericTransportSettings.cache_A
-            GenericTransportSettings.cache_b
-            GenericTransportSettings.conductance
-            GenericTransportSettings.phase
-            GenericTransportSettings.prefix
-            GenericTransportSettings.quantity
-            GenericTransportSettings.variable_props
-   
-   

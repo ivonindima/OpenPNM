@@ -48,23 +48,3 @@ OhmicConduction
             OhmicConduction.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            OhmicConduction.A
-            OhmicConduction.Np
-            OhmicConduction.Nt
-            OhmicConduction.Ps
-            OhmicConduction.Ts
-            OhmicConduction.b
-            OhmicConduction.name
-            OhmicConduction.network
-            OhmicConduction.project
-            OhmicConduction.settings
-            OhmicConduction.x
-   
-   

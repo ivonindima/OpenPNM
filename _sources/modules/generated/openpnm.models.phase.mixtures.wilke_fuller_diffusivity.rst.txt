@@ -1,0 +1,6 @@
+wilke\_fuller\_diffusivity
+==========================
+
+.. currentmodule:: openpnm.models.phase.mixtures
+
+.. autofunction:: wilke_fuller_diffusivity

@@ -19,16 +19,6 @@ Models
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-
-   
-      Docorator
-      Substitution
-   
    
 
    
@@ -43,10 +33,11 @@ Models
       :toctree:
       :recursive:
    
+      openpnm.models.collections
       openpnm.models.geometry
       openpnm.models.misc
       openpnm.models.network
-      openpnm.models.phases
+      openpnm.models.phase
       openpnm.models.physics
    
    

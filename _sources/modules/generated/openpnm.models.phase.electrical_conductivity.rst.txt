@@ -1,0 +1,37 @@
+:noindex:
+
+.. raw:: html
+
+   <p hidden>This is a module</p>
+
+Electrical\_conductivity
+========================
+
+.. automodule:: openpnm.models.phase.electrical_conductivity
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      percolating_continua
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

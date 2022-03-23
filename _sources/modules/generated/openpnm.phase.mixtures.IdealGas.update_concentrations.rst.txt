@@ -1,0 +1,8 @@
+:orphan:
+
+update_concentrations
+=====================================================
+
+.. currentmodule:: openpnm.phase.mixtures
+
+.. automethod:: IdealGas.update_concentrations

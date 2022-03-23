@@ -1,0 +1,8 @@
+:orphan:
+
+throats
+===============================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.gases
+
+.. automethod:: H2.throats

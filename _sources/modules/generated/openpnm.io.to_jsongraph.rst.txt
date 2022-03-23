@@ -1,0 +1,6 @@
+to\_jsongraph
+=============
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: to_jsongraph

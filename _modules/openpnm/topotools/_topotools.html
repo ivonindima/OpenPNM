@@ -5,33 +5,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>openpnm.topotools._topotools &#8212; OpenPNM 2.8.2 documentation</title>
+    <title>openpnm.topotools._topotools &#8212; OpenPNM 2.8.2.dev117 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -39,6 +39,7 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../../../_static/js/custom.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -97,7 +98,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../examples/examples.html">
+ <a class="reference internal nav-link" href="../../../examples_index.html">
   Examples
  </a>
 </li>
@@ -121,22 +122,16 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Quick Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack">
-            <span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label>
-          </a>
+          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
+            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter-square"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
+          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
       </ul>
       </div>
@@ -152,7 +147,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -160,6 +156,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -179,19 +178,57 @@
               <div>
                 
   <h1>Source code for openpnm.topotools._topotools</h1><div class="highlight"><pre>
-<span></span><span class="kn">from</span> <span class="nn">auto_all</span> <span class="kn">import</span> <span class="n">start_all</span><span class="p">,</span> <span class="n">end_all</span>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">scipy</span> <span class="k">as</span> <span class="nn">sp</span>
 <span class="kn">import</span> <span class="nn">scipy.ndimage</span> <span class="k">as</span> <span class="nn">spim</span>
 <span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">cKDTree</span>
 <span class="kn">from</span> <span class="nn">scipy.sparse</span> <span class="kn">import</span> <span class="n">csgraph</span>
 <span class="kn">from</span> <span class="nn">scipy.spatial</span> <span class="kn">import</span> <span class="n">ConvexHull</span>
-<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">logging</span><span class="p">,</span> <span class="n">Workspace</span><span class="p">,</span> <span class="n">prettify_logger_message</span>
+<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">Workspace</span><span class="p">,</span> <span class="n">prettify_logger_message</span>
 
 
 <span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
 <span class="n">ws</span> <span class="o">=</span> <span class="n">Workspace</span><span class="p">()</span>
-<span class="n">start_all</span><span class="p">()</span>
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;isoutside&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;rotate_coords&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;shear_coords&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;trim&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;extend&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;label_faces&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;find_surface_pores&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;dimensionality&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;clone_pores&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;merge_networks&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;stitch&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;stitch_pores&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;connect_pores&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;find_pore_to_pore_distance&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;subdivide&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;trim_occluded_throats&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;merge_pores&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;hull_centroid&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;template_sphere_shell&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;template_cylinder_annulus&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;generate_base_points&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;to_cylindrical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;from_cylindrical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;to_spherical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;from_spherical&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;reflect_base_points&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;add_boundary_pores&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;iscoplanar&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;is_fully_connected&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_spacing&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_shape&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_domain_area&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;get_domain_length&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;filter_pores_by_z&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;find_interface_throats&#39;</span><span class="p">,</span>
+    <span class="s1">&#39;add_reservoir_pore&#39;</span><span class="p">,</span>
+<span class="p">]</span>
 
 
 <div class="viewcode-block" id="isoutside"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.isoutside.html#openpnm.topotools.isoutside">[docs]</a><span class="k">def</span> <span class="nf">isoutside</span><span class="p">(</span><span class="n">coords</span><span class="p">,</span> <span class="n">shape</span><span class="p">):</span>
@@ -682,7 +719,7 @@
         <span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.&#39;</span><span class="o">+</span><span class="n">label</span><span class="p">][</span><span class="n">neighbors</span><span class="p">]</span> <span class="o">=</span> <span class="kc">True</span></div>
 
 
-<div class="viewcode-block" id="dimensionality"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.generators.tools.dimensionality.html#openpnm.topotools.dimensionality">[docs]</a><span class="k">def</span> <span class="nf">dimensionality</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+<div class="viewcode-block" id="dimensionality"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.dimensionality.html#openpnm.topotools.dimensionality">[docs]</a><span class="k">def</span> <span class="nf">dimensionality</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Checks the dimensionality of the network</span>
 
@@ -723,10 +760,14 @@
 <span class="sd">    mode : str</span>
 <span class="sd">        Controls the connections between parents and clones.  Options are:</span>
 
-<span class="sd">        - &#39;parents&#39;: (Default) Each clone is connected only to its parent</span>
-<span class="sd">        - &#39;siblings&#39;: Clones are only connected to each other in the same</span>
-<span class="sd">                      manner as parents were connected</span>
-<span class="sd">        - &#39;isolated&#39;: No connections between parents or siblings</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;parents&#39;    Each clone is connected only to its parent.(Default)</span>
+<span class="sd">            &#39;siblings&#39;   Clones are only connected to each other in the same</span>
+<span class="sd">                         manner as parents were connected.</span>
+<span class="sd">            &#39;isolated&#39;   No connections between parents or siblings</span>
+<span class="sd">            ===========  =====================================================</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">labels</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
@@ -973,7 +1014,14 @@
 <span class="sd">        The pore indices of the disconnected clusters to be joined</span>
 <span class="sd">    mode : str</span>
 <span class="sd">        Dictates which tesselation method is used to identify which pores to</span>
-<span class="sd">        stitch together.  Options are &#39;gabriel&#39; (default) or &#39;delaunay&#39;.</span>
+<span class="sd">        stitch together.  Options are:</span>
+
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;gabriel&#39;    Uses the gabriel tesselation method</span>
+<span class="sd">            &#39;delaunay&#39;   Uses the delaunay tesselation method</span>
+<span class="sd">            ===========  =====================================================</span>
 
 <span class="sd">    Returns</span>
 <span class="sd">    -------</span>
@@ -1283,7 +1331,7 @@
 <span class="sd">    mask : str</span>
 <span class="sd">        Applies routine only to throats with this label</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">occluded_ts</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;throat.area&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
+    <span class="n">occluded_ts</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;throat.cross_sectional_area&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">occluded_ts</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">occluded_ts</span> <span class="o">*=</span> <span class="n">network</span><span class="p">[</span><span class="s2">&quot;throat.&quot;</span><span class="o">+</span><span class="n">mask</span><span class="p">]</span>
         <span class="n">trim</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="p">,</span> <span class="n">throats</span><span class="o">=</span><span class="n">occluded_ts</span><span class="p">)</span></div>
@@ -1495,7 +1543,7 @@
     <span class="k">return</span> <span class="n">img</span></div>
 
 
-<div class="viewcode-block" id="generate_base_points"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.generators.tools.generate_base_points.html#openpnm.topotools.generate_base_points">[docs]</a><span class="k">def</span> <span class="nf">generate_base_points</span><span class="p">(</span><span class="n">num_points</span><span class="p">,</span> <span class="n">domain_size</span><span class="p">,</span> <span class="n">density_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
+<div class="viewcode-block" id="generate_base_points"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.generate_base_points.html#openpnm.topotools.generate_base_points">[docs]</a><span class="k">def</span> <span class="nf">generate_base_points</span><span class="p">(</span><span class="n">num_points</span><span class="p">,</span> <span class="n">domain_size</span><span class="p">,</span> <span class="n">density_map</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span>
                          <span class="n">reflect</span><span class="o">=</span><span class="kc">True</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Generates a set of base points for passing into the Tessellation-based</span>
@@ -1910,6 +1958,7 @@
         <span class="n">is_connected</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">unique</span><span class="p">(</span><span class="n">temp</span><span class="p">)</span><span class="o">.</span><span class="n">size</span> <span class="o">==</span> <span class="mi">1</span>
     <span class="k">return</span> <span class="n">is_connected</span></div>
 
+
 <div class="viewcode-block" id="get_spacing"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.get_spacing.html#openpnm.topotools.get_spacing">[docs]</a><span class="k">def</span> <span class="nf">get_spacing</span><span class="p">(</span><span class="n">network</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Determine the spacing along each axis of a simple cubic network</span>
@@ -1930,6 +1979,7 @@
     <span class="n">d</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;vert.coords&#39;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">coords</span><span class="p">,</span> <span class="s1">&#39;edge.conns&#39;</span><span class="p">:</span> <span class="n">network</span><span class="o">.</span><span class="n">conns</span><span class="p">}</span>
     <span class="n">spc</span> <span class="o">=</span> <span class="n">get_spacing</span><span class="p">(</span><span class="n">d</span><span class="p">)</span>
     <span class="k">return</span> <span class="n">spc</span></div>
+
 
 <div class="viewcode-block" id="get_shape"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.get_shape.html#openpnm.topotools.get_shape">[docs]</a><span class="k">def</span> <span class="nf">get_shape</span><span class="p">(</span><span class="n">network</span><span class="p">):</span>
     <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
@@ -2060,7 +2110,112 @@
     <span class="n">hits</span> <span class="o">=</span> <span class="n">pores</span><span class="p">[</span><span class="n">orphans</span><span class="p">]</span>
     <span class="k">return</span> <span class="n">hits</span></div>
 
-<span class="n">end_all</span><span class="p">()</span>
+
+<div class="viewcode-block" id="find_interface_throats"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.find_interface_throats.html#openpnm.topotools.find_interface_throats">[docs]</a><span class="k">def</span> <span class="nf">find_interface_throats</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Finds all throats between two sets pores with the given labels.</span>
+
+<span class="sd">    Parameters</span>
+<span class="sd">    ----------</span>
+<span class="sd">    network : GenericNetwork</span>
+<span class="sd">        The network on which the query is to be performed</span>
+<span class="sd">    P1 : array_like str</span>
+<span class="sd">        The (label of) first set of pores</span>
+<span class="sd">    P2 : array_like or str</span>
+<span class="sd">        The (label of) second set of pores</span>
+
+<span class="sd">    Returns</span>
+<span class="sd">    -------</span>
+<span class="sd">    ndarray</span>
+<span class="sd">        List of interface throats between the two given sets of pores</span>
+
+<span class="sd">    Notes</span>
+<span class="sd">    -----</span>
+<span class="sd">    This method requires that the two labels do not share any pores.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">P1</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">pores</span><span class="p">(</span><span class="n">P1</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">P1</span>
+    <span class="n">P2</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">pores</span><span class="p">(</span><span class="n">P2</span><span class="p">)</span> <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">P2</span><span class="p">,</span> <span class="nb">str</span><span class="p">)</span> <span class="k">else</span> <span class="n">P2</span>
+    <span class="k">if</span> <span class="n">np</span><span class="o">.</span><span class="n">intersect1d</span><span class="p">(</span><span class="n">P1</span><span class="p">,</span> <span class="n">P2</span><span class="p">)</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s2">&quot;P1 and P2 must not share any pores.&quot;</span><span class="p">)</span>
+    <span class="n">Ts1</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">find_neighbor_throats</span><span class="p">(</span><span class="n">pores</span><span class="o">=</span><span class="n">P1</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;xor&quot;</span><span class="p">)</span>
+    <span class="n">Ts2</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">find_neighbor_throats</span><span class="p">(</span><span class="n">pores</span><span class="o">=</span><span class="n">P2</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;xor&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">intersect1d</span><span class="p">(</span><span class="n">Ts1</span><span class="p">,</span> <span class="n">Ts2</span><span class="p">)</span></div>
+
+
+
+<div class="viewcode-block" id="add_reservoir_pore"><a class="viewcode-back" href="../../../modules/generated/openpnm.topotools.add_reservoir_pore.html#openpnm.topotools.add_reservoir_pore">[docs]</a><span class="k">def</span> <span class="nf">add_reservoir_pore</span><span class="p">(</span><span class="bp">cls</span><span class="p">,</span> <span class="n">network</span><span class="p">,</span> <span class="n">pores</span><span class="p">,</span> <span class="n">offset</span><span class="o">=</span><span class="mf">0.1</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Adds a single pore connected to all ``pores`` to act as a reservoir</span>
+
+<span class="sd">        This function is mostly needed to make network compatible with the</span>
+<span class="sd">        Statoil file format, which requires reservoir pores on the inlet and</span>
+<span class="sd">        outlet faces.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        network : GenericNetwork</span>
+<span class="sd">            The network to which the reservoir pore should be added</span>
+<span class="sd">        pores : array_like</span>
+<span class="sd">            The pores to which the reservoir pore should be connected to</span>
+<span class="sd">        offset : scalar</span>
+<span class="sd">            Controls the distance which the reservoir is offset from the given</span>
+<span class="sd">            ``pores``.  The total displacement is found from the network</span>
+<span class="sd">            dimension normal to given ``pores``, multiplied by ``offset``.</span>
+
+<span class="sd">        Returns</span>
+<span class="sd">        -------</span>
+<span class="sd">        project : list</span>
+<span class="sd">            An OpenPNM project object with a new geometry object added to</span>
+<span class="sd">            represent the newly added pore and throats.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="kn">from</span> <span class="nn">openpnm.geometry</span> <span class="kn">import</span> <span class="n">GenericGeometry</span>
+        <span class="kn">import</span> <span class="nn">openpnm.models.geometry</span> <span class="k">as</span> <span class="nn">mods</span>
+        <span class="c1"># Check if a label was given and fetch actual indices</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">pores</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="c1"># Convert &#39;face&#39; into &#39;pore.face&#39; if necessary</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">pores</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;pore.&#39;</span><span class="p">):</span>
+                <span class="n">pores</span> <span class="o">=</span> <span class="s1">&#39;pore.&#39;</span> <span class="o">+</span> <span class="n">pores</span>
+            <span class="n">pores</span> <span class="o">=</span> <span class="n">network</span><span class="o">.</span><span class="n">pores</span><span class="p">(</span><span class="n">pores</span><span class="p">)</span>
+        <span class="c1"># Find coordinates of pores on given face</span>
+        <span class="n">coords</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.coords&#39;</span><span class="p">][</span><span class="n">pores</span><span class="p">]</span>
+        <span class="c1"># Normalize the coordinates based on full network size</span>
+        <span class="n">c_norm</span> <span class="o">=</span> <span class="n">coords</span><span class="o">/</span><span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.coords&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">max</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="c1"># Identify axis of face by looking for dim with smallest delta</span>
+        <span class="n">diffs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">amax</span><span class="p">(</span><span class="n">c_norm</span> <span class="o">-</span> <span class="n">np</span><span class="o">.</span><span class="n">average</span><span class="p">(</span><span class="n">c_norm</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">),</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">ax</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">where</span><span class="p">(</span><span class="n">diffs</span> <span class="o">==</span> <span class="n">diffs</span><span class="o">.</span><span class="n">min</span><span class="p">())[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span>
+        <span class="c1"># Add new pore at center of domain</span>
+        <span class="n">new_coord</span> <span class="o">=</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.coords&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">(</span><span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+        <span class="n">domain_half_length</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">ptp</span><span class="p">(</span><span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.coords&#39;</span><span class="p">][:,</span> <span class="n">ax</span><span class="p">])</span><span class="o">/</span><span class="mi">2</span>
+        <span class="k">if</span> <span class="n">coords</span><span class="p">[:,</span> <span class="n">ax</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">&lt;</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.coords&#39;</span><span class="p">][:,</span> <span class="n">ax</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">():</span>
+            <span class="n">new_coord</span><span class="p">[</span><span class="n">ax</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_coord</span><span class="p">[</span><span class="n">ax</span><span class="p">]</span> <span class="o">-</span> <span class="n">domain_half_length</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">coords</span><span class="p">[:,</span> <span class="n">ax</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">()</span> <span class="o">&gt;</span> <span class="n">network</span><span class="p">[</span><span class="s1">&#39;pore.coords&#39;</span><span class="p">][:,</span> <span class="n">ax</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">():</span>
+            <span class="n">new_coord</span><span class="p">[</span><span class="n">ax</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_coord</span><span class="p">[</span><span class="n">ax</span><span class="p">]</span> <span class="o">+</span> <span class="n">domain_half_length</span><span class="o">*</span><span class="p">(</span><span class="mi">1</span> <span class="o">+</span> <span class="n">offset</span><span class="p">)</span>
+        <span class="n">Ps</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">Np</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">Np</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+        <span class="n">extend</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="p">,</span> <span class="n">coords</span><span class="o">=</span><span class="p">[</span><span class="n">new_coord</span><span class="p">],</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;reservoir&#39;</span><span class="p">])</span>
+        <span class="n">conns</span> <span class="o">=</span> <span class="p">[[</span><span class="n">P</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">Np</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">P</span> <span class="ow">in</span> <span class="n">pores</span><span class="p">]</span>
+        <span class="n">Ts</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">Nt</span><span class="p">,</span> <span class="n">network</span><span class="o">.</span><span class="n">Nt</span> <span class="o">+</span> <span class="nb">len</span><span class="p">(</span><span class="n">conns</span><span class="p">))</span>
+        <span class="n">extend</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="p">,</span> <span class="n">conns</span><span class="o">=</span><span class="n">conns</span><span class="p">,</span> <span class="n">labels</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;reservoir&#39;</span><span class="p">])</span>
+        <span class="c1"># Compute the geometrical properties of the reservoir pore and throats</span>
+        <span class="c1"># Confirm if network has any geometry props on it</span>
+        <span class="n">props</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;throat.length&#39;</span><span class="p">,</span> <span class="s1">&#39;pore.diameter&#39;</span><span class="p">,</span> <span class="s1">&#39;throat.volume&#39;</span><span class="p">}</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">network</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span><span class="o">.</span><span class="n">intersection</span><span class="p">(</span><span class="n">props</span><span class="p">))</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Geometrical properties should be moved to a &#39;</span> <span class="o">+</span>
+                            <span class="s1">&#39;geometry object first&#39;</span><span class="p">)</span>
+            <span class="c1"># or just do this?:  geo = Imported(network=network)</span>
+        <span class="n">geo</span> <span class="o">=</span> <span class="n">GenericGeometry</span><span class="p">(</span><span class="n">network</span><span class="o">=</span><span class="n">network</span><span class="p">,</span> <span class="n">pores</span><span class="o">=</span><span class="n">Ps</span><span class="p">,</span> <span class="n">throats</span><span class="o">=</span><span class="n">Ts</span><span class="p">)</span>
+        <span class="n">geo</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">propname</span><span class="o">=</span><span class="s1">&#39;pore.diameter&#39;</span><span class="p">,</span>
+                      <span class="n">model</span><span class="o">=</span><span class="n">mods</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">pore_size</span><span class="o">.</span><span class="n">largest_sphere</span><span class="p">)</span>
+        <span class="n">geo</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">propname</span><span class="o">=</span><span class="s1">&#39;throat.diameter_temp&#39;</span><span class="p">,</span>
+                      <span class="n">model</span><span class="o">=</span><span class="n">mods</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">throat_size</span><span class="o">.</span><span class="n">from_neighbor_pores</span><span class="p">,</span>
+                      <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;min&#39;</span><span class="p">)</span>
+        <span class="n">geo</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">propname</span><span class="o">=</span><span class="s1">&#39;throat.diameter&#39;</span><span class="p">,</span>
+                      <span class="n">model</span><span class="o">=</span><span class="n">mods</span><span class="o">.</span><span class="n">misc</span><span class="o">.</span><span class="n">scaled</span><span class="p">,</span>
+                      <span class="n">prop</span><span class="o">=</span><span class="s1">&#39;throat.diameter_temp&#39;</span><span class="p">,</span> <span class="n">factor</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+        <span class="n">geo</span><span class="o">.</span><span class="n">add_model</span><span class="p">(</span><span class="n">propname</span><span class="o">=</span><span class="s1">&#39;throat.volume&#39;</span><span class="p">,</span>
+                      <span class="n">model</span><span class="o">=</span><span class="n">mods</span><span class="o">.</span><span class="n">geometry</span><span class="o">.</span><span class="n">throat_volume</span><span class="o">.</span><span class="n">cylinder</span><span class="p">)</span>
+        <span class="k">return</span> <span class="n">network</span><span class="o">.</span><span class="n">project</span></div>
 </pre></div>
 
               </div>
@@ -2072,19 +2227,19 @@
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, PMEAL.<br>
+    &copy; Copyright 2022, PMEAL.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

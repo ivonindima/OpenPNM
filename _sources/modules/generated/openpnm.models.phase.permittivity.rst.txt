@@ -1,0 +1,37 @@
+:noindex:
+
+.. raw:: html
+
+   <p hidden>This is a module</p>
+
+Permittivity
+============
+
+.. automodule:: openpnm.models.phase.permittivity
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      water
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

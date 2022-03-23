@@ -21,6 +21,7 @@ Topotools
       :toctree:
    
       add_boundary_pores
+      add_reservoir_pore
       bond_percolation
       clone_pores
       connect_pores
@@ -33,6 +34,7 @@ Topotools
       find_complement
       find_connected_sites
       find_connecting_bonds
+      find_interface_throats
       find_neighbor_bonds
       find_neighbor_sites
       find_path

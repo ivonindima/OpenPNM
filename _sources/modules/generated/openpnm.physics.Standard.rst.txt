@@ -50,23 +50,3 @@ Standard
             Standard.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Standard.Np
-            Standard.Nt
-            Standard.Ps
-            Standard.Ts
-            Standard.geometry
-            Standard.models
-            Standard.name
-            Standard.network
-            Standard.phase
-            Standard.project
-            Standard.settings
-   
-   

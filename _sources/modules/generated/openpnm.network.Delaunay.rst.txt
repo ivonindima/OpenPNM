@@ -59,27 +59,3 @@ Delaunay
             Delaunay.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Delaunay.Np
-            Delaunay.Nt
-            Delaunay.Ps
-            Delaunay.Ts
-            Delaunay.am
-            Delaunay.conns
-            Delaunay.coords
-            Delaunay.im
-            Delaunay.models
-            Delaunay.name
-            Delaunay.network
-            Delaunay.project
-            Delaunay.settings
-            Delaunay.tri
-            Delaunay.vor
-   
-   

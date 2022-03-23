@@ -49,23 +49,3 @@ AdvectionDiffusion
             AdvectionDiffusion.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            AdvectionDiffusion.A
-            AdvectionDiffusion.Np
-            AdvectionDiffusion.Nt
-            AdvectionDiffusion.Ps
-            AdvectionDiffusion.Ts
-            AdvectionDiffusion.b
-            AdvectionDiffusion.name
-            AdvectionDiffusion.network
-            AdvectionDiffusion.project
-            AdvectionDiffusion.settings
-            AdvectionDiffusion.x
-   
-   

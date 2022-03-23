@@ -18,7 +18,3 @@ ParaView
             ParaView.open_paraview
    
    
-
-   
-   
-   

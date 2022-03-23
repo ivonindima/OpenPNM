@@ -1,0 +1,8 @@
+:orphan:
+
+copy
+============================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.gases
+
+.. automethod:: H2.copy

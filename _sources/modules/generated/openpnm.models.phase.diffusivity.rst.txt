@@ -1,0 +1,41 @@
+:noindex:
+
+.. raw:: html
+
+   <p hidden>This is a module</p>
+
+Diffusivity
+===========
+
+.. automodule:: openpnm.models.phase.diffusivity
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      chapman_enskog
+      fuller
+      fuller_scaling
+      tyn_calus
+      tyn_calus_scaling
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

@@ -48,22 +48,3 @@ SpheresAndCylinders
             SpheresAndCylinders.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            SpheresAndCylinders.Np
-            SpheresAndCylinders.Nt
-            SpheresAndCylinders.Ps
-            SpheresAndCylinders.Ts
-            SpheresAndCylinders.models
-            SpheresAndCylinders.name
-            SpheresAndCylinders.network
-            SpheresAndCylinders.physics
-            SpheresAndCylinders.project
-            SpheresAndCylinders.settings
-   
-   

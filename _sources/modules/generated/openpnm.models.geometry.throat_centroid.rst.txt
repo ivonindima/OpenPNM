@@ -26,15 +26,6 @@ Throat\_centroid
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-
-   
-      Docorator
-   
    
 
    

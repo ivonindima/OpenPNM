@@ -50,23 +50,3 @@ Basic
             Basic.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Basic.Np
-            Basic.Nt
-            Basic.Ps
-            Basic.Ts
-            Basic.geometry
-            Basic.models
-            Basic.name
-            Basic.network
-            Basic.phase
-            Basic.project
-            Basic.settings
-   
-   

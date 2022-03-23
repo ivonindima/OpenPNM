@@ -1,0 +1,6 @@
+water
+=====
+
+.. currentmodule:: openpnm.models.phase.permittivity
+
+.. autofunction:: water

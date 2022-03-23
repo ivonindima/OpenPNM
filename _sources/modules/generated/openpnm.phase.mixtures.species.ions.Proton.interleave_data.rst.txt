@@ -1,0 +1,8 @@
+:orphan:
+
+interleave_data
+==========================================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.ions
+
+.. automethod:: Proton.interleave_data

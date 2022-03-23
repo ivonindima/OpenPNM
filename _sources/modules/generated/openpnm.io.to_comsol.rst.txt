@@ -1,0 +1,6 @@
+to\_comsol
+==========
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: to_comsol

@@ -28,13 +28,3 @@ HealthDict
             HealthDict.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            HealthDict.health
-   
-   

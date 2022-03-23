@@ -5,33 +5,33 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>openpnm.core._mixins &#8212; OpenPNM 2.8.2 documentation</title>
+    <title>openpnm.core._mixins &#8212; OpenPNM 2.8.2.dev117 documentation</title>
     
-  <link href="../../../_static/css/theme.css" rel="stylesheet">
-  <link href="../../../_static/css/index.ff1ffe594081f20da1ef19478df9384b.css" rel="stylesheet">
-
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
     
-  <link rel="stylesheet"
-    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-  <link rel="preload" as="font" type="font/woff2" crossorigin
-    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
     
       
-
+  
     
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/css/blank.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-  <link rel="preload" as="script" href="../../../_static/js/index.be7d3bbb2ef33a8344ce.js">
-
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -39,6 +39,7 @@
     <script src="../../../_static/clipboard.min.js"></script>
     <script src="../../../_static/copybutton.js"></script>
     <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
     <script src="../../../_static/js/custom.js"></script>
     <link rel="index" title="Index" href="../../../genindex.html" />
     <link rel="search" title="Search" href="../../../search.html" />
@@ -97,7 +98,7 @@
 </li>
 
 <li class="toctree-l1 nav-item">
- <a class="reference internal nav-link" href="../../../examples/examples.html">
+ <a class="reference internal nav-link" href="../../../examples_index.html">
   Examples
  </a>
 </li>
@@ -121,22 +122,16 @@
       <div class="navbar-end-item">
         <ul id="navbar-icon-links" class="navbar-nav" aria-label="Quick Links">
         <li class="nav-item">
-          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub">
-            <span><i class="fab fa-github-square"></i></span>
-            <label class="sr-only">GitHub</label>
-          </a>
+          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack">
-            <span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label>
-          </a>
+          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
+            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter">
-            <span><i class="fab fa-twitter-square"></i></span>
-            <label class="sr-only">Twitter</label>
-          </a>
+          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
         </li>
       </ul>
       </div>
@@ -152,7 +147,8 @@
           
             
             <!-- Only show if we have sidebars configured, else just a small margin  -->
-            <div class="col-12 col-md-3 bd-sidebar"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
   <i class="icon fas fa-search"></i>
   <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
 </form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
@@ -160,6 +156,9 @@
     
   </div>
 </nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
             </div>
             
           
@@ -196,6 +195,11 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="o">.</span><span class="n">_value</span> <span class="o">=</span> <span class="s2">&quot;Values&quot;</span>
 
     <span class="k">def</span> <span class="fm">__getitem__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">key</span><span class="p">):</span>
+        <span class="c1"># If the key is a just a numerical value, the kick it directly back</span>
+        <span class="c1"># This allows one to do either value=&#39;pore.blah&#39; or value=1.0</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">key</span><span class="p">,</span> <span class="p">(</span><span class="nb">int</span><span class="p">,</span> <span class="nb">float</span><span class="p">,</span> <span class="nb">bool</span><span class="p">,</span> <span class="nb">complex</span><span class="p">)):</span>
+            <span class="k">return</span> <span class="n">key</span>
+
         <span class="k">if</span> <span class="n">key</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s1">&#39;param&#39;</span><span class="p">):</span>
             <span class="k">try</span><span class="p">:</span>
                 <span class="n">vals</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_params</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
@@ -373,23 +377,22 @@
 <span class="sd">            Controls how the query should be performed.  Only applicable</span>
 <span class="sd">            when ``pores`` or ``throats`` are specified:</span>
 
-<span class="sd">            **&#39;or&#39;, &#39;union&#39;, &#39;any&#39;**: (default) Returns the labels that are</span>
-<span class="sd">            assigned to *any* of the given locations.</span>
-
-<span class="sd">            **&#39;and&#39;, &#39;intersection&#39;, &#39;all&#39;**: Labels that are present on *all*</span>
-<span class="sd">            the given locations.</span>
-
-<span class="sd">            **&#39;xor&#39;, &#39;exclusive_or&#39;** : Labels that are present on *only one*</span>
-<span class="sd">            of the given locations.</span>
-
-<span class="sd">            **&#39;nor&#39;, &#39;none&#39;, &#39;not&#39;**: Labels that are *not* present on any of</span>
-<span class="sd">            the given locations.</span>
-
-<span class="sd">            **&#39;nand&#39;**: Labels that are present on *all but one* of the given</span>
-<span class="sd">            locations</span>
-
-<span class="sd">            **&#39;xnor&#39;**: Labels that are present on *more than one* of the given</span>
-<span class="sd">            locations.  &#39;nxor&#39; is also accepted.</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            mode            meaning</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            &#39;or&#39;            Returns the labels that are assigned to *any* of the</span>
+<span class="sd">                            given locations. Also accepts &#39;union&#39; and &#39;any&#39;</span>
+<span class="sd">            &#39;and&#39;           Labels that are present on all the given locations.</span>
+<span class="sd">                            also accepts &#39;intersection&#39; and &#39;all&#39;</span>
+<span class="sd">            &#39;xor&#39;           Labels that are present on *only one*</span>
+<span class="sd">                            of the given locations.Also accepts &#39;exclusive_or&#39;</span>
+<span class="sd">            &#39;nor&#39;           Labels that are *not* present on any of</span>
+<span class="sd">                            the given locations. Also accepts &#39;not&#39; and &#39;none&#39;</span>
+<span class="sd">            &#39;nand&#39;          Labels that are present on *all but one* of the given</span>
+<span class="sd">                            locations</span>
+<span class="sd">            &#39;xnor&#39;          Labels that are present on *more than one* of the given</span>
+<span class="sd">                            locations.</span>
+<span class="sd">            ==============  =====================================================</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -563,32 +566,29 @@
 <span class="sd">        labels : str or list[str]</span>
 <span class="sd">            The label(s) whose pores locations are requested.  This argument</span>
 <span class="sd">            also accepts &#39;*&#39; for wildcard searches.</span>
-
 <span class="sd">        mode : str</span>
 <span class="sd">            Specifies how the query should be performed.  The options are:</span>
 
-<span class="sd">            **&#39;or&#39;, &#39;union&#39;, &#39;any&#39;** : (default) Pores with *one or more* of</span>
-<span class="sd">            the given labels are returned.</span>
-
-<span class="sd">            **&#39;and&#39;, &#39;intersection&#39;, &#39;all&#39;** : Pores with *all* of the given</span>
-<span class="sd">            labels are returned.</span>
-
-<span class="sd">            **&#39;xor&#39;, &#39;exclusive_or&#39;** : Pores with *only one* of the given</span>
-<span class="sd">            labels are returned.</span>
-
-<span class="sd">            **&#39;nor&#39;, &#39;none&#39;, &#39;not&#39;** : Pores with *none* of the given labels</span>
-<span class="sd">            are returned.</span>
-
-<span class="sd">            **&#39;nand&#39;** : Pores with *not all* of the given labels are</span>
-<span class="sd">            returned.</span>
-
-<span class="sd">            **&#39;xnor&#39;** : Pores with *more than one* of the given labels are</span>
-<span class="sd">            returned.</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            mode            meaning</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            &#39;or&#39;            Pores with *one or more* of the given labels are</span>
+<span class="sd">                            returned. Also accepts &#39;union&#39; and &#39;any&#39;.</span>
+<span class="sd">            &#39;and&#39;           Pores with all of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;intersection&#39; and &#39;all&#39;.</span>
+<span class="sd">            &#39;xor&#39;           Pores with *only one* of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;exclusive_or&#39;.</span>
+<span class="sd">            &#39;nor&#39;           Pores with *none* of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;not&#39; and &#39;none&#39;.</span>
+<span class="sd">            &#39;nand&#39;          Pores with *not all* of the given labels are</span>
+<span class="sd">                            returned.</span>
+<span class="sd">            &#39;xnor&#39;          Pores with *more than one* of the given labels are</span>
+<span class="sd">                            returned.</span>
+<span class="sd">            ==============  =====================================================</span>
 
 <span class="sd">        asmask : bool</span>
 <span class="sd">            If ``True`` then a boolean array of length Np is returned with</span>
 <span class="sd">            ``True`` values indicating the pores that satisfy the query.</span>
-
 <span class="sd">        to_global : bool</span>
 <span class="sd">            If ``True``, the returned indices will be indexed relative to the</span>
 <span class="sd">            full domain.  This only has an effect when the calling object</span>
@@ -644,32 +644,29 @@
 <span class="sd">            The throat label(s) whose locations are requested.  If omitted,</span>
 <span class="sd">            &#39;all&#39; throat inidices are returned.  This argument also accepts</span>
 <span class="sd">            &#39;*&#39; for wildcard searches.</span>
-
 <span class="sd">        mode : str</span>
-<span class="sd">            Specifies how the query should be performed.  The options are:</span>
+<span class="sd">            Specifies how the query should be performed. The options are:</span>
 
-<span class="sd">            **&#39;or&#39;, &#39;union&#39;, &#39;any&#39;** : (default) Throats with *one or more* of</span>
-<span class="sd">            the given labels are returned.</span>
-
-<span class="sd">            **&#39;and&#39;, &#39;intersection&#39;, &#39;all&#39;** : Throats with *all* of the given</span>
-<span class="sd">            labels are returned.</span>
-
-<span class="sd">            **&#39;xor&#39;, &#39;exclusive_or&#39;** : Throats with *only one* of the given</span>
-<span class="sd">            labels are returned.</span>
-
-<span class="sd">            **&#39;nor&#39;, &#39;none&#39;, &#39;not&#39;** : Throats with *none* of the given labels</span>
-<span class="sd">            are returned.</span>
-
-<span class="sd">            **&#39;nand&#39;** : Throats with *not all* of the given labels are</span>
-<span class="sd">            returned.</span>
-
-<span class="sd">            **&#39;xnor&#39;** : Throats with *more than one* of the given labels are</span>
-<span class="sd">            returned.</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            mode            meaning</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            &#39;or&#39;            Throats with *one or more* of the given labels are</span>
+<span class="sd">                            returned. Also accepts &#39;union&#39; and &#39;any&#39;.</span>
+<span class="sd">            &#39;and&#39;           Throats with all of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;intersection&#39; and &#39;all&#39;.</span>
+<span class="sd">            &#39;xor&#39;           Throats with *only one* of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;exclusive_or&#39;.</span>
+<span class="sd">            &#39;nor&#39;           Throats with *none* of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;not&#39; and &#39;none&#39;.</span>
+<span class="sd">            &#39;nand&#39;          Throats with *not all* of the given labels are</span>
+<span class="sd">                            returned.</span>
+<span class="sd">            &#39;xnor&#39;          Throats with *more than one* of the given labels are</span>
+<span class="sd">                            returned.</span>
+<span class="sd">            ==============  =====================================================</span>
 
 <span class="sd">        asmask : bool</span>
 <span class="sd">            If ``True`` then a boolean array of length Nt is returned with</span>
 <span class="sd">            ``True`` values indicating the throats that satisfy the query.</span>
-
 <span class="sd">        to_global : bool</span>
 <span class="sd">            If ``True``, the returned indices will be indexed relative to the</span>
 <span class="sd">            full domain.  This only has an effect when the calling object</span>
@@ -712,31 +709,28 @@
 <span class="sd">        ----------</span>
 <span class="sd">        pores, or throats : array_like</span>
 <span class="sd">            List of pores or throats to be filtered</span>
-
 <span class="sd">        labels : list of strings</span>
 <span class="sd">            The labels to apply as a filter</span>
-
 <span class="sd">        mode : str</span>
+<span class="sd">            Controls how the filter is applied. The default value is</span>
+<span class="sd">            &#39;or&#39;. Options include:</span>
 
-<span class="sd">            Controls how the filter is applied.  Options include:</span>
-
-<span class="sd">            **&#39;or&#39;, &#39;union&#39;, &#39;any&#39;**: (default) Returns a list of the given</span>
-<span class="sd">            locations where *any* of the given labels exist.</span>
-
-<span class="sd">            **&#39;and&#39;, &#39;intersection&#39;, &#39;all&#39;**: Only locations where *all* the</span>
-<span class="sd">            given labels are found.</span>
-
-<span class="sd">            **&#39;xor&#39;, &#39;exclusive_or&#39;**: Only locations where exactly *one* of</span>
-<span class="sd">            the given labels are found.</span>
-
-<span class="sd">            **&#39;nor&#39;, &#39;none&#39;, &#39;not&#39;**: Only locations where *none* of the given</span>
-<span class="sd">            labels are found.</span>
-
-<span class="sd">            **&#39;nand&#39;** : Only locations with *some but not all* of the given</span>
-<span class="sd">            labels are returned.</span>
-
-<span class="sd">            **&#39;xnor&#39;** : Only locations with *more than one* of the given</span>
-<span class="sd">            labels are returned.</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;or&#39;         Returns a list of the given locations where *any* of</span>
+<span class="sd">                         the given labels exist. Also accepts &#39;union&#39; and &#39;any&#39;.</span>
+<span class="sd">            &#39;and&#39;        Only locations where *all* the given labels are</span>
+<span class="sd">                         found. Also accepts &#39;intersection&#39; and &#39;all&#39;.</span>
+<span class="sd">            &#39;xor&#39;        Only locations where exactly *one* of the given</span>
+<span class="sd">                         labels are found.</span>
+<span class="sd">            &#39;nor&#39;        Only locations where *none* of the given labels are</span>
+<span class="sd">                         found. Also accepts &#39;none&#39; and &#39;not&#39;</span>
+<span class="sd">            &#39;nand&#39;       Only locations with *some but not all* of the given</span>
+<span class="sd">                         labels are returned</span>
+<span class="sd">            &#39;xnor&#39;       Only locations with *more than one* of the given</span>
+<span class="sd">                         labels are returned</span>
+<span class="sd">            ===========  =====================================================</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -787,30 +781,28 @@
 <span class="sd">        labels : list of strings, optional</span>
 <span class="sd">            The pore labels that should be included in the count.</span>
 <span class="sd">            If not supplied, all pores are counted.</span>
-
 <span class="sd">        labels : list of strings</span>
 <span class="sd">            Label of pores to be returned</span>
-
 <span class="sd">        mode : str, optional</span>
-<span class="sd">            Specifies how the count should be performed.  The options are:</span>
+<span class="sd">            Specifies how the count should be performed. The options are:</span>
 
-<span class="sd">            **&#39;or&#39;, &#39;union&#39;, &#39;any&#39;** : (default) Pores with *one or more* of</span>
-<span class="sd">            the given labels are counted.</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            mode            meaning</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            &#39;or&#39;            Pores with *one or more* of the given labels are</span>
+<span class="sd">                            counted. Also accepts &#39;union&#39; and &#39;any&#39;.</span>
+<span class="sd">            &#39;and&#39;           Pores with all of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;intersection&#39; and &#39;all&#39;.</span>
+<span class="sd">            &#39;xor&#39;           Pores with *only one* of the given labels are</span>
+<span class="sd">                            counted. Also accepts &#39;exclusive_or&#39;.</span>
+<span class="sd">            &#39;nor&#39;           Pores with *none* of the given labels are counted.</span>
+<span class="sd">                            Also accepts &#39;not&#39; and &#39;none&#39;.</span>
+<span class="sd">            &#39;nand&#39;          Pores with *not all* of the given labels are</span>
+<span class="sd">                            counted.</span>
+<span class="sd">            &#39;xnor&#39;          Pores with *more than one* of the given labels are</span>
+<span class="sd">                            counted.</span>
+<span class="sd">            ==============  =====================================================</span>
 
-<span class="sd">            **&#39;and&#39;, &#39;intersection&#39;, &#39;all&#39;** : Pores with *all* of the given</span>
-<span class="sd">            labels are counted.</span>
-
-<span class="sd">            **&#39;xor&#39;, &#39;exclusive_or&#39;** : Pores with *only one* of the given</span>
-<span class="sd">            labels are counted.</span>
-
-<span class="sd">            **&#39;nor&#39;, &#39;none&#39;, &#39;not&#39;** : Pores with *none* of the given labels</span>
-<span class="sd">            are counted.</span>
-
-<span class="sd">            **&#39;nand&#39;** : Pores with *some but not all* of the given labels are</span>
-<span class="sd">            counted.</span>
-
-<span class="sd">            **&#39;xnor&#39;** : Pores with *more than one* of the given labels are</span>
-<span class="sd">            counted.</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -856,27 +848,25 @@
 <span class="sd">        labels : list of strings, optional</span>
 <span class="sd">            The throat labels that should be included in the count.</span>
 <span class="sd">            If not supplied, all throats are counted.</span>
-
 <span class="sd">        mode : str, optional</span>
 <span class="sd">            Specifies how the count should be performed.  The options are:</span>
 
-<span class="sd">            **&#39;or&#39;, &#39;union&#39;, &#39;any&#39;** : (default) Throats with *one or more* of</span>
-<span class="sd">            the given labels are counted.</span>
-
-<span class="sd">            **&#39;and&#39;, &#39;intersection&#39;, &#39;all&#39;** : Throats with *all* of the given</span>
-<span class="sd">            labels are counted.</span>
-
-<span class="sd">            **&#39;xor&#39;, &#39;exclusive_or&#39;** : Throats with *only one* of the given</span>
-<span class="sd">            labels are counted.</span>
-
-<span class="sd">            **&#39;nor&#39;, &#39;none&#39;, &#39;not&#39;** : Throats with *none* of the given labels</span>
-<span class="sd">            are counted.</span>
-
-<span class="sd">            **&#39;nand&#39;** : Throats with *some but not all* of the given labels</span>
-<span class="sd">            are counted.</span>
-
-<span class="sd">            **&#39;xnor&#39;** : Throats with *more than one* of the given labels are</span>
-<span class="sd">            counted.</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            mode            meaning</span>
+<span class="sd">            ==============  =====================================================</span>
+<span class="sd">            &#39;or&#39;            Throats with *one or more* of the given labels are</span>
+<span class="sd">                            counted. Also accepts &#39;union&#39; and &#39;any&#39;.</span>
+<span class="sd">            &#39;and&#39;           Throats with all of the given labels are returned.</span>
+<span class="sd">                            Also accepts &#39;intersection&#39; and &#39;all&#39;.</span>
+<span class="sd">            &#39;xor&#39;           Throats with *only one* of the given labels are</span>
+<span class="sd">                            counted. Also accepts &#39;exclusive_or&#39;.</span>
+<span class="sd">            &#39;nor&#39;           Throats with *none* of the given labels are counted.</span>
+<span class="sd">                            Also accepts &#39;not&#39; and &#39;none&#39;.</span>
+<span class="sd">            &#39;nand&#39;          Throats with *not all* of the given labels are</span>
+<span class="sd">                            counted.</span>
+<span class="sd">            &#39;xnor&#39;          Throats with *more than one* of the given labels are</span>
+<span class="sd">                            counted.</span>
+<span class="sd">            ==============  =====================================================</span>
 
 <span class="sd">        Returns</span>
 <span class="sd">        -------</span>
@@ -910,19 +900,19 @@
       </div>
     </div>
   
-  <script src="../../../_static/js/index.be7d3bbb2ef33a8344ce.js"></script>
-<footer class="footer mt-5 mt-md-0">
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
       <p class="copyright">
-    &copy; Copyright 2021, PMEAL.<br>
+    &copy; Copyright 2022, PMEAL.<br>
 </p>
     </div>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.3.1.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
 </p>
     </div>
     

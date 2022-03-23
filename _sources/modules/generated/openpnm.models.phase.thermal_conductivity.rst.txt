@@ -1,0 +1,39 @@
+:noindex:
+
+.. raw:: html
+
+   <p hidden>This is a module</p>
+
+Thermal\_conductivity
+=====================
+
+.. automodule:: openpnm.models.phase.thermal_conductivity
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      chung
+      sato
+      water
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

@@ -59,27 +59,3 @@ Voronoi
             Voronoi.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Voronoi.Np
-            Voronoi.Nt
-            Voronoi.Ps
-            Voronoi.Ts
-            Voronoi.am
-            Voronoi.conns
-            Voronoi.coords
-            Voronoi.im
-            Voronoi.models
-            Voronoi.name
-            Voronoi.network
-            Voronoi.project
-            Voronoi.settings
-            Voronoi.tri
-            Voronoi.vor
-   
-   

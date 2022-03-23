@@ -48,22 +48,3 @@ CubesAndCuboids
             CubesAndCuboids.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            CubesAndCuboids.Np
-            CubesAndCuboids.Nt
-            CubesAndCuboids.Ps
-            CubesAndCuboids.Ts
-            CubesAndCuboids.models
-            CubesAndCuboids.name
-            CubesAndCuboids.network
-            CubesAndCuboids.physics
-            CubesAndCuboids.project
-            CubesAndCuboids.settings
-   
-   

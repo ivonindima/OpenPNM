@@ -1,0 +1,442 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>openpnm.algorithms._mixins &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    
+    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+<link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  
+    
+    <link rel="stylesheet"
+      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+    <link rel="preload" as="font" type="font/woff2" crossorigin
+      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+  
+    
+      
+  
+    
+    <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
+    <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
+    
+    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+  
+    <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
+    <script src="../../../_static/jquery.js"></script>
+    <script src="../../../_static/underscore.js"></script>
+    <script src="../../../_static/doctools.js"></script>
+    <script src="../../../_static/clipboard.min.js"></script>
+    <script src="../../../_static/copybutton.js"></script>
+    <script crossorigin="anonymous" integrity="sha256-Ae2Vz/4ePdIu6ZyI/5ZGsYnb+m0JlOmKPjt6XZ9JJkA=" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.4/require.min.js"></script>
+    <script src="https://unpkg.com/@jupyter-widgets/html-manager@^0.20.1/dist/embed-amd.js"></script>
+    <script src="../../../_static/js/custom.js"></script>
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="docsearch:language" content="None">
+    
+
+    <!-- Google Analytics -->
+    
+  </head>
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+    
+    <div class="container-fluid" id="banner"></div>
+
+    
+    <nav class="navbar navbar-light navbar-expand-lg bg-light fixed-top bd-navbar" id="navbar-main"><div class="container-xl">
+
+  <div id="navbar-start">
+    
+    
+
+<a class="navbar-brand" href="https://www.openpnm.org">
+  <img src="../../../_static/openpnm_logo.png" class="logo" alt="logo">
+</a>
+
+
+    
+  </div>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsible" aria-controls="navbar-collapsible" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  
+  <div id="navbar-collapsible" class=" collapse navbar-collapse">
+    <div id="navbar-center" class="mr-auto">
+      
+      <div class="navbar-center-item">
+        <ul id="navbar-main-elements" class="navbar-nav">
+    <li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../user_guide/installation.html">
+  Installation
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../user_guide/index.html">
+  User Guide
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../modules/index.html">
+  Module Reference
+ </a>
+</li>
+
+<li class="toctree-l1 nav-item">
+ <a class="reference internal nav-link" href="../../../examples_index.html">
+  Examples
+ </a>
+</li>
+
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://github.com/PMEAL/OpenPNM/issues">Issue Tracker<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+    <li class="nav-item">
+        <a class="nav-link nav-external" href="https://github.com/PMEAL/OpenPNM/discussions">Get Help<i class="fas fa-external-link-alt"></i></a>
+    </li>
+    
+</ul>
+      </div>
+      
+    </div>
+
+    <div id="navbar-end">
+      
+      <div class="navbar-end-item">
+        <ul id="navbar-icon-links" class="navbar-nav" aria-label="Quick Links">
+        <li class="nav-item">
+          <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
+            <label class="sr-only">GitHub</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
+            <label class="sr-only">Substack</label></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
+            <label class="sr-only">Twitter</label></a>
+        </li>
+      </ul>
+      </div>
+      
+    </div>
+  </div>
+</div>
+    </nav>
+    
+
+    <div class="container-xl">
+      <div class="row">
+          
+            
+            <!-- Only show if we have sidebars configured, else just a small margin  -->
+            <div class="col-12 col-md-3 bd-sidebar">
+              <div class="sidebar-start-items"><form class="bd-search d-flex align-items-center" action="../../../search.html" method="get">
+  <i class="icon fas fa-search"></i>
+  <input type="search" class="form-control" name="q" id="search-input" placeholder="Search the docs ..." aria-label="Search the docs ..." autocomplete="off" >
+</form><nav class="bd-links" id="bd-docs-nav" aria-label="Main navigation">
+  <div class="bd-toc-item active">
+    
+  </div>
+</nav>
+              </div>
+              <div class="sidebar-end-items">
+              </div>
+            </div>
+            
+          
+
+          
+          <div class="d-none d-xl-block col-xl-2 bd-toc">
+            
+          </div>
+          
+
+          
+          
+            
+          
+          <main class="col-12 col-md-9 col-xl-7 py-md-5 pl-md-5 pr-md-4 bd-content" role="main">
+              
+              <div>
+                
+  <h1>Source code for openpnm.algorithms._mixins</h1><div class="highlight"><pre>
+<span></span><span class="kn">import</span> <span class="nn">logging</span>
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
+<span class="kn">import</span> <span class="nn">warnings</span>
+<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">prettify_logger_message</span>
+<span class="kn">from</span> <span class="nn">openpnm.utils</span> <span class="kn">import</span> <span class="n">Docorator</span>
+<span class="n">docstr</span> <span class="o">=</span> <span class="n">Docorator</span><span class="p">()</span>
+<span class="n">logger</span> <span class="o">=</span> <span class="n">logging</span><span class="o">.</span><span class="n">getLogger</span><span class="p">(</span><span class="vm">__name__</span><span class="p">)</span>
+
+
+<span class="n">__all__</span> <span class="o">=</span> <span class="p">[</span>
+    <span class="s1">&#39;BCsMixin&#39;</span>
+<span class="p">]</span>
+
+
+<div class="viewcode-block" id="BCsMixin"><a class="viewcode-back" href="../../../modules/generated/openpnm.algorithms.BCsMixin.html#openpnm.algorithms.BCsMixin">[docs]</a><span class="k">class</span> <span class="nc">BCsMixin</span><span class="p">:</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Mixin class to add boundary condition functionality to algorithms.</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="BCsMixin.set_value_BC"><a class="viewcode-back" href="../../../modules/generated/openpnm.algorithms.BCsMixin.set_value_BC.html#openpnm.algorithms.BCsMixin.set_value_BC">[docs]</a>    <span class="k">def</span> <span class="nf">set_value_BC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pores</span><span class="p">,</span> <span class="n">values</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;merge&#39;</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Applues constant value boundary conditons to the specified pores.</span>
+
+<span class="sd">        These are sometimes referred to as Dirichlet conditions.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pores : array_like</span>
+<span class="sd">            The pore indices where the condition should be applied</span>
+<span class="sd">        values : float or array_like</span>
+<span class="sd">            The value to apply in each pore. If a scalar is supplied</span>
+<span class="sd">            it is assigne to all locations, and if a vector is applied is</span>
+<span class="sd">            must be the same size as the indices given in ``pores``.</span>
+<span class="sd">        mode : str, optional</span>
+<span class="sd">            Controls how the boundary conditions are applied. The default</span>
+<span class="sd">            value is &#39;merge&#39;. Options are:</span>
+
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;merge&#39;      Adds supplied boundary conditions to already</span>
+<span class="sd">                         existing conditions, and also overwrites any</span>
+<span class="sd">                         existing values. If BCs of the complementary type</span>
+<span class="sd">                         already exist in the given locations, those</span>
+<span class="sd">                         values are kept.</span>
+<span class="sd">            &#39;overwrite&#39;  Deletes all boundary conditions of the given type</span>
+<span class="sd">                         then adds the specified new ones (unless</span>
+<span class="sd">                         locations already have BCs of the other type)</span>
+<span class="sd">            ===========  =====================================================</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The definition of ``quantity`` is specified in the algorithm&#39;s</span>
+<span class="sd">        ``settings``, e.g. ``alg.settings[&#39;quantity&#39;] = &#39;pore.pressure&#39;``.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_BC</span><span class="p">(</span><span class="n">pores</span><span class="o">=</span><span class="n">pores</span><span class="p">,</span> <span class="n">bctype</span><span class="o">=</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="n">bcvalues</span><span class="o">=</span><span class="n">values</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span></div>
+
+<div class="viewcode-block" id="BCsMixin.set_rate_BC"><a class="viewcode-back" href="../../../modules/generated/openpnm.algorithms.BCsMixin.set_rate_BC.html#openpnm.algorithms.BCsMixin.set_rate_BC">[docs]</a>    <span class="k">def</span> <span class="nf">set_rate_BC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pores</span><span class="p">,</span> <span class="n">rates</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">total_rate</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;merge&#39;</span><span class="p">,</span>
+                    <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Apply constant rate boundary conditons to the specified locations.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pores : array_like</span>
+<span class="sd">            The pore indices where the condition should be applied</span>
+<span class="sd">        rates : float or array_like, optional</span>
+<span class="sd">            The rates to apply in each pore. If a scalar is supplied that</span>
+<span class="sd">            rate is assigned to all locations, and if a vector is supplied</span>
+<span class="sd">            it must be the same size as the indices given in ``pores``.</span>
+<span class="sd">        total_rate : float, optional</span>
+<span class="sd">            The total rate supplied to all pores. The rate supplied by</span>
+<span class="sd">            this argument is divided evenly among all pores. A scalar must</span>
+<span class="sd">            be supplied! Total_rate cannot be specified if rate is</span>
+<span class="sd">            specified.</span>
+<span class="sd">        mode : str, optional</span>
+<span class="sd">            Controls how the boundary conditions are applied. The default</span>
+<span class="sd">            value is &#39;merge&#39;. Options are:</span>
+
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;merge&#39;      Adds supplied boundary conditions to already</span>
+<span class="sd">                         existing conditions, and also overwrites any</span>
+<span class="sd">                         existing values. If BCs of the complementary type</span>
+<span class="sd">                         already exist in the given locations, those</span>
+<span class="sd">                         values are kept.</span>
+<span class="sd">            &#39;overwrite&#39;  Deletes all boundary conditions of the given type</span>
+<span class="sd">                         then adds the specified new ones (unless</span>
+<span class="sd">                         locations already have BCs of the other type)</span>
+<span class="sd">            ===========  =====================================================</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        The definition of ``quantity`` is specified in the algorithm&#39;s</span>
+<span class="sd">        ``settings``, e.g. ``alg.settings[&#39;quantity&#39;] = &#39;pore.pressure&#39;``.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># support &#39;values&#39; keyword</span>
+        <span class="k">if</span> <span class="s1">&#39;values&#39;</span> <span class="ow">in</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">keys</span><span class="p">():</span>
+            <span class="n">rates</span> <span class="o">=</span> <span class="n">kwargs</span><span class="o">.</span><span class="n">pop</span><span class="p">(</span><span class="s2">&quot;values&quot;</span><span class="p">)</span>
+            <span class="n">warnings</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;&#39;values&#39; has been deprecated, use &#39;rates&#39; instead.&quot;</span><span class="p">,</span>
+                          <span class="ne">DeprecationWarning</span><span class="p">)</span>
+        <span class="c1"># handle total_rate feature</span>
+        <span class="k">if</span> <span class="n">total_rate</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">np</span><span class="o">.</span><span class="n">isscalar</span><span class="p">(</span><span class="n">total_rate</span><span class="p">):</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;total_rate argument accepts scalar only!&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">rates</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+                <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;Cannot specify both arguments: rate and &#39;</span>
+                                <span class="o">+</span> <span class="s1">&#39;total_rate&#39;</span><span class="p">)</span>
+            <span class="n">pores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_indices</span><span class="p">(</span><span class="n">pores</span><span class="p">)</span>
+            <span class="n">rates</span> <span class="o">=</span> <span class="n">total_rate</span><span class="o">/</span><span class="n">pores</span><span class="o">.</span><span class="n">size</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">_set_BC</span><span class="p">(</span><span class="n">pores</span><span class="o">=</span><span class="n">pores</span><span class="p">,</span> <span class="n">bctype</span><span class="o">=</span><span class="s1">&#39;rate&#39;</span><span class="p">,</span> <span class="n">bcvalues</span><span class="o">=</span><span class="n">rates</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="n">mode</span><span class="p">)</span></div>
+
+    <span class="nd">@docstr</span><span class="o">.</span><span class="n">get_sections</span><span class="p">(</span><span class="n">base</span><span class="o">=</span><span class="s1">&#39;GenericTransport._set_BC&#39;</span><span class="p">,</span>
+                         <span class="n">sections</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;Parameters&#39;</span><span class="p">,</span> <span class="s1">&#39;Notes&#39;</span><span class="p">])</span>
+    <span class="k">def</span> <span class="nf">_set_BC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pores</span><span class="p">,</span> <span class="n">bctype</span><span class="p">,</span> <span class="n">bcvalues</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;merge&#39;</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        This private method is called by public facing BC methods, to</span>
+<span class="sd">        apply boundary conditions to specified pores</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pores : array_like</span>
+<span class="sd">            The pores where the boundary conditions should be applied</span>
+<span class="sd">        bctype : str</span>
+<span class="sd">            Specifies the type or the name of boundary condition to apply.</span>
+<span class="sd">            The types can be one one of the following:</span>
+
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            bctype       meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;value&#39;      Specify the value of the quantity in each pore</span>
+<span class="sd">            &#39;rate&#39;       Specify the flow rate into each pore</span>
+<span class="sd">            ===========  =====================================================</span>
+
+<span class="sd">        bcvalues : int or array_like</span>
+<span class="sd">            The boundary value to apply, such as concentration or rate.</span>
+<span class="sd">            If a single value is given, it&#39;s assumed to apply to all</span>
+<span class="sd">            locations unless the &#39;total_rate&#39; bc_type is supplied whereby</span>
+<span class="sd">            a single value corresponds to a total rate to be divded evenly</span>
+<span class="sd">            among all pores. Otherwise, different values can be applied to</span>
+<span class="sd">            all pores in the form of an array of the same length as</span>
+<span class="sd">            ``pores``.</span>
+<span class="sd">        mode : str, optional</span>
+<span class="sd">            Controls how the boundary conditions are applied. The default</span>
+<span class="sd">            value is &#39;merge&#39;. Options are:</span>
+
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            mode         meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;merge&#39;      Adds supplied boundary conditions to already existing</span>
+<span class="sd">                         conditions, and also overwrites any existing values.</span>
+<span class="sd">                         If BCs of the complementary type already exist in the</span>
+<span class="sd">                         given locations, these values are kept.</span>
+<span class="sd">            &#39;overwrite&#39;  Deletes all boundary conditions of the given type</span>
+<span class="sd">                         then adds the specified new ones (unless locations</span>
+<span class="sd">                         already have BCs of the other type).</span>
+<span class="sd">            ===========  =====================================================</span>
+
+<span class="sd">        Notes</span>
+<span class="sd">        -----</span>
+<span class="sd">        It is not possible to have multiple boundary conditions for a</span>
+<span class="sd">        specified location in one algorithm. Use ``remove_BCs`` to</span>
+<span class="sd">        clear existing BCs before applying new ones or ``mode=&#39;overwrite&#39;``</span>
+<span class="sd">        which removes all existing BC&#39;s before applying the new ones.</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="c1"># Hijack the parse_mode function to verify bctype argument</span>
+        <span class="n">bctype</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_mode</span><span class="p">(</span><span class="n">bctype</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;rate&#39;</span><span class="p">],</span> <span class="n">single</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">othertype</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">setdiff1d</span><span class="p">([</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;rate&#39;</span><span class="p">],</span> <span class="n">bctype</span><span class="p">)</span><span class="o">.</span><span class="n">item</span><span class="p">()</span>
+        <span class="n">mode</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_mode</span><span class="p">(</span><span class="n">mode</span><span class="p">,</span> <span class="n">allowed</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;merge&#39;</span><span class="p">,</span> <span class="s1">&#39;overwrite&#39;</span><span class="p">],</span> <span class="n">single</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+        <span class="n">pores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_parse_indices</span><span class="p">(</span><span class="n">pores</span><span class="p">)</span>
+
+        <span class="n">values</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">bcvalues</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">values</span><span class="o">.</span><span class="n">size</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="ow">and</span> <span class="n">values</span><span class="o">.</span><span class="n">size</span> <span class="o">!=</span> <span class="n">pores</span><span class="o">.</span><span class="n">size</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">Exception</span><span class="p">(</span><span class="s1">&#39;The number of values must match the number of locations&#39;</span><span class="p">)</span>
+
+        <span class="c1"># Catch pores with existing BCs</span>
+        <span class="k">if</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;merge&#39;</span><span class="p">:</span>         <span class="c1"># Remove offenders, and warn user</span>
+            <span class="n">existing_bcs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;pore.bc_</span><span class="si">{</span><span class="n">othertype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">])</span>
+            <span class="n">inds</span> <span class="o">=</span> <span class="n">pores</span><span class="p">[</span><span class="n">existing_bcs</span><span class="p">[</span><span class="n">pores</span><span class="p">]]</span>
+        <span class="k">elif</span> <span class="n">mode</span> <span class="o">==</span> <span class="s1">&#39;overwrite&#39;</span><span class="p">:</span>   <span class="c1"># Remove existing BCs and write new ones</span>
+            <span class="bp">self</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;pore.bc_</span><span class="si">{</span><span class="n">bctype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+            <span class="n">existing_bcs</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">isfinite</span><span class="p">(</span><span class="bp">self</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;pore.bc_</span><span class="si">{</span><span class="n">othertype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">])</span>
+            <span class="n">inds</span> <span class="o">=</span> <span class="n">pores</span><span class="p">[</span><span class="n">existing_bcs</span><span class="p">[</span><span class="n">pores</span><span class="p">]]</span>
+        <span class="c1"># Now drop any pore indices which have BCs that should be kept</span>
+        <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">inds</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">msg</span> <span class="o">=</span> <span class="p">(</span><span class="sa">r</span><span class="s1">&#39;Boundary conditions are already specified in the following given&#39;</span>
+                   <span class="sa">f</span><span class="s1">&#39; pores, so these will be skipped: </span><span class="si">{</span><span class="n">inds</span><span class="o">.</span><span class="fm">__repr__</span><span class="p">()</span><span class="si">}</span><span class="s1">&#39;</span><span class="p">)</span>
+            <span class="n">logger</span><span class="o">.</span><span class="n">warning</span><span class="p">(</span><span class="n">prettify_logger_message</span><span class="p">(</span><span class="n">msg</span><span class="p">))</span>
+            <span class="n">pores</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">setdiff1d</span><span class="p">(</span><span class="n">pores</span><span class="p">,</span> <span class="n">inds</span><span class="p">)</span>
+
+        <span class="c1"># Store boundary values</span>
+        <span class="bp">self</span><span class="p">[</span><span class="sa">f</span><span class="s2">&quot;pore.bc_</span><span class="si">{</span><span class="n">bctype</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">][</span><span class="n">pores</span><span class="p">]</span> <span class="o">=</span> <span class="n">values</span>
+
+<div class="viewcode-block" id="BCsMixin.remove_BC"><a class="viewcode-back" href="../../../modules/generated/openpnm.algorithms.BCsMixin.remove_BC.html#openpnm.algorithms.BCsMixin.remove_BC">[docs]</a>    <span class="k">def</span> <span class="nf">remove_BC</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">pores</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">bctype</span><span class="o">=</span><span class="s1">&#39;all&#39;</span><span class="p">):</span>
+        <span class="sa">r</span><span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">        Removes boundary conditions from the specified pores.</span>
+
+<span class="sd">        Parameters</span>
+<span class="sd">        ----------</span>
+<span class="sd">        pores : array_like, optional</span>
+<span class="sd">            The pores from which boundary conditions are to be removed. If</span>
+<span class="sd">            no pores are specified, then BCs are removed from all pores.</span>
+<span class="sd">            No error is thrown if the provided pores do not have any BCs</span>
+<span class="sd">            assigned.</span>
+<span class="sd">        bctype : str, or List[str]</span>
+<span class="sd">            Specifies which type of boundary condition to remove. The</span>
+<span class="sd">            default value is &#39;all&#39;. Options are:</span>
+
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            bctype       meaning</span>
+<span class="sd">            ===========  =====================================================</span>
+<span class="sd">            &#39;all&#39;        Removes all boundary conditions</span>
+<span class="sd">            &#39;value&#39;      Removes only value conditions</span>
+<span class="sd">            &#39;rate&#39;       Removes only rate conditions</span>
+<span class="sd">            ===========  =====================================================</span>
+
+<span class="sd">        &quot;&quot;&quot;</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">bctype</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">bctype</span> <span class="o">=</span> <span class="p">[</span><span class="n">bctype</span><span class="p">]</span>
+        <span class="k">if</span> <span class="s1">&#39;all&#39;</span> <span class="ow">in</span> <span class="n">bctype</span><span class="p">:</span>
+            <span class="n">bctype</span> <span class="o">=</span> <span class="p">[</span><span class="s1">&#39;value&#39;</span><span class="p">,</span> <span class="s1">&#39;rate&#39;</span><span class="p">]</span>
+        <span class="k">if</span> <span class="n">pores</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="n">pores</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">Ps</span>
+        <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;pore.bc_value&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;value&#39;</span> <span class="ow">in</span> <span class="n">bctype</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;pore.bc_value&#39;</span><span class="p">][</span><span class="n">pores</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span>
+        <span class="k">if</span> <span class="p">(</span><span class="s1">&#39;pore.bc_rate&#39;</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">keys</span><span class="p">())</span> <span class="ow">and</span> <span class="p">(</span><span class="s1">&#39;rate&#39;</span> <span class="ow">in</span> <span class="n">bctype</span><span class="p">):</span>
+            <span class="bp">self</span><span class="p">[</span><span class="s1">&#39;pore.bc_rate&#39;</span><span class="p">][</span><span class="n">pores</span><span class="p">]</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">nan</span></div></div>
+</pre></div>
+
+              </div>
+              
+              
+          </main>
+          
+
+      </div>
+    </div>
+  
+    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+  <footer class="footer mt-5 mt-md-0">
+  <div class="container">
+    
+    <div class="footer-item">
+      <p class="copyright">
+    &copy; Copyright 2022, PMEAL.<br>
+</p>
+    </div>
+    
+    <div class="footer-item">
+      <p class="sphinx-version">
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+</p>
+    </div>
+    
+  </div>
+</footer>
+  </body>
+</html>

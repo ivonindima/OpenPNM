@@ -1,0 +1,8 @@
+:orphan:
+
+remove_model
+=============================================
+
+.. currentmodule:: openpnm.phase.mixtures
+
+.. automethod:: GasByName.remove_model

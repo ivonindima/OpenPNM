@@ -40,20 +40,3 @@ GenericAlgorithm
             GenericAlgorithm.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            GenericAlgorithm.Np
-            GenericAlgorithm.Nt
-            GenericAlgorithm.Ps
-            GenericAlgorithm.Ts
-            GenericAlgorithm.name
-            GenericAlgorithm.network
-            GenericAlgorithm.project
-            GenericAlgorithm.settings
-   
-   

@@ -1,0 +1,6 @@
+to\_networkx
+============
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: to_networkx

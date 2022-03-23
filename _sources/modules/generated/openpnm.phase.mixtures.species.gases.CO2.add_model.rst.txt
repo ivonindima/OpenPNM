@@ -1,0 +1,8 @@
+:orphan:
+
+add_model
+==================================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.gases
+
+.. automethod:: CO2.add_model

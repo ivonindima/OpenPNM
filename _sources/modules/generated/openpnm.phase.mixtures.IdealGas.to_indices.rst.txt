@@ -1,0 +1,8 @@
+:orphan:
+
+to_indices
+==========================================
+
+.. currentmodule:: openpnm.phase.mixtures
+
+.. automethod:: IdealGas.to_indices

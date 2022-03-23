@@ -48,23 +48,3 @@ FickianDiffusion
             FickianDiffusion.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            FickianDiffusion.A
-            FickianDiffusion.Np
-            FickianDiffusion.Nt
-            FickianDiffusion.Ps
-            FickianDiffusion.Ts
-            FickianDiffusion.b
-            FickianDiffusion.name
-            FickianDiffusion.network
-            FickianDiffusion.project
-            FickianDiffusion.settings
-            FickianDiffusion.x
-   
-   

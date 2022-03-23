@@ -52,15 +52,4 @@ Misc
 
    
    
-   .. rubric:: Modules
-
-   .. autosummary::
-      :toctree:
-      :recursive:
-   
-      openpnm.models.misc.basic_math
-      openpnm.models.misc.neighbor_lookups
-      openpnm.models.misc.simple_equations
-      openpnm.models.misc.statistical_distributions
-   
    

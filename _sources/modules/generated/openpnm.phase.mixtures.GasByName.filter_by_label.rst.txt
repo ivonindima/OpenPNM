@@ -1,0 +1,8 @@
+:orphan:
+
+filter_by_label
+================================================
+
+.. currentmodule:: openpnm.phase.mixtures
+
+.. automethod:: GasByName.filter_by_label

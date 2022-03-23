@@ -1,0 +1,6 @@
+from\_csv
+=========
+
+.. currentmodule:: openpnm.io
+
+.. autofunction:: from_csv

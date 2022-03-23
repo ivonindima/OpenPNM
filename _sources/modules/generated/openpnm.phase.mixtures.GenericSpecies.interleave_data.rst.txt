@@ -1,0 +1,8 @@
+:orphan:
+
+interleave_data
+=====================================================
+
+.. currentmodule:: openpnm.phase.mixtures
+
+.. automethod:: GenericSpecies.interleave_data

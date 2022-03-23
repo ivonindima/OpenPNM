@@ -48,23 +48,3 @@ TransientReactiveTransport
             TransientReactiveTransport.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            TransientReactiveTransport.A
-            TransientReactiveTransport.Np
-            TransientReactiveTransport.Nt
-            TransientReactiveTransport.Ps
-            TransientReactiveTransport.Ts
-            TransientReactiveTransport.b
-            TransientReactiveTransport.name
-            TransientReactiveTransport.network
-            TransientReactiveTransport.project
-            TransientReactiveTransport.settings
-            TransientReactiveTransport.x
-   
-   

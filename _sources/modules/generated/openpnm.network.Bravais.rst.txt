@@ -57,25 +57,3 @@ Bravais
             Bravais.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Bravais.Np
-            Bravais.Nt
-            Bravais.Ps
-            Bravais.Ts
-            Bravais.am
-            Bravais.conns
-            Bravais.coords
-            Bravais.im
-            Bravais.models
-            Bravais.name
-            Bravais.network
-            Bravais.project
-            Bravais.settings
-   
-   

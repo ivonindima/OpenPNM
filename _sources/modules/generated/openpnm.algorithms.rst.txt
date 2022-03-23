@@ -27,6 +27,7 @@ Algorithms
 
    
       AdvectionDiffusion
+      BCsMixin
       FickianDiffusion
       FourierConduction
       GenericAlgorithm

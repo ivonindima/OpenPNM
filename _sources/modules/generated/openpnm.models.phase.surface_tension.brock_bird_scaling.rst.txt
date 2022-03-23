@@ -1,0 +1,6 @@
+brock\_bird\_scaling
+====================
+
+.. currentmodule:: openpnm.models.phase.surface_tension
+
+.. autofunction:: brock_bird_scaling

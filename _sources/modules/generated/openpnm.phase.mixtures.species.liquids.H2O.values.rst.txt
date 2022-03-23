@@ -1,0 +1,8 @@
+:orphan:
+
+values
+=================================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.liquids
+
+.. automethod:: H2O.values

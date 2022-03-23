@@ -22,11 +22,8 @@ Tools
    
       add_all_label
       crop
-      dimensionality
-      generate_base_points
       get_shape
       get_spacing
-      isoutside
       join
       label_faces
       label_surface_nodes

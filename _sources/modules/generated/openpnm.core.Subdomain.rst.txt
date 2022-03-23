@@ -44,20 +44,3 @@ Subdomain
             Subdomain.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            Subdomain.Np
-            Subdomain.Nt
-            Subdomain.Ps
-            Subdomain.Ts
-            Subdomain.name
-            Subdomain.network
-            Subdomain.project
-            Subdomain.settings
-   
-   

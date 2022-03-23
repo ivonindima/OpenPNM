@@ -1,0 +1,40 @@
+:noindex:
+
+.. raw:: html
+
+   <p hidden>This is a module</p>
+
+Surface\_tension
+================
+
+.. automodule:: openpnm.models.phase.surface_tension
+
+   
+   
+   
+
+   
+   
+   .. rubric:: Functions
+
+   .. autosummary::
+      :toctree:
+   
+      brock_bird_scaling
+      eotvos
+      guggenheim_katayama
+      water
+   
+   
+
+   
+   
+   
+
+   
+   
+   
+
+   
+   
+   

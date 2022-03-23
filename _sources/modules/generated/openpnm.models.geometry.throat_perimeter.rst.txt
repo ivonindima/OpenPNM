@@ -28,15 +28,6 @@ Throat\_perimeter
 
    
    
-   .. rubric:: Classes
-
-   .. autosummary::
-      :nosignatures:
-      :toctree:
-
-   
-      Docorator
-   
    
 
    

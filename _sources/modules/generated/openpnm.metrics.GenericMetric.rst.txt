@@ -34,20 +34,3 @@ GenericMetric
             GenericMetric.values
    
    
-
-   
-   
-   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
-      .. autosummary::
-         :toctree:
-         
-            GenericMetric.Np
-            GenericMetric.Nt
-            GenericMetric.Ps
-            GenericMetric.Ts
-            GenericMetric.name
-            GenericMetric.network
-            GenericMetric.project
-            GenericMetric.settings
-   
-   

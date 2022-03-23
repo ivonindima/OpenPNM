@@ -1,0 +1,21 @@
+BCsMixin
+===========================
+
+.. currentmodule:: openpnm.algorithms
+
+.. autoclass:: BCsMixin
+   :no-members:
+   :no-inherited-members:
+   :no-special-members:
+
+   
+   
+   .. HACK -- we don't want this to appear in the output, but autosummary should still generate the pages.
+      .. autosummary::
+         :toctree:
+         
+            BCsMixin.remove_BC
+            BCsMixin.set_rate_BC
+            BCsMixin.set_value_BC
+   
+   

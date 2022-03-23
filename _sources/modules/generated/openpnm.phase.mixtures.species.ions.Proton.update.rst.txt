@@ -1,0 +1,8 @@
+:orphan:
+
+update
+=================================================
+
+.. currentmodule:: openpnm.phase.mixtures.species.ions
+
+.. automethod:: Proton.update
