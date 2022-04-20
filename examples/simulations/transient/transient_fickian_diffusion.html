@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Transient Fickian Diffusion &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Transient Fickian Diffusion &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -834,7 +827,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Transient-Fickian-Diffusion">
-<h1>Transient Fickian Diffusion<a class="headerlink" href="#Transient-Fickian-Diffusion" title="Permalink to this headline">¶</a></h1>
+<h1>Transient Fickian Diffusion<a class="headerlink" href="#Transient-Fickian-Diffusion" title="Permalink to this headline">#</a></h1>
 <p>The package <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> allows for the simulation of many transport phenomena in porous media such as Stokes flow, Fickian diffusion, advection-diffusion, transport of charged species, etc. Transient and steady-state simulations are both supported. An example of a transient Fickian diffusion simulation through a <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> pore network is shown here.</p>
 <p>First, <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> is imported.</p>
 <div class="nbinput nblast docutils container">
@@ -851,7 +844,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Define-new-workspace-and-project">
-<h2>Define new workspace and project<a class="headerlink" href="#Define-new-workspace-and-project" title="Permalink to this headline">¶</a></h2>
+<h2>Define new workspace and project<a class="headerlink" href="#Define-new-workspace-and-project" title="Permalink to this headline">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -864,7 +857,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Generate-a-pore-network">
-<h2>Generate a pore network<a class="headerlink" href="#Generate-a-pore-network" title="Permalink to this headline">¶</a></h2>
+<h2>Generate a pore network<a class="headerlink" href="#Generate-a-pore-network" title="Permalink to this headline">#</a></h2>
 <p>An arbitrary <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> 3D pore network is generated consisting of a layer of <span class="math notranslate nohighlight">\(29\times13\)</span> pores with a constant pore to pore centers spacing of <span class="math notranslate nohighlight">\({10}^{-4}{m}\)</span>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -877,7 +870,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Create-a-geometry">
-<h2>Create a geometry<a class="headerlink" href="#Create-a-geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Create a geometry<a class="headerlink" href="#Create-a-geometry" title="Permalink to this headline">#</a></h2>
 <p>Here, a geometry, corresponding to the created network, is created. The geometry contains information about the size of pores and throats in the network such as length and diameter, etc. <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> has many prebuilt geometries that represent the microstructure of different materials such as Toray090 carbon papers, sand stone, electrospun fibers, etc. In this example, a simple geometry known as <code class="docutils literal notranslate"><span class="pre">SpheresAndCylinders</span></code> that assigns random diameter values to pores throats, with certain
 constraints, is used.</p>
 <div class="nbinput nblast docutils container">
@@ -890,7 +883,7 @@ constraints, is used.</p>
 </div>
 </section>
 <section id="Add-a-phase">
-<h2>Add a phase<a class="headerlink" href="#Add-a-phase" title="Permalink to this headline">¶</a></h2>
+<h2>Add a phase<a class="headerlink" href="#Add-a-phase" title="Permalink to this headline">#</a></h2>
 <p>Then, a phase (water in this example) is added to the simulation and assigned to the network. The phase contains the physical properties of the fluid considered in the simulation such as the viscosity, etc. Many predefined phases as available on <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -915,7 +908,7 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Add-a-physics">
-<h2>Add a physics<a class="headerlink" href="#Add-a-physics" title="Permalink to this headline">¶</a></h2>
+<h2>Add a physics<a class="headerlink" href="#Add-a-physics" title="Permalink to this headline">#</a></h2>
 <p>Next, a physics object is defined. The physics object stores information about the different physical models used in the simulation and is assigned to specific network, geometry and phase objects. This ensures that the different physical models will only have access to information about the network, geometry and phase objects to which they are assigned. In fact, models (such as Stokes flow or Fickian diffusion) require information about the network (such as the connectivity between pores), the
 geometry (such as the pores and throats diameters), and the phase (such as the diffusivity coefficient).</p>
 <div class="nbinput docutils container">
@@ -963,7 +956,7 @@ Input <span class="ansi-green-fg">In [7]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Defining-a-new-model">
-<h2>Defining a new model<a class="headerlink" href="#Defining-a-new-model" title="Permalink to this headline">¶</a></h2>
+<h2>Defining a new model<a class="headerlink" href="#Defining-a-new-model" title="Permalink to this headline">#</a></h2>
 <p>The physical model, consisting of Fickian diffusion, is defined and attached to the physics object previously defined.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -990,7 +983,7 @@ Input <span class="ansi-green-fg">In [8]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Define-a-transient-Fickian-diffusion-algorithm">
-<h2>Define a transient Fickian diffusion algorithm<a class="headerlink" href="#Define-a-transient-Fickian-diffusion-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2>Define a transient Fickian diffusion algorithm<a class="headerlink" href="#Define-a-transient-Fickian-diffusion-algorithm" title="Permalink to this headline">#</a></h2>
 <p>Here, an algorithm for the simulation of transient Fickian diffusion is defined. It is assigned to the network and phase of interest to be able to retrieve all the information needed to build systems of linear equations.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1015,7 +1008,7 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Add-boundary-conditions">
-<h2>Add boundary conditions<a class="headerlink" href="#Add-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Add boundary conditions<a class="headerlink" href="#Add-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Next, Dirichlet boundary conditions are added over the back and front boundaries of the network.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1042,11 +1035,11 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Define-initial-conditions">
-<h2>Define initial conditions<a class="headerlink" href="#Define-initial-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Define initial conditions<a class="headerlink" href="#Define-initial-conditions" title="Permalink to this headline">#</a></h2>
 <p>Initial conditions must be specified when <code class="docutils literal notranslate"><span class="pre">alg.run</span></code> is called as <code class="docutils literal notranslate"><span class="pre">alg.run(x0=x0)</span></code>, where <code class="docutils literal notranslate"><span class="pre">x0</span></code> could either be a scalar (in which case it’ll be broadcasted to all pores), or an array.</p>
 </section>
 <section id="Setup-the-transient-algorithm-settings">
-<h2>Setup the transient algorithm settings<a class="headerlink" href="#Setup-the-transient-algorithm-settings" title="Permalink to this headline">¶</a></h2>
+<h2>Setup the transient algorithm settings<a class="headerlink" href="#Setup-the-transient-algorithm-settings" title="Permalink to this headline">#</a></h2>
 <p>The settings of the transient algorithm are updated here. When calling <code class="docutils literal notranslate"><span class="pre">alg.run</span></code>, you can pass the following arguments: - <code class="docutils literal notranslate"><span class="pre">x0</span></code>: initial conditions - <code class="docutils literal notranslate"><span class="pre">tspan</span></code>: integration time span - <code class="docutils literal notranslate"><span class="pre">saveat</span></code>: the interval at which the solution is to be stored</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1060,7 +1053,7 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Print-the-algorithm-settings">
-<h2>Print the algorithm settings<a class="headerlink" href="#Print-the-algorithm-settings" title="Permalink to this headline">¶</a></h2>
+<h2>Print the algorithm settings<a class="headerlink" href="#Print-the-algorithm-settings" title="Permalink to this headline">#</a></h2>
 <p>One can print the algorithm’s settings as shown here.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1086,7 +1079,7 @@ Input <span class="ansi-green-fg">In [12]</span>, in <span class="ansi-cyan-fg">
 <p>Note that the <code class="docutils literal notranslate"><span class="pre">quantity</span></code> corresponds to the quantity solved for.</p>
 </section>
 <section id="Run-the-algorithm">
-<h2>Run the algorithm<a class="headerlink" href="#Run-the-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2>Run the algorithm<a class="headerlink" href="#Run-the-algorithm" title="Permalink to this headline">#</a></h2>
 <p>The algorithm is run here.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1111,7 +1104,7 @@ Input <span class="ansi-green-fg">In [13]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Post-process-and-export-the-results">
-<h2>Post process and export the results<a class="headerlink" href="#Post-process-and-export-the-results" title="Permalink to this headline">¶</a></h2>
+<h2>Post process and export the results<a class="headerlink" href="#Post-process-and-export-the-results" title="Permalink to this headline">#</a></h2>
 <p>Once the simulation is successfully performed. The solution at every time steps is stored within the algorithm object. The algorithm’s stored information is printed here.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -1181,7 +1174,7 @@ Input <span class="ansi-green-fg">In [16]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Visialization-using-Matplotlib">
-<h2>Visialization using Matplotlib<a class="headerlink" href="#Visialization-using-Matplotlib" title="Permalink to this headline">¶</a></h2>
+<h2>Visialization using Matplotlib<a class="headerlink" href="#Visialization-using-Matplotlib" title="Permalink to this headline">#</a></h2>
 <p>One can perform post processing and visualization using the exported files on an external software such as <code class="docutils literal notranslate"><span class="pre">Paraview</span></code>. Additionally, the <code class="docutils literal notranslate"><span class="pre">Pyhton</span></code> library <code class="docutils literal notranslate"><span class="pre">Matplotlib</span></code> can be used as shown here to plot the concentration color map at steady-state.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
@@ -1230,8 +1223,9 @@ Input <span class="ansi-green-fg">In [17]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1242,7 +1236,7 @@ Input <span class="ansi-green-fg">In [17]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

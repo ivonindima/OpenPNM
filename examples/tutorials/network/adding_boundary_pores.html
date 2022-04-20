@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Adding Boundary Pores &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Adding Boundary Pores &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -779,7 +772,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Adding-Boundary-Pores">
-<h1>Adding Boundary Pores<a class="headerlink" href="#Adding-Boundary-Pores" title="Permalink to this headline">¶</a></h1>
+<h1>Adding Boundary Pores<a class="headerlink" href="#Adding-Boundary-Pores" title="Permalink to this headline">#</a></h1>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -833,7 +826,6 @@ openpnm.network.Delaunay : net_01
 11    throat.all                                    601
 12    throat.boundary                               0
 13    throat.internal                               553
-14    throat.surface                                48
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -859,7 +851,7 @@ apper to be randomly oriented relative to the internal pore they are connected w
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c57af0a0&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb803f59490&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -906,7 +898,6 @@ openpnm.network.Delaunay : net_01
 11    throat.all                                    553
 12    throat.boundary                               0
 13    throat.internal                               553
-14    throat.surface                                0
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -931,7 +922,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c5893070&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb804094580&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -941,7 +932,7 @@ Parameters                          Values
 <img alt="../../../_images/examples_tutorials_network_adding_boundary_pores_9_1.svg" src="../../../_images/examples_tutorials_network_adding_boundary_pores_9_1.svg" /></div>
 </div>
 <section id="Find-Surface-Pores:-The-Basic-Way">
-<h2>Find Surface Pores: The Basic Way<a class="headerlink" href="#Find-Surface-Pores:-The-Basic-Way" title="Permalink to this headline">¶</a></h2>
+<h2>Find Surface Pores: The Basic Way<a class="headerlink" href="#Find-Surface-Pores:-The-Basic-Way" title="Permalink to this headline">#</a></h2>
 <p>The easiest way to find pores on one surface of a domain is using coordinates. In the code below we’ll find all pores on the right surface based on their x-coordinate.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -978,7 +969,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c173f3d0&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb800e88580&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -989,7 +980,7 @@ Parameters                          Values
 </div>
 </section>
 <section id="Find-Surface-Pores:-The-Proper-Way">
-<h2>Find Surface Pores: The Proper Way<a class="headerlink" href="#Find-Surface-Pores:-The-Proper-Way" title="Permalink to this headline">¶</a></h2>
+<h2>Find Surface Pores: The Proper Way<a class="headerlink" href="#Find-Surface-Pores:-The-Proper-Way" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">topotools</span></code> module in OpenPNM provides many handy helper functions for dealing with topology. We’ll first use the <code class="docutils literal notranslate"><span class="pre">find_surface_pores</span></code> function. It works be specifying the location of a set of <em>marker</em> points outside the domain, then performing a Delaunay tessellation between these markers and the network pores. Any pores that form a simplex with the marker points are considered to be on the surface. By default OpenPNM will place <em>one</em> marker on each edge of the domain in an attempt to
 find all the surfaces. In our case, we will specify them manually to only find one face.</p>
 <p>Specifying the markers can be a challenge. If we only specify a single marker, we will only find a limited number of surface pores due to the way the triangulation works.</p>
@@ -1012,7 +1003,7 @@ find all the surfaces. In our case, we will specify them manually to only find o
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c166aa90&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb800e2c370&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1042,7 +1033,7 @@ find all the surfaces. In our case, we will specify them manually to only find o
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c15add00&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb800d03940&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1054,7 +1045,7 @@ find all the surfaces. In our case, we will specify them manually to only find o
 <p>Now we’ve captured several more pores. In some cases we may actually get more than we wanted, including some that are more correctly on the bottom of the domain. This is why finding surfaces requires a careful touch, although this problem becomes less important in domains with more pores.</p>
 </section>
 <section id="Cloning-Surface-Pores-to-Make-Proper-Boundary-Pores">
-<h2>Cloning Surface Pores to Make Proper Boundary Pores<a class="headerlink" href="#Cloning-Surface-Pores-to-Make-Proper-Boundary-Pores" title="Permalink to this headline">¶</a></h2>
+<h2>Cloning Surface Pores to Make Proper Boundary Pores<a class="headerlink" href="#Cloning-Surface-Pores-to-Make-Proper-Boundary-Pores" title="Permalink to this headline">#</a></h2>
 <p>Next we want to take the newly labeled surface pores and ‘clone’ them. This creates new pores in the network that are physically located in the same place as their ‘parents’. They are also connected only to their ‘parents’ by default which is what we want, though this can be changed using the <code class="docutils literal notranslate"><span class="pre">mode</span></code> argument. In the following code, we tell the function to clone the ‘left_surface’ pores and to give them a new label of ‘left_boundary’.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1110,7 +1101,6 @@ openpnm.network.Delaunay : net_01
 15    throat.boundary                               0
 16    throat.internal                               553
 17    throat.left_boundary                          12
-18    throat.surface                                0
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -1137,7 +1127,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c14ead00&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb800d28d30&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1185,7 +1175,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7f70c1506100&gt;
+&lt;matplotlib.collections.PathCollection at 0x7fb800c4d610&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1207,8 +1197,9 @@ Parameters                          Values
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1219,7 +1210,7 @@ Parameters                          Values
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

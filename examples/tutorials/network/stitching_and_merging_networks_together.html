@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Stitching and Merging Networks &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Stitching and Merging Networks &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -779,9 +772,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Stitching-and-Merging-Networks">
-<h1>Stitching and Merging Networks<a class="headerlink" href="#Stitching-and-Merging-Networks" title="Permalink to this headline">¶</a></h1>
+<h1>Stitching and Merging Networks<a class="headerlink" href="#Stitching-and-Merging-Networks" title="Permalink to this headline">#</a></h1>
 <section id="Create-Bilayer-Topology-with-Merging-and-Stitching">
-<h2>Create Bilayer Topology with Merging and Stitching<a class="headerlink" href="#Create-Bilayer-Topology-with-Merging-and-Stitching" title="Permalink to this headline">¶</a></h2>
+<h2>Create Bilayer Topology with Merging and Stitching<a class="headerlink" href="#Create-Bilayer-Topology-with-Merging-and-Stitching" title="Permalink to this headline">#</a></h2>
 <p>OpenPNM includes numerous tools for manipulating and altering the topology. Most of these are found in the <strong>topotools</strong> submodule. This example will illustrate how to ‘merge’ and ‘stitch’ two distinct networks, even if they have different lattice spacing. In this example we’ll create a coarse and a fine network then join them together to make a network with two distinct layers.</p>
 <p>Start by creating a network with a large lattice spacing:</p>
 <div class="nbinput nblast docutils container">
@@ -837,7 +830,6 @@ openpnm.network.Cubic : coarse_net
 9     pore.top                                      100
 10    throat.all                                    2700
 11    throat.internal                               2700
-12    throat.surface                                972
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -883,7 +875,6 @@ openpnm.network.Cubic : fine_net
 10    pore.top                                      625
 11    throat.all                                    8500
 12    throat.internal                               8500
-13    throat.surface                                3072
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -892,7 +883,7 @@ Parameters                          Values
 </div>
 </section>
 <section id="Merge-Two-Networks">
-<h2>Merge Two Networks<a class="headerlink" href="#Merge-Two-Networks" title="Permalink to this headline">¶</a></h2>
+<h2>Merge Two Networks<a class="headerlink" href="#Merge-Two-Networks" title="Permalink to this headline">#</a></h2>
 <p>These two networks are totally independent of each other, and actually both spatially overlap each other since the network generator places the pores at the [0, 0, 0] origin. Combining these networks into a single network is possible using the <code class="docutils literal notranslate"><span class="pre">merge</span></code> function, but first we must make some adjustments. For starters, let’s shift the <code class="docutils literal notranslate"><span class="pre">fine_net</span></code> along the z-axis so it is beside the <code class="docutils literal notranslate"><span class="pre">coarse_net</span></code> to give the layered effect:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -919,7 +910,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f4b374c4190&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f5e548dc880&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -953,7 +944,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f4b1f428880&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f5e0de76280&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -964,7 +955,7 @@ Parameters                          Values
 </div>
 </section>
 <section id="Stitch-Two-Networks">
-<h2>Stitch Two Networks<a class="headerlink" href="#Stitch-Two-Networks" title="Permalink to this headline">¶</a></h2>
+<h2>Stitch Two Networks<a class="headerlink" href="#Stitch-Two-Networks" title="Permalink to this headline">#</a></h2>
 <p>Merging networks is a basic operation that does not actually join the pores on the top of the coarse network to those on the bottom of the fine network. A merge is useful is you have a specific plan for how to join or “stitch” these two domains together. If just want pores connected to their nearest counterpart(s) on the opposite domain, you can use the <code class="docutils literal notranslate"><span class="pre">stitch</span></code>. The <code class="docutils literal notranslate"><span class="pre">stitch</span></code> function uses Euclidean distance to determine which pore is each face is nearest each other, and connects them.</p>
 <p>First let’s return the domain to contain only the pores from the coarse network using the <code class="docutils literal notranslate"><span class="pre">trim</span></code> function.</p>
 <div class="nbinput nblast docutils container">
@@ -1022,7 +1013,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f4b1f4c2190&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f5e0da97c70&gt;
 </pre></div></div>
 </div>
 <div class="nboutput docutils container">
@@ -1067,7 +1058,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f4b1f683be0&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f5e0dae3550&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1089,8 +1080,9 @@ Parameters                          Values
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1101,7 +1093,7 @@ Parameters                          Values
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

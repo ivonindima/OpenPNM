@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Interleaving Data &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Interleaving Data &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -776,9 +769,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Interleaving-Data">
-<h1>Interleaving Data<a class="headerlink" href="#Interleaving-Data" title="Permalink to this headline">¶</a></h1>
+<h1>Interleaving Data<a class="headerlink" href="#Interleaving-Data" title="Permalink to this headline">#</a></h1>
 <section id="Defining-Multiple-Subdomains">
-<h2>Defining Multiple Subdomains<a class="headerlink" href="#Defining-Multiple-Subdomains" title="Permalink to this headline">¶</a></h2>
+<h2>Defining Multiple Subdomains<a class="headerlink" href="#Defining-Multiple-Subdomains" title="Permalink to this headline">#</a></h2>
 <p>One of the features in OpenPNM is the ability to model heterogeneous materials by applying different pore-scale models to different regions. This is done by (a) creating a unique <strong>Geometry</strong> object for each region (i.e. small pores vs big pores) and (b) creating unique <strong>Physics</strong> object for each region as well (i.e. Knudsen diffusion vs Fickian diffusion). One consequence of this segregation of properties is that a <em>single</em> array containing values for all locations in the domain does not
 exist. OpenPNM offers a shortcut for this, known as <code class="docutils literal notranslate"><span class="pre">interleave_data</span></code>, which happens <em>automatically</em>, and makes it possible to query <strong>Geometry</strong> properties via the <strong>Network</strong> object, and <strong>Physics</strong> properties from the associated <strong>Phase</strong> object:</p>
 <p>Let’s demonstrate this by creating a network and assigning two separate geometries to each half of the network:</p>
@@ -862,7 +855,7 @@ exist. OpenPNM offers a shortcut for this, known as <code class="docutils litera
 </pre></div></div>
 </div>
 <section id="Points-to-Note">
-<h3>Points to Note<a class="headerlink" href="#Points-to-Note" title="Permalink to this headline">¶</a></h3>
+<h3>Points to Note<a class="headerlink" href="#Points-to-Note" title="Permalink to this headline">#</a></h3>
 <ul class="simple">
 <li><p>Data <strong>cannot</strong> be written in this way, so that you cannot write ‘pore.diameter’ values to the Network if ’pore.diameter is already present on a Geometry (e.g. pn[‘pore.diameter’] = 2.0 will result in an error)</p></li>
 <li><p>Interleaving data is automatically attempted if the requested key is not found. For instance, when you request <code class="docutils literal notranslate"><span class="pre">pn['pore.diameter']</span></code> it is not found, so a search is made of the associated Geometry objects and if found an array is built.</p></li>
@@ -882,8 +875,9 @@ exist. OpenPNM offers a shortcut for this, known as <code class="docutils litera
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -894,7 +888,7 @@ exist. OpenPNM offers a shortcut for this, known as <code class="docutils litera
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

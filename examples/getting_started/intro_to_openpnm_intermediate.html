@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial 2 - Intermediate &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Tutorial 2 - Intermediate &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -836,9 +829,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial-2---Intermediate">
-<h1>Tutorial 2 - Intermediate<a class="headerlink" href="#Tutorial-2---Intermediate" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial 2 - Intermediate<a class="headerlink" href="#Tutorial-2---Intermediate" title="Permalink to this headline">#</a></h1>
 <section id="Tutorial-2-of-3:-Digging-Deeper-into-OpenPNM">
-<h2>Tutorial 2 of 3: Digging Deeper into OpenPNM<a class="headerlink" href="#Tutorial-2-of-3:-Digging-Deeper-into-OpenPNM" title="Permalink to this headline">¶</a></h2>
+<h2>Tutorial 2 of 3: Digging Deeper into OpenPNM<a class="headerlink" href="#Tutorial-2-of-3:-Digging-Deeper-into-OpenPNM" title="Permalink to this headline">#</a></h2>
 <p>This tutorial will follow the same outline as <strong>Getting Started</strong>, but will dig a little bit deeper at each step to reveal the important features of OpenPNM that were glossed over previously.</p>
 <p><strong>Learning Objectives</strong></p>
 <ul class="simple">
@@ -852,7 +845,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 </section>
 <section id="Building-a-Cubic-Network">
-<h2>Building a Cubic Network<a class="headerlink" href="#Building-a-Cubic-Network" title="Permalink to this headline">¶</a></h2>
+<h2>Building a Cubic Network<a class="headerlink" href="#Building-a-Cubic-Network" title="Permalink to this headline">#</a></h2>
 <p>As usual, start by importing the OpenPNM and Scipy packages:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -884,7 +877,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 </section>
 <section id="Initialize-and-Build-Multiple-Geometry-Objects">
-<h2>Initialize and Build <em>Multiple</em> Geometry Objects<a class="headerlink" href="#Initialize-and-Build-Multiple-Geometry-Objects" title="Permalink to this headline">¶</a></h2>
+<h2>Initialize and Build <em>Multiple</em> Geometry Objects<a class="headerlink" href="#Initialize-and-Build-Multiple-Geometry-Objects" title="Permalink to this headline">#</a></h2>
 <p>One of the main functionalities of OpenPNM is the ability to assign drastically different geometrical properties to different regions of the domain to create heterogeneous materials, such as layered structures. To demonstrate the motivation behind this feature, this tutorial will make a material that has different geometrical properties on the top and bottom surfaces compared to the internal pores. We need to create one <strong>Geometry</strong> object to manage the top and bottom pores, and a second to
 manage the remaining internal pores:</p>
 <div class="nbinput nblast docutils container">
@@ -906,7 +899,7 @@ manage the remaining internal pores:</p>
 connected to the pores in the supplied list, while <code class="docutils literal notranslate"><span class="pre">'intersection'</span></code> returns the throats that are <em>only</em> connected to the supplied pores. More specifically, if pores 1 and 2 have throats [1, 2] and [2, 3] as neighbors, respectively, then the <code class="docutils literal notranslate"><span class="pre">'union'</span></code> mode returns [1, 2, 3] and the <code class="docutils literal notranslate"><span class="pre">'intersection'</span></code> mode returns [2]. A detailed description of this behavior is given in :ref:<code class="docutils literal notranslate"><span class="pre">topology</span></code>.</p></li>
 </ul>
 <section id="Assign-Static-Seed-values-to-Each-Geometry">
-<h3>Assign Static Seed values to <em>Each</em> Geometry<a class="headerlink" href="#Assign-Static-Seed-values-to-Each-Geometry" title="Permalink to this headline">¶</a></h3>
+<h3>Assign Static Seed values to <em>Each</em> Geometry<a class="headerlink" href="#Assign-Static-Seed-values-to-Each-Geometry" title="Permalink to this headline">#</a></h3>
 <p>In :ref:<code class="docutils literal notranslate"><span class="pre">getting_started</span></code> we only assigned ‘static’ values to the <strong>Geometry</strong> object, which we calculated explicitly. In this tutorial we will use the <em>pore-scale models</em> that are provided with OpenPNM. To get started, however, we’ll assign static random seed values between 0 and 1 to each pore on both <strong>Geometry</strong> objects, by assigning random numbers to each Geometry’s <code class="docutils literal notranslate"><span class="pre">'pore.seed'</span></code> property:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -923,7 +916,7 @@ connected to the pores in the supplied list, while <code class="docutils literal
 </ul>
 </section>
 <section id="Accessing-Data-Distributed-Between-Geometries">
-<h3>Accessing Data Distributed Between Geometries<a class="headerlink" href="#Accessing-Data-Distributed-Between-Geometries" title="Permalink to this headline">¶</a></h3>
+<h3>Accessing Data Distributed Between Geometries<a class="headerlink" href="#Accessing-Data-Distributed-Between-Geometries" title="Permalink to this headline">#</a></h3>
 <p>The segmentation of the data between separate Geometry objects is essential to the management of pore-scale models, although it does create a complication: it’s not easy to obtain a single array containing <em>all</em> the values of a given property for the whole network. It is technically possible to piece this data together manually since we know the locations where each <strong>Geometry</strong> object applies, but this is tedious so OpenPNM provides a shortcut. First, let’s illustrate the manual approach using
 the <code class="docutils literal notranslate"><span class="pre">'pore.seed'</span></code> values we have defined:</p>
 <div class="nbinput docutils container">
@@ -960,7 +953,7 @@ True
 </ul>
 </section>
 <section id="Add-Pore-Size-Distribution-Models-to-Each-Geometry">
-<h3>Add Pore Size Distribution Models to Each Geometry<a class="headerlink" href="#Add-Pore-Size-Distribution-Models-to-Each-Geometry" title="Permalink to this headline">¶</a></h3>
+<h3>Add Pore Size Distribution Models to Each Geometry<a class="headerlink" href="#Add-Pore-Size-Distribution-Models-to-Each-Geometry" title="Permalink to this headline">#</a></h3>
 <p>Pore-scale models are mathematical functions that are applied to each pore (or throat) in the network to produce some local property value. Each of the modules in OpenPNM (Network, Geometry, Phase and Physics) have a “library” of pre-written models located under “models” (i.e. <em>Geometry.models</em>). Below this level, the models are further categorized according to what property they calculate, and there are typical 2-3 models for each. For instance, under <code class="docutils literal notranslate"><span class="pre">Geometry.models.pore_diameter</span></code> you will
 see <code class="docutils literal notranslate"><span class="pre">random</span></code>, <code class="docutils literal notranslate"><span class="pre">normal</span></code> and <code class="docutils literal notranslate"><span class="pre">weibull</span></code> among others.</p>
 <p>Pore size distribution models are assigned to each Geometry object as follows:</p>
@@ -988,10 +981,10 @@ see <code class="docutils literal notranslate"><span class="pre">random</span></
 <li><p>The remaining arguments are those required by the chosen <em>model</em>. In the above cases, these are the parameters that define the statistical distribution. Note that the mean pore size for <code class="docutils literal notranslate"><span class="pre">geom1</span></code> will be 20 um (set by <code class="docutils literal notranslate"><span class="pre">scale</span></code>) while for <code class="docutils literal notranslate"><span class="pre">geom2</span></code> it will be 50 um, thus creating the smaller surface pores as intended. The pore-scale models are well documented regarding what arguments are required and their meaning; as usual these can be viewed with Object Inspector in Spyder.</p></li>
 </ul>
 <p>Now that we’ve added pore diameter models the each <strong>Geometry</strong> we can visualize the network in Paraview to confirm that distinctly different pore sizes on the surface regions:</p>
-<p><img alt="554d426408294546b53c7383e0cc45f0" src="http://i.imgur.com/5F70ens.png" /></p>
+<p><img alt="d2c444fc056d44ebb12d4b1930383060" src="http://i.imgur.com/5F70ens.png" /></p>
 </section>
 <section id="Add-Additional-Pore-Scale-Models-to-Each-Geometry">
-<h3>Add Additional Pore-Scale Models to Each Geometry<a class="headerlink" href="#Add-Additional-Pore-Scale-Models-to-Each-Geometry" title="Permalink to this headline">¶</a></h3>
+<h3>Add Additional Pore-Scale Models to Each Geometry<a class="headerlink" href="#Add-Additional-Pore-Scale-Models-to-Each-Geometry" title="Permalink to this headline">#</a></h3>
 <p>In addition to pore diameter, there are several other geometrical properties needed to perform a permeability simulation. Let’s start with throat diameter:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1047,7 +1040,7 @@ array([[5.21639565e-05, 5.83316363e-05],
 </section>
 </section>
 <section id="Create-a-Phase-Object-and-Assign-Thermophysical-Property-Models">
-<h2>Create a Phase Object and Assign Thermophysical Property Models<a class="headerlink" href="#Create-a-Phase-Object-and-Assign-Thermophysical-Property-Models" title="Permalink to this headline">¶</a></h2>
+<h2>Create a Phase Object and Assign Thermophysical Property Models<a class="headerlink" href="#Create-a-Phase-Object-and-Assign-Thermophysical-Property-Models" title="Permalink to this headline">#</a></h2>
 <p>For this tutorial, we will create a generic <strong>Phase</strong> object for water, then assign some pore-scale models for calculating their properties. Alternatively, we could use the prewritten <strong>Water</strong> class included in OpenPNM, which comes complete with the necessary pore-scale models, but this would defeat the purpose of the tutorial.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1120,7 +1113,7 @@ Input <span class="ansi-green-fg">In [13]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Create-Physics-Objects-for-Each-Geometry">
-<h2>Create Physics Objects for Each Geometry<a class="headerlink" href="#Create-Physics-Objects-for-Each-Geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Create Physics Objects for Each Geometry<a class="headerlink" href="#Create-Physics-Objects-for-Each-Geometry" title="Permalink to this headline">#</a></h2>
 <p><strong>Physics</strong> objects are where geometric information and thermophysical properties are combined to produce the pore and throat scale transport parameters. Thus we need to create one <strong>Physics</strong> object for <em>EACH</em> <strong>Phase</strong> and <em>EACH</em> <strong>Geometry</strong>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -1176,7 +1169,7 @@ Input <span class="ansi-green-fg">In [15]</span>, in <span class="ansi-cyan-fg">
 <li><p>The “pore-scale model” mechanism was specifically designed to allow for users to easily create their own custom models. Creating custom models is outlined in :ref:<code class="docutils literal notranslate"><span class="pre">advanced_usage</span></code>.</p></li>
 </ul>
 <section id="Accessing-Data-Distributed-Between-Multiple-Physics-Objects">
-<h3>Accessing Data Distributed Between Multiple Physics Objects<a class="headerlink" href="#Accessing-Data-Distributed-Between-Multiple-Physics-Objects" title="Permalink to this headline">¶</a></h3>
+<h3>Accessing Data Distributed Between Multiple Physics Objects<a class="headerlink" href="#Accessing-Data-Distributed-Between-Multiple-Physics-Objects" title="Permalink to this headline">#</a></h3>
 <p>Just as <strong>Network</strong> objects can retrieve data from separate <strong>Geometries</strong> as a single array with values in the correct locations, <strong>Phase</strong> objects can retrieve data from <strong>Physics</strong> objects as follows:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
@@ -1206,7 +1199,7 @@ Input <span class="ansi-green-fg">In [16]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Pore-Scale-Models:-The-Big-Picture">
-<h2>Pore-Scale Models: The Big Picture<a class="headerlink" href="#Pore-Scale-Models:-The-Big-Picture" title="Permalink to this headline">¶</a></h2>
+<h2>Pore-Scale Models: The Big Picture<a class="headerlink" href="#Pore-Scale-Models:-The-Big-Picture" title="Permalink to this headline">#</a></h2>
 <p>Having created all the necessary objects with pore-scale models, it is now time to demonstrate why the OpenPNM pore-scale model approach is so powerful. First, let’s inspect the current value of hydraulic conductance in throat 1 on <code class="docutils literal notranslate"><span class="pre">phys1</span></code> and <code class="docutils literal notranslate"><span class="pre">phys2</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
@@ -1400,7 +1393,7 @@ Input <span class="ansi-green-fg">In [25]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Determine-Permeability-Tensor-by-Changing-Inlet-and-Outlet-Boundary-Conditions">
-<h2>Determine Permeability Tensor by Changing Inlet and Outlet Boundary Conditions<a class="headerlink" href="#Determine-Permeability-Tensor-by-Changing-Inlet-and-Outlet-Boundary-Conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Determine Permeability Tensor by Changing Inlet and Outlet Boundary Conditions<a class="headerlink" href="#Determine-Permeability-Tensor-by-Changing-Inlet-and-Outlet-Boundary-Conditions" title="Permalink to this headline">#</a></h2>
 <p>The <a class="reference internal" href="intro_to_openpnm_basic.html"><span class="doc">Getting started Tutorial</span></a> already demonstrated the process of performing a basic permeability simulation. In this tutorial, we’ll perform the simulation in all three perpendicular dimensions to obtain the permeability tensor of our heterogeneous anisotropic material.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[26]:
@@ -1450,7 +1443,7 @@ Input <span class="ansi-green-fg">In [27]</span>, in <span class="ansi-cyan-fg">
 </pre></div></div>
 </div>
 <p>The resulting pressure field can be seen using Paraview:</p>
-<p><img alt="dc6caa34f1044f10b6e20690c53bd7f1" src="http://i.imgur.com/ugX0LFG.png" /></p>
+<p><img alt="53439700f77a4f5490fce48529ace49a" src="http://i.imgur.com/ugX0LFG.png" /></p>
 <p>To determine the permeability coefficient we must find the flow rate through the network to use in Darcy’s law. The <strong>StokesFlow</strong> class (and all analogous transport algorithms) possess a <code class="docutils literal notranslate"><span class="pre">rate</span></code> method that calculates the net transport through a given set of pores:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[28]:
@@ -1684,8 +1677,9 @@ Input <span class="ansi-green-fg">In [37]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1696,7 +1690,7 @@ Input <span class="ansi-green-fg">In [37]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

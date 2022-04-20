@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Cubic Lattice &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Cubic Lattice &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -796,15 +789,15 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Cubic-Lattice">
-<h1>Cubic Lattice<a class="headerlink" href="#Cubic-Lattice" title="Permalink to this headline">¶</a></h1>
+<h1>Cubic Lattice<a class="headerlink" href="#Cubic-Lattice" title="Permalink to this headline">#</a></h1>
 <section id="Generate-Cubic-Lattices-of-Various-Shape,-Sizes-and-Topologies">
-<h2>Generate Cubic Lattices of Various Shape, Sizes and Topologies<a class="headerlink" href="#Generate-Cubic-Lattices-of-Various-Shape,-Sizes-and-Topologies" title="Permalink to this headline">¶</a></h2>
+<h2>Generate Cubic Lattices of Various Shape, Sizes and Topologies<a class="headerlink" href="#Generate-Cubic-Lattices-of-Various-Shape,-Sizes-and-Topologies" title="Permalink to this headline">#</a></h2>
 <p>The Cubic lattice network is the most commonly used pore network topology by far. When people first learn about pore network modeling they often insist on creating networks that are topologically equivalent or representative of the real network (i.e. random networks extracted from tomography images). In reality, however, a simple cubic network provides a very passable representation of more complex topologies, and provides several additional benefits as well; namely they are much easier to
 visualize, and applying boundary conditions is easier since the faces of the network are flat.</p>
 <p>The examples below will demonstrate how to create various cubic lattice networks in OpenPNM using the Cubic class, as well as illustrating a few topological manipulations that can be performed, such as adding boundary pores, and trimming throats to create a more random-like topology.</p>
 </section>
 <section id="Basic-Cubic-Lattice-with-Different-Connectivity">
-<h2>Basic Cubic Lattice with Different Connectivity<a class="headerlink" href="#Basic-Cubic-Lattice-with-Different-Connectivity" title="Permalink to this headline">¶</a></h2>
+<h2>Basic Cubic Lattice with Different Connectivity<a class="headerlink" href="#Basic-Cubic-Lattice-with-Different-Connectivity" title="Permalink to this headline">#</a></h2>
 <p>Let’s start with the most basic cubic lattice:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -824,9 +817,9 @@ visualize, and applying boundary conditions is easier since the faces of the net
 </div>
 </div>
 <p>In this case <code class="docutils literal notranslate"><span class="pre">pn</span></code> will be a 10 x 10 x 10 <em>cube</em> with each pore spaced 1 <em>unit</em> away from it’s neighbors in all directions. Each pore is connected to the 6 neighbors adjacent to each <em>face</em> of the cubic lattice site in which it sits. The image below illustrates the resulting network with pores shown as white spheres, along with a zoomed in view of the internals, showing the connectivity of the pores.</p>
-<p><img alt="956b39ab6a804bca9ed90dd2ee34c837" src="http://i.imgur.com/JTUodGy.png" /></p>
+<p><img alt="a99380481e2e49849c6f1850a4acf5cd" src="http://i.imgur.com/JTUodGy.png" /></p>
 <p>The <strong>Cubic</strong> network generator applies 6-connectivity by default, but different values can be specified. In a cubic lattice, each pore can have up to 26 neighbors: 6 on each face, 8 on each corner, and 12 on each edge. This is illustrated in the image below.</p>
-<p><img alt="3008f0db5d544d8cb883cd96eec96569" src="http://i.imgur.com/ACiQFtJ.png" /></p>
+<p><img alt="4d1e66680daf465ab83d0d89e6ef5487" src="http://i.imgur.com/ACiQFtJ.png" /></p>
 <p>Cubic networks can have any combination of corners, edges, and faces, which is controlled with the <code class="docutils literal notranslate"><span class="pre">connectivity</span></code> argument by specifying the total number of neighbors (6, 14, 18, 20, or 26). Note that 8 and 12 are not permitted since these lead to disconnected networks.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -837,10 +830,10 @@ visualize, and applying boundary conditions is easier since the faces of the net
 </div>
 </div>
 <p>This yields the following network, which clearly has a LOT of connections!</p>
-<p><img alt="06ed968f256d4eacb528e0abddccd12e" src="http://i.imgur.com/PS6d7CO.png" /></p>
+<p><img alt="bad4471c017946a68509f310e6b07c78" src="http://i.imgur.com/PS6d7CO.png" /></p>
 </section>
 <section id="Trimming-Random-Throats-to-Adjust-Coordination-Number">
-<h2>Trimming Random Throats to Adjust Coordination Number<a class="headerlink" href="#Trimming-Random-Throats-to-Adjust-Coordination-Number" title="Permalink to this headline">¶</a></h2>
+<h2>Trimming Random Throats to Adjust Coordination Number<a class="headerlink" href="#Trimming-Random-Throats-to-Adjust-Coordination-Number" title="Permalink to this headline">#</a></h2>
 <p>Often it is desired to create a distribution of coordination numbers on each pore, such that some pores have 2 neighbors and other have 8, while the overall average may be around 5. It is computationally very challenging to specify a specific distribution, but OpenPNM does allow you to create a network with a specific <em>average</em> connectivity. This is done by creating a network with far more connections than needed (say 26), then trimming some fraction of throats from the network to reduce the
 coordination.</p>
 <div class="nbinput docutils container">
@@ -876,7 +869,7 @@ coordination.</p>
 </div>
 <p>The following image shows histogram of the pore connectivity before and after trimming. Before trimming the coordination numbers fall into 4 distinct bins depending on where the pores lies (internal, face, edge or corner), while after trimming the coordination numbers show some distribution around their original values. If the trimming is too aggressive, OpenPNM might report an error message saying that isolated pores exist, which means that some regions of the network are now disconnected from
 the main network due to a lack of connected throats.</p>
-<p><img alt="19e5391cd4c2457494a6542ea9304830" src="http://i.imgur.com/Z4HgMYC.png" /></p>
+<p><img alt="51e5937b877e448db617663728bff76e" src="http://i.imgur.com/Z4HgMYC.png" /></p>
 <p>In order to allow more aggressive trimming without creating topological problems, OpenPNM offers a tool in the <code class="docutils literal notranslate"><span class="pre">topotools</span></code> module called <code class="docutils literal notranslate"><span class="pre">reduce_coordination</span></code>, which accepts an average coordination number. This function works by first computing the minimum-spanning tree of the network (which is a set of connections that ensures every pore is connected), then deletes throats that are NOT part of the spanning tree to ensure that connection is maintained.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -921,9 +914,9 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Creating-Domains-with-More-Interesting-Shapes">
-<h2>Creating Domains with More Interesting Shapes<a class="headerlink" href="#Creating-Domains-with-More-Interesting-Shapes" title="Permalink to this headline">¶</a></h2>
+<h2>Creating Domains with More Interesting Shapes<a class="headerlink" href="#Creating-Domains-with-More-Interesting-Shapes" title="Permalink to this headline">#</a></h2>
 <section id="Rectangular-Domains-with-Non-Uniform-Spacing">
-<h3>Rectangular Domains with Non-Uniform Spacing<a class="headerlink" href="#Rectangular-Domains-with-Non-Uniform-Spacing" title="Permalink to this headline">¶</a></h3>
+<h3>Rectangular Domains with Non-Uniform Spacing<a class="headerlink" href="#Rectangular-Domains-with-Non-Uniform-Spacing" title="Permalink to this headline">#</a></h3>
 <p>The <code class="docutils literal notranslate"><span class="pre">shape</span></code> and <code class="docutils literal notranslate"><span class="pre">spacing</span></code> arguments can of course be adjusted to create domains other than simple cubes:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -934,10 +927,10 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </div>
 <p>This results in the following network with is squished in the x-direction. Note that this can also be accomplished after the fact by simple scaling the coords (e.g. <code class="docutils literal notranslate"><span class="pre">pn['pore.coords']</span> <span class="pre">=*</span> <span class="pre">[0.001,</span> <span class="pre">0.03,</span> <span class="pre">0.02]</span></code>).</p>
-<p><img alt="5450a7b06d7d4986be07f3a4ff20df4a" src="http://i.imgur.com/ICEAO7p.png" /></p>
+<p><img alt="ed057e1968394edda5d612d503bca8fb" src="http://i.imgur.com/ICEAO7p.png" /></p>
 </section>
 <section id="Spherical-and-Other-Arbitrary-Domains">
-<h3>Spherical and Other Arbitrary Domains<a class="headerlink" href="#Spherical-and-Other-Arbitrary-Domains" title="Permalink to this headline">¶</a></h3>
+<h3>Spherical and Other Arbitrary Domains<a class="headerlink" href="#Spherical-and-Other-Arbitrary-Domains" title="Permalink to this headline">#</a></h3>
 <p>It’s also possible to obtain cubic networks of arbitrary shapes (i.e. spheres), but still with <em>cubic</em> connectivity. This is accomplished using the <code class="docutils literal notranslate"><span class="pre">CubicTemplate</span></code> class, which accepts a binary image of 1’s and 0’s. The network will have pores where the 1’s are and 0’s elsewhere. For instance, to make a spherical domain for a catalyst pellet, generate an image of a sphere using Scipy’s NDimage module, the pass this image to <strong>Cubic</strong> as follows:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -953,7 +946,7 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </div>
 <p>This results in the following:</p>
-<p><img alt="77155965888a4fb0b8a7efe7c1734bb2" src="http://i.imgur.com/eyFHqNx.png" /></p>
+<p><img alt="65f9499499974c19b2af055ca2b1129d" src="http://i.imgur.com/eyFHqNx.png" /></p>
 <p>All images of networks were made with paraview by exporting a VTK file with the following command:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -992,8 +985,9 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1004,7 +998,7 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

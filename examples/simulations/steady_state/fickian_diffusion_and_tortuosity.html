@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Fickian Diffusion and Tortuosity &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Fickian Diffusion and Tortuosity &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -825,7 +818,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Fickian-Diffusion-and-Tortuosity">
-<h1>Fickian Diffusion and Tortuosity<a class="headerlink" href="#Fickian-Diffusion-and-Tortuosity" title="Permalink to this headline">¶</a></h1>
+<h1>Fickian Diffusion and Tortuosity<a class="headerlink" href="#Fickian-Diffusion-and-Tortuosity" title="Permalink to this headline">#</a></h1>
 <p>In this example, we will learn how to perform Fickian diffusion on a <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> network. The algorithm works fine with every other network type, but for now we want to keep it simple. Refere to <strong>Tutorials &gt; Network</strong> for more details on different network types.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -844,7 +837,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Generating-network">
-<h2>Generating network<a class="headerlink" href="#Generating-network" title="Permalink to this headline">¶</a></h2>
+<h2>Generating network<a class="headerlink" href="#Generating-network" title="Permalink to this headline">#</a></h2>
 <p>First, we need to generate a <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> network. For now, we stick to a 2d network, but you might as well try it in 3d!</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -858,7 +851,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Adding-geometry">
-<h2>Adding geometry<a class="headerlink" href="#Adding-geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Adding geometry<a class="headerlink" href="#Adding-geometry" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to add a geometry to the generated network. A geometry contains information about size of the pores/throats in a network. <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> has tons of prebuilt geometries that represent the microstructure of different materials such as Toray090 carbon papers, sand stone, electrospun fibers, etc. For now, we’ll stick to a simple geometry called <code class="docutils literal notranslate"><span class="pre">SpheresAndCylinders</span></code> that assigns random values to pore/throat diameters.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -870,7 +863,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Adding-phase">
-<h2>Adding phase<a class="headerlink" href="#Adding-phase" title="Permalink to this headline">¶</a></h2>
+<h2>Adding phase<a class="headerlink" href="#Adding-phase" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to add a phase to our simulation. A phase object(s) contain(s) thermophysical information about the working fluid(s) in the simulation. <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> has tons of prebuilt phases as well! For this simulation, we use air as our working fluid.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -882,7 +875,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Adding-physics">
-<h2>Adding physics<a class="headerlink" href="#Adding-physics" title="Permalink to this headline">¶</a></h2>
+<h2>Adding physics<a class="headerlink" href="#Adding-physics" title="Permalink to this headline">#</a></h2>
 <p>Finally, we need to add a physics. A physics object contains information about the working fluid in the simulation that depend on the geometry of the network. A good example is diffusive conductance, which not only depends on the thermophysical properties of the working fluid, but also depends on the geometry of pores/throats. OpenPNM includes a pre-defined physics class called <code class="docutils literal notranslate"><span class="pre">Standard</span></code> which as the name suggests contains all the standard pore-scale models to get you going:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -895,7 +888,7 @@ div.rendered_html tbody tr:hover {
 </section>
 </section>
 <section id="Performing-Fickian-diffusion">
-<h1>Performing Fickian diffusion<a class="headerlink" href="#Performing-Fickian-diffusion" title="Permalink to this headline">¶</a></h1>
+<h1>Performing Fickian diffusion<a class="headerlink" href="#Performing-Fickian-diffusion" title="Permalink to this headline">#</a></h1>
 <p>Now that everything’s set up, it’s time to perform our Fickian diffusion simulation. For this purpose, we need to add the <code class="docutils literal notranslate"><span class="pre">FickianDiffusion</span></code> algorithm to our simulation. Here’s how we do it:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -907,7 +900,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <p>Note that <code class="docutils literal notranslate"><span class="pre">network</span></code> and <code class="docutils literal notranslate"><span class="pre">phase</span></code> are required parameters for pretty much every algorithm we add, since we need to specify on which network and for which phase we want to run the algorithm.</p>
 <section id="Adding-boundary-conditions">
-<h2>Adding boundary conditions<a class="headerlink" href="#Adding-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Adding boundary conditions<a class="headerlink" href="#Adding-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to add some boundary conditions to the simulation. By default, <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> assumes zero flux for the boundary pores.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -925,7 +918,7 @@ div.rendered_html tbody tr:hover {
 <p><code class="docutils literal notranslate"><span class="pre">set_value_BC</span></code> applies the so-called “Dirichlet” boundary condition to the specified pores. Note that unless you want to apply a single value to all of the specified pores (like we just did), you must pass a list (or <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>) as the <code class="docutils literal notranslate"><span class="pre">values</span></code> parameter.</p>
 </section>
 <section id="Running-the-algorithm">
-<h2>Running the algorithm<a class="headerlink" href="#Running-the-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2>Running the algorithm<a class="headerlink" href="#Running-the-algorithm" title="Permalink to this headline">#</a></h2>
 <p>Now, it’s time to run the algorithm. This is done by calling the <code class="docutils literal notranslate"><span class="pre">run</span></code> method attached to the algorithm object.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -971,7 +964,7 @@ div.rendered_html tbody tr:hover {
 </section>
 </section>
 <section id="Post-processing">
-<h1>Post processing<a class="headerlink" href="#Post-processing" title="Permalink to this headline">¶</a></h1>
+<h1>Post processing<a class="headerlink" href="#Post-processing" title="Permalink to this headline">#</a></h1>
 <p>When an algorithm is successfully run, the results are attached to the same object. To access the results, you need to know the quantity for which the algorithm was solving. For instance, <code class="docutils literal notranslate"><span class="pre">FickianDiffusion</span></code> solves for the quantity <code class="docutils literal notranslate"><span class="pre">pore.concentration</span></code>, which is somewhat intuitive. However, if you ever forget it, or wanted to manually check the quantity, you can take a look at the algorithm <code class="docutils literal notranslate"><span class="pre">settings</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -991,16 +984,14 @@ Settings                            Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 name                                fick_01
 prefix                              fick
-uuid                                495841a9-3b1f-48aa-b3b8-b2065dfa9c24
+uuid                                18c98e7a-f442-4a4a-af0e-8e34279a17a2
 cache                               True
 conductance                         throat.diffusive_conductance
 f_rtol                              1e-06
 newton_maxiter                      5000
-nlin_max_iter                       5000
 phase                               phase_01
 quantity                            pore.concentration
 relaxation_quantity                 1.0
-relaxation_source                   1.0
 sources                             []
 variable_props                      TypedSet()
 x_rtol                              1e-06
@@ -1008,7 +999,7 @@ x_rtol                              1e-06
 </pre></div></div>
 </div>
 <section id="Visualizing">
-<h2>Visualizing<a class="headerlink" href="#Visualizing" title="Permalink to this headline">¶</a></h2>
+<h2>Visualizing<a class="headerlink" href="#Visualizing" title="Permalink to this headline">#</a></h2>
 <p>Now that we know the quantity for which <code class="docutils literal notranslate"><span class="pre">FickianDiffusion</span></code> was solved, let’s take a look at the results:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1032,7 +1023,7 @@ x_rtol                              1e-06
 </div>
 </section>
 <section id="Calculating-flux">
-<h2>Calculating flux<a class="headerlink" href="#Calculating-flux" title="Permalink to this headline">¶</a></h2>
+<h2>Calculating flux<a class="headerlink" href="#Calculating-flux" title="Permalink to this headline">#</a></h2>
 <p>You might as well be interested in calculating the mass flux from a boundary! This is easily done in <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> via calling the <code class="docutils literal notranslate"><span class="pre">rate</span></code> method attached to the algorithm. Let’s see how it works:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1148,8 +1139,9 @@ The tortuosity is: 2.302101E+00
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1160,7 +1152,7 @@ The tortuosity is: 2.302101E+00
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

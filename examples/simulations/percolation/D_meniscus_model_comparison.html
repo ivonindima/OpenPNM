@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Meniscus Model Comparison &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Meniscus Model Comparison &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -794,12 +787,12 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Meniscus-Model-Comparison">
-<h1>Meniscus Model Comparison<a class="headerlink" href="#Meniscus-Model-Comparison" title="Permalink to this headline">¶</a></h1>
+<h1>Meniscus Model Comparison<a class="headerlink" href="#Meniscus-Model-Comparison" title="Permalink to this headline">#</a></h1>
 <section id="Comparison-of-toroidal-meniscus-models-with-different-profile-shapes">
-<h2>Comparison of toroidal meniscus models with different profile shapes<a class="headerlink" href="#Comparison-of-toroidal-meniscus-models-with-different-profile-shapes" title="Permalink to this headline">¶</a></h2>
+<h2>Comparison of toroidal meniscus models with different profile shapes<a class="headerlink" href="#Comparison-of-toroidal-meniscus-models-with-different-profile-shapes" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="Introduction">
-<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">¶</a></h2>
+<h2>Introduction<a class="headerlink" href="#Introduction" title="Permalink to this headline">#</a></h2>
 <p>So far all the capillary entry pressures for the percoaltion examples were calculated using the <code class="docutils literal notranslate"><span class="pre">Standard</span></code> physics model which is the <code class="docutils literal notranslate"><span class="pre">Washburn</span></code> model for straight walled capillary tubes. This has been shown to be a bad model for fibrous media where the walls of throats are converging and diverging. In the study <a class="reference external" href="http://link.springer.com/10.1007/s11242-017-0973-2">Capillary Hysteresis in Neutrally Wettable Fibrous Media: A Pore Network Study of a Fuel Cell Electrode</a> percolation in
 fibrous media was simulated using a meniscus model that assumed the contrictions between fibers are similar to a toroid:</p>
 <img alt="https://media.giphy.com/media/AIbz7mpqxgc5a/giphy.gif" src="https://media.giphy.com/media/AIbz7mpqxgc5a/giphy.gif" />
@@ -811,7 +804,7 @@ fibrous media was simulated using a meniscus model that assumed the contrictions
 <p>Considering other shapes of solid profile this situation can be avoided. It will be shown by reformulating the Purcell model in a more general way that allows for a flexible defintion of the solid profile that filling angle can be limited to values below 90 and allow for spontaneous imbibition (percolation threshold below zero) of highly wetting fluids.</p>
 </section>
 <section id="Set-up">
-<h2>Set up<a class="headerlink" href="#Set-up" title="Permalink to this headline">¶</a></h2>
+<h2>Set up<a class="headerlink" href="#Set-up" title="Permalink to this headline">#</a></h2>
 <p>We will set up a trivially small network with one throat to demonstrate the use of the meniscus model. Here we do the imports and define a few functions for plotting.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -968,7 +961,7 @@ Input <span class="ansi-green-fg">In [3]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Circular-(Purcell)">
-<h2>Circular (Purcell)<a class="headerlink" href="#Circular-(Purcell)" title="Permalink to this headline">¶</a></h2>
+<h2>Circular (Purcell)<a class="headerlink" href="#Circular-(Purcell)" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
 </pre></div>
@@ -1097,7 +1090,7 @@ Input <span class="ansi-green-fg">In [8]</span>, in <span class="ansi-cyan-fg">&
 <p>Here we can see that the critical entry pressure for the circular profile is positive, even though the intrinsic contact angle is highly non-wetting</p>
 </section>
 <section id="Sinusoidal">
-<h2>Sinusoidal<a class="headerlink" href="#Sinusoidal" title="Permalink to this headline">¶</a></h2>
+<h2>Sinusoidal<a class="headerlink" href="#Sinusoidal" title="Permalink to this headline">#</a></h2>
 <p>Now we can start to compare the different meniscus models:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1387,7 +1380,7 @@ Input <span class="ansi-green-fg">In [22]</span>, in <span class="ansi-cyan-fg">
 <p>Now the crtical entry pressure is negative signifying that spontaneous imbibition will occur</p>
 </section>
 <section id="General-Elliptical">
-<h2>General Elliptical<a class="headerlink" href="#General-Elliptical" title="Permalink to this headline">¶</a></h2>
+<h2>General Elliptical<a class="headerlink" href="#General-Elliptical" title="Permalink to this headline">#</a></h2>
 <p>Similarly we can define an elliptical profile and use the same method to determine the capillary pressure:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
@@ -1608,8 +1601,9 @@ Input <span class="ansi-green-fg">In [29]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1620,7 +1614,7 @@ Input <span class="ansi-green-fg">In [29]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

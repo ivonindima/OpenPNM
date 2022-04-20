@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Manually Adding and Removing Pores and Throats &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Manually Adding and Removing Pores and Throats &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -784,7 +777,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Manually-Adding-and-Removing-Pores-and-Throats">
-<h1>Manually Adding and Removing Pores and Throats<a class="headerlink" href="#Manually-Adding-and-Removing-Pores-and-Throats" title="Permalink to this headline">¶</a></h1>
+<h1>Manually Adding and Removing Pores and Throats<a class="headerlink" href="#Manually-Adding-and-Removing-Pores-and-Throats" title="Permalink to this headline">#</a></h1>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -809,7 +802,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Add-a-Single-Pore">
-<h2>Add a Single Pore<a class="headerlink" href="#Add-a-Single-Pore" title="Permalink to this headline">¶</a></h2>
+<h2>Add a Single Pore<a class="headerlink" href="#Add-a-Single-Pore" title="Permalink to this headline">#</a></h2>
 <p>First add a pore and visualize it:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -829,7 +822,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.LineCollection at 0x7f239f67b400&gt;
+&lt;matplotlib.collections.LineCollection at 0x7f08411cc160&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -841,7 +834,7 @@ div.rendered_html tbody tr:hover {
 <p>Note that we’ve only added a pore, but not specified any connections to other pores. This requires quite a bit more thought than adding pore coords. The original network had 25 pores, number 0 to 24 (due to python’s 0 indexing), so this new pore is number 25. Specifying connections requires explicitly stating which pores are connected to which according to the pore index.</p>
 </section>
 <section id="Add-a-Single-Throat">
-<h2>Add a Single Throat<a class="headerlink" href="#Add-a-Single-Throat" title="Permalink to this headline">¶</a></h2>
+<h2>Add a Single Throat<a class="headerlink" href="#Add-a-Single-Throat" title="Permalink to this headline">#</a></h2>
 <p>Let’s connect this new pore to a the single pore in the top-left corner, which we know to be pore 4. Again we’ll use <code class="docutils literal notranslate"><span class="pre">extend</span></code> but specify <code class="docutils literal notranslate"><span class="pre">throat_conns</span></code> instead:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -861,7 +854,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.LineCollection at 0x7f239d560130&gt;
+&lt;matplotlib.collections.LineCollection at 0x7f0829e2f6a0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -872,7 +865,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Find-Several-Throat-and-Add-Simultaneously">
-<h2>Find Several Throat and Add Simultaneously<a class="headerlink" href="#Find-Several-Throat-and-Add-Simultaneously" title="Permalink to this headline">¶</a></h2>
+<h2>Find Several Throat and Add Simultaneously<a class="headerlink" href="#Find-Several-Throat-and-Add-Simultaneously" title="Permalink to this headline">#</a></h2>
 <p>We can also find the indices of pores that are physicall close to pore 25 , then make connections between those:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -928,7 +921,7 @@ div.rendered_html tbody tr:hover {
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.LineCollection at 0x7f239d4f7e20&gt;
+&lt;matplotlib.collections.LineCollection at 0x7f0829e0ad30&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -939,7 +932,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="More-Complex-Additions">
-<h2>More Complex Additions<a class="headerlink" href="#More-Complex-Additions" title="Permalink to this headline">¶</a></h2>
+<h2>More Complex Additions<a class="headerlink" href="#More-Complex-Additions" title="Permalink to this headline">#</a></h2>
 <p>Now let’s do something more complex, by adding pores inside a for-loop. First create a simple 2D cubic network:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1032,8 +1025,9 @@ bidirectional_throats               []
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1044,7 +1038,7 @@ bidirectional_throats               []
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

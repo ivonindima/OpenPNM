@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Overview of the Settings Attribute &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Overview of the Settings Attribute &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -801,7 +794,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Overview-of-the-Settings-Attribute">
-<h1>Overview of the Settings Attribute<a class="headerlink" href="#Overview-of-the-Settings-Attribute" title="Permalink to this headline">¶</a></h1>
+<h1>Overview of the Settings Attribute<a class="headerlink" href="#Overview-of-the-Settings-Attribute" title="Permalink to this headline">#</a></h1>
 <p>OpenPNM objects all include a <code class="docutils literal notranslate"><span class="pre">settings</span></code> attribute which contains certain information used by OpenPNM. The best example is the <code class="docutils literal notranslate"><span class="pre">algorithm</span></code> classes, which often require numerous settings such as number of iterations and tolerance for iterative calculations. This tutorial will provide an overview of how these settings work, both from the user perspective as well as for developers.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -832,7 +825,7 @@ Input <span class="ansi-green-fg">In [1]</span>, in <span class="ansi-cyan-fg">&
 </pre></div></div>
 </div>
 <section id="Normal-Usage">
-<h2>Normal Usage<a class="headerlink" href="#Normal-Usage" title="Permalink to this headline">¶</a></h2>
+<h2>Normal Usage<a class="headerlink" href="#Normal-Usage" title="Permalink to this headline">#</a></h2>
 <blockquote>
 <div><p>This section is relevant to users of OpenPNM, while the next section is more relevant to developers</p>
 </div></blockquote>
@@ -975,7 +968,7 @@ Input <span class="ansi-green-fg">In [7]</span>, in <span class="ansi-cyan-fg">&
 <p>OpenPNM uses the <a class="reference external" href="https://docs.enthought.com/traits/traits_user_manual/index.html">traits package</a> to control this behavior, which will be explained in more detail in the next section.</p>
 </section>
 <section id="Advanced-Usage">
-<h2>Advanced Usage<a class="headerlink" href="#Advanced-Usage" title="Permalink to this headline">¶</a></h2>
+<h2>Advanced Usage<a class="headerlink" href="#Advanced-Usage" title="Permalink to this headline">#</a></h2>
 <blockquote>
 <div><p>The following sections are probably only relevant if you plan to do some development in OpenPN</p>
 </div></blockquote>
@@ -983,7 +976,7 @@ Input <span class="ansi-green-fg">In [7]</span>, in <span class="ansi-cyan-fg">&
 <p>OpenPNM has two settings related classes: <code class="docutils literal notranslate"><span class="pre">SettingsData</span></code> and <code class="docutils literal notranslate"><span class="pre">SettingsAttr</span></code>. The first is a subclass of the <code class="docutils literal notranslate"><span class="pre">HasTraits</span></code> class from the <a class="reference external" href="https://docs.enthought.com/traits/traits_user_manual/index.html">traits package</a>. It preceeded the <a class="reference external" href="https://docs.python.org/3/library/dataclasses.html">Python dataclass</a> by many years and offers far more functionality. For our purposes the main difference is that <code class="docutils literal notranslate"><span class="pre">dataclasses</span></code> allow developers to specify the type of attributes (i.e. <code class="docutils literal notranslate"><span class="pre">obj.a</span></code> must
 be an <code class="docutils literal notranslate"><span class="pre">int</span></code>), but these are only enforced during object creation. Once the object is made, any value can be assigned to <code class="docutils literal notranslate"><span class="pre">a</span></code>. The <code class="docutils literal notranslate"><span class="pre">traits</span></code> package offers the same functionality but also enforces the type of <code class="docutils literal notranslate"><span class="pre">a</span></code> for all subsequent assignments. We saw this in action in the previous section when we tried to assign an integer to <code class="docutils literal notranslate"><span class="pre">alg.sets.prefix</span></code>.</p>
 <section id="The-SettingsData-and-HasTraits-Classes">
-<h3>The SettingsData and HasTraits Classes<a class="headerlink" href="#The-SettingsData-and-HasTraits-Classes" title="Permalink to this headline">¶</a></h3>
+<h3>The SettingsData and HasTraits Classes<a class="headerlink" href="#The-SettingsData-and-HasTraits-Classes" title="Permalink to this headline">#</a></h3>
 <p>Let’s dissect this process:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1167,7 +1160,7 @@ Input <span class="ansi-green-fg">In [14]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Gotcha-With-the-HasTraits-Class">
-<h3>Gotcha With the HasTraits Class<a class="headerlink" href="#Gotcha-With-the-HasTraits-Class" title="Permalink to this headline">¶</a></h3>
+<h3>Gotcha With the HasTraits Class<a class="headerlink" href="#Gotcha-With-the-HasTraits-Class" title="Permalink to this headline">#</a></h3>
 <p>When defining a set of custom settings using the <code class="docutils literal notranslate"><span class="pre">HasTraits</span></code> or <code class="docutils literal notranslate"><span class="pre">SettingsData</span></code> class, you <em>MUST</em> specify a type for each attribute value. If not then it is essentially ignored.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
@@ -1221,7 +1214,7 @@ Input <span class="ansi-green-fg">In [15]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="The-SettingsAttr-Class">
-<h3>The SettingsAttr Class<a class="headerlink" href="#The-SettingsAttr-Class" title="Permalink to this headline">¶</a></h3>
+<h3>The SettingsAttr Class<a class="headerlink" href="#The-SettingsAttr-Class" title="Permalink to this headline">#</a></h3>
 <p>The problem with the <code class="docutils literal notranslate"><span class="pre">HasTraits</span></code> class is that there is are lot of helper methods attached to it. This means that when we use the autocomplete functionality of our favorite IDEs (spyder and jupyter), we will have a hard time finding the attributes we set amongst the noise. For this reason we have created a wrapper class called <code class="docutils literal notranslate"><span class="pre">SettingsAttr</span></code> which works as follows:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
@@ -1377,7 +1370,7 @@ Input <span class="ansi-green-fg">In [22]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Adding-Documentation-to-a-SettingsData-and-SettingsAttr-Class">
-<h2>Adding Documentation to a SettingsData and SettingsAttr Class<a class="headerlink" href="#Adding-Documentation-to-a-SettingsData-and-SettingsAttr-Class" title="Permalink to this headline">¶</a></h2>
+<h2>Adding Documentation to a SettingsData and SettingsAttr Class<a class="headerlink" href="#Adding-Documentation-to-a-SettingsData-and-SettingsAttr-Class" title="Permalink to this headline">#</a></h2>
 <p>One the main reasons for using a <code class="docutils literal notranslate"><span class="pre">dataclass</span></code> style object for holding settings is so that docstrings for each attribute can be defined and explained:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[23]:
@@ -1584,7 +1577,7 @@ Input <span class="ansi-green-fg">In [28]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Attaching-to-an-OpenPNM-Object">
-<h2>Attaching to an OpenPNM Object<a class="headerlink" href="#Attaching-to-an-OpenPNM-Object" title="Permalink to this headline">¶</a></h2>
+<h2>Attaching to an OpenPNM Object<a class="headerlink" href="#Attaching-to-an-OpenPNM-Object" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">SettingsAttr</span></code> wrapper class is so named because it is meant to be an attribute (i.e. attr) on OpenPNM objects. These attached to the <code class="docutils literal notranslate"><span class="pre">settings</span></code> attribute:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[29]:
@@ -1681,8 +1674,9 @@ Input <span class="ansi-green-fg">In [31]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1693,7 +1687,7 @@ Input <span class="ansi-green-fg">In [31]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Overview of Subdomains &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Overview of Subdomains &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -774,7 +767,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Overview-of-Subdomains">
-<h1>Overview of Subdomains<a class="headerlink" href="#Overview-of-Subdomains" title="Permalink to this headline">¶</a></h1>
+<h1>Overview of Subdomains<a class="headerlink" href="#Overview-of-Subdomains" title="Permalink to this headline">#</a></h1>
 <p>Subdomains are a key feature of OpenPNM, but the can be a source of confusion. First, let’s understand what subdomains are and why they are useful. The simplest scenario is a porous materials with 2 distince layers, each with their own pore size distribution. In OpenPNM you can handle this by creating two separate Geometry objects, with each assigned to one of the layers. Each Geometry object can then compute pore size distributions independently from their own different statistical
 distributions, and store the values corresponding the pores in its layer. A subdomain is thus a selection of pores (and/or throats) that are related to each other but distinct from the rest of the network. Geometry objects thus define subdomains by the pores and/or throats to which they are applied or assigned.</p>
 <p>One of the repercussion of supporing subdomains at the deepest possible layer in OpenPNM is that all users must deal with them, regardelss of whether they are actually using the feature. In other words, even materials with one domain must also define Geometry that defines a single subdomain.</p>
@@ -830,7 +823,7 @@ distributions, and store the values corresponding the pores in its layer. A subd
 </div>
 </div>
 <section id="The-Preferred-Way-to-Work-with-Subdomains">
-<h2>The Preferred Way to Work with Subdomains<a class="headerlink" href="#The-Preferred-Way-to-Work-with-Subdomains" title="Permalink to this headline">¶</a></h2>
+<h2>The Preferred Way to Work with Subdomains<a class="headerlink" href="#The-Preferred-Way-to-Work-with-Subdomains" title="Permalink to this headline">#</a></h2>
 <p>Create two Geometry objects, with one assigned to each set of pores (i.e. ‘layer1’ and ‘layer2’). Let’s also assign all the throats to <code class="docutils literal notranslate"><span class="pre">geo1</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -944,7 +937,6 @@ openpnm.network.Cubic : net_01
 13    throat.geo_01                                 24
 14    throat.geo_02                                 0
 15    throat.internal                               24
-16    throat.surface                                12
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -991,7 +983,7 @@ Parameters                          Values
 </div></blockquote>
 </section>
 <section id="Working-with-Subdomains-Manually">
-<h2>Working with Subdomains Manually<a class="headerlink" href="#Working-with-Subdomains-Manually" title="Permalink to this headline">¶</a></h2>
+<h2>Working with Subdomains Manually<a class="headerlink" href="#Working-with-Subdomains-Manually" title="Permalink to this headline">#</a></h2>
 <p>Let’s recreate the above multidomain network to illustrate how to manually set locations and associations.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1039,12 +1031,12 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
 ------------------------------------------------------------
     WARNING    : No Geometry provided, phys_01 will not be associated with any locations
     SOURCE     : openpnm.physics._generic.__init__
-    TIME STAMP : 2022-03-23 01:20:40,835
+    TIME STAMP : 2022-04-20 03:07:34,926
 ------------------------------------------------------------
 ------------------------------------------------------------
     WARNING    : No Geometry provided, phys_02 will not be associated with any locations
     SOURCE     : openpnm.physics._generic.__init__
-    TIME STAMP : 2022-03-23 01:20:40,836
+    TIME STAMP : 2022-04-20 03:07:34,929
 ------------------------------------------------------------
 </pre></div></div>
 </div>
@@ -1448,8 +1440,9 @@ Input <span class="ansi-green-fg">In [27]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1460,7 +1453,7 @@ Input <span class="ansi-green-fg">In [27]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

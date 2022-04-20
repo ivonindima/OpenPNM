@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Transient Fickian Diffusion with Reaction &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Transient Fickian Diffusion with Reaction &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -814,7 +807,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Transient-Fickian-Diffusion-with-Reaction">
-<h1>Transient Fickian Diffusion with Reaction<a class="headerlink" href="#Transient-Fickian-Diffusion-with-Reaction" title="Permalink to this headline">¶</a></h1>
+<h1>Transient Fickian Diffusion with Reaction<a class="headerlink" href="#Transient-Fickian-Diffusion-with-Reaction" title="Permalink to this headline">#</a></h1>
 <p><code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> supports adding reaction terms to both steady state and transient simulations. <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> already includes many different source term models that can be added to simulate a reaction. In this example, we show how to add a <code class="docutils literal notranslate"><span class="pre">powerlaw</span></code> source term model to a transient fickian diffusion simulation.</p>
 <p>Start by importing openpnm</p>
 <div class="nbinput nblast docutils container">
@@ -832,7 +825,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Define-network,-geometry,-and-phase-objects">
-<h2>Define network, geometry, and phase objects<a class="headerlink" href="#Define-network,-geometry,-and-phase-objects" title="Permalink to this headline">¶</a></h2>
+<h2>Define network, geometry, and phase objects<a class="headerlink" href="#Define-network,-geometry,-and-phase-objects" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -883,7 +876,7 @@ Input <span class="ansi-green-fg">In [3]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Define-physics-object">
-<h2>Define physics object<a class="headerlink" href="#Define-physics-object" title="Permalink to this headline">¶</a></h2>
+<h2>Define physics object<a class="headerlink" href="#Define-physics-object" title="Permalink to this headline">#</a></h2>
 <p>Here, we will use <code class="docutils literal notranslate"><span class="pre">Standard</span></code> physics which already includes many standard models. You could also use <code class="docutils literal notranslate"><span class="pre">Generic</span></code> physics and add neccessary models like <code class="docutils literal notranslate"><span class="pre">throat.diffusive_conductance</span></code> after using <code class="docutils literal notranslate"><span class="pre">phys.add_model()</span></code> method.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -908,7 +901,7 @@ Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Add-reaction-model">
-<h2>Add reaction model<a class="headerlink" href="#Add-reaction-model" title="Permalink to this headline">¶</a></h2>
+<h2>Add reaction model<a class="headerlink" href="#Add-reaction-model" title="Permalink to this headline">#</a></h2>
 <p>Add reaction model to physics object. For this example we use the <code class="docutils literal notranslate"><span class="pre">powerlaw</span></code> reaction model which is of the form:</p>
 <p><span class="math">\begin{equation*}
 \ A_1X^{A_2}
@@ -942,7 +935,7 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Define-transient-fickian-diffusion-object">
-<h2>Define transient fickian diffusion object<a class="headerlink" href="#Define-transient-fickian-diffusion-object" title="Permalink to this headline">¶</a></h2>
+<h2>Define transient fickian diffusion object<a class="headerlink" href="#Define-transient-fickian-diffusion-object" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
@@ -966,7 +959,7 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Setup-the-transient-algorithm-settings">
-<h2>Setup the transient algorithm settings<a class="headerlink" href="#Setup-the-transient-algorithm-settings" title="Permalink to this headline">¶</a></h2>
+<h2>Setup the transient algorithm settings<a class="headerlink" href="#Setup-the-transient-algorithm-settings" title="Permalink to this headline">#</a></h2>
 <p>To do this you can call the <code class="docutils literal notranslate"><span class="pre">tfd.setup()</span></code> method and use it to set settings such as transient solver scheme, final time, time step, tolerance, etc. The <code class="docutils literal notranslate"><span class="pre">cranknicolson</span></code> scheme used here is the most accurate but slowest. Other time schemes are <code class="docutils literal notranslate"><span class="pre">implicit</span></code> which is faster but less accurate and <code class="docutils literal notranslate"><span class="pre">steady</span></code> which gives the steady state solution.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -980,7 +973,7 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Set-value-boundary-conditions">
-<h2>Set value boundary conditions<a class="headerlink" href="#Set-value-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Set value boundary conditions<a class="headerlink" href="#Set-value-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>In this example we set the concentraton of the <code class="docutils literal notranslate"><span class="pre">front</span></code> pores to 1 and the concentration of the <code class="docutils literal notranslate"><span class="pre">back</span></code> pores to 0.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1007,11 +1000,11 @@ Input <span class="ansi-green-fg">In [8]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Set-initial-condition">
-<h2>Set initial condition<a class="headerlink" href="#Set-initial-condition" title="Permalink to this headline">¶</a></h2>
+<h2>Set initial condition<a class="headerlink" href="#Set-initial-condition" title="Permalink to this headline">#</a></h2>
 <p>Initial conditions must be specified when <code class="docutils literal notranslate"><span class="pre">alg.run</span></code> is called as <code class="docutils literal notranslate"><span class="pre">alg.run(x0=x0)</span></code>, where <code class="docutils literal notranslate"><span class="pre">x0</span></code> could either be a scalar (in which case it’ll be broadcasted to all pores), or an array.</p>
 </section>
 <section id="Set-source-term">
-<h2>Set source term<a class="headerlink" href="#Set-source-term" title="Permalink to this headline">¶</a></h2>
+<h2>Set source term<a class="headerlink" href="#Set-source-term" title="Permalink to this headline">#</a></h2>
 <p>In this example, we apply the source term to pores 212 and 412.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1036,7 +1029,7 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Run-the-simulation">
-<h2>Run the simulation<a class="headerlink" href="#Run-the-simulation" title="Permalink to this headline">¶</a></h2>
+<h2>Run the simulation<a class="headerlink" href="#Run-the-simulation" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
 </pre></div>
@@ -1060,7 +1053,7 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Visualize-results">
-<h2>Visualize results<a class="headerlink" href="#Visualize-results" title="Permalink to this headline">¶</a></h2>
+<h2>Visualize results<a class="headerlink" href="#Visualize-results" title="Permalink to this headline">#</a></h2>
 <p>Ater simulation runs we can visualize results using a colour plot from <code class="docutils literal notranslate"><span class="pre">matplotlib.pyplot</span></code>. Here we visualize the results at the final time <code class="docutils literal notranslate"><span class="pre">t_final</span></code> by using the <code class="docutils literal notranslate"><span class="pre">pore.concentration</span></code> key on the algorithm object.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1161,8 +1154,9 @@ Input <span class="ansi-green-fg">In [13]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1173,7 +1167,7 @@ Input <span class="ansi-green-fg">In [13]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

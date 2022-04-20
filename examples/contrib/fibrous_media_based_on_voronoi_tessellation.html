@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Fibrous Media with Voronoi Tessellations &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Fibrous Media with Voronoi Tessellations &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -789,27 +782,27 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Fibrous-Media-with-Voronoi-Tessellations">
-<h1>Fibrous Media with Voronoi Tessellations<a class="headerlink" href="#Fibrous-Media-with-Voronoi-Tessellations" title="Permalink to this headline">¶</a></h1>
+<h1>Fibrous Media with Voronoi Tessellations<a class="headerlink" href="#Fibrous-Media-with-Voronoi-Tessellations" title="Permalink to this headline">#</a></h1>
 <section id="Generating-a-Fibrous-Media-Network-using-VoronoiFibers-from-the-Materials-Module">
-<h2>Generating a Fibrous Media Network using VoronoiFibers from the Materials Module<a class="headerlink" href="#Generating-a-Fibrous-Media-Network-using-VoronoiFibers-from-the-Materials-Module" title="Permalink to this headline">¶</a></h2>
+<h2>Generating a Fibrous Media Network using VoronoiFibers from the Materials Module<a class="headerlink" href="#Generating-a-Fibrous-Media-Network-using-VoronoiFibers-from-the-Materials-Module" title="Permalink to this headline">#</a></h2>
 </section>
 <section id="Getting-Started">
-<h2>Getting Started<a class="headerlink" href="#Getting-Started" title="Permalink to this headline">¶</a></h2>
+<h2>Getting Started<a class="headerlink" href="#Getting-Started" title="Permalink to this headline">#</a></h2>
 <p>In this tutorial, we will demonstrate concepts of random pore network modelling outlined in <a class="reference external" href="http://jes.ecsdl.org/cgi/doi/10.1149/2.009308jes">J.T. Gostick’s 2013 paper</a> and subsequently used in some of our other papers investigating fuel cell gas diffusion layer compression <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/fuce.201500168">Tranter et. al 2016</a> and capillary hysteresis <a class="reference external" href="http://link.springer.com/10.1007/s11242-017-0973-2">Tranter et. al 2017</a>.</p>
 </section>
 <section id="Background">
-<h2>Background<a class="headerlink" href="#Background" title="Permalink to this headline">¶</a></h2>
+<h2>Background<a class="headerlink" href="#Background" title="Permalink to this headline">#</a></h2>
 <p>Pores are randomly dispersed inside the domain and connections are defined by the nearest neighbour Delaunay triangulation algorithm. The <a class="reference external" href="https://en.wikipedia.org/wiki/Voronoi_diagram">Voronoi diagram</a> is the compliment to the <a class="reference external" href="https://en.wikipedia.org/wiki/Delaunay_triangulation">Delaunay triangulation</a> and is used to replicate the fibres in a porous domain such as a fuel cell GDL. Each pore is surrounded by a cage of fibres which are created from the intersections of the equidistant
 planes between neighbouring pores. Where the planes intersect, a Voronoi vertex is created. A throat is defined by a set of vertices which are shared by two neighbouring pores. The throat vertices will be coplanar and the throat normal is the vector from one pore’s coordinate to the other. N.B this coordinate is not the pore centroid but can be close if the shape of the cage is near spherical. The vertices are used by the Voronoi geometry model which creates a 3D image of the fibres using a
 supplied fibre radius. Image analysis is then performed to extract pore and throat sizes by using the convex hull of the pore and throat vertices.</p>
 </section>
 <section id="Materials-Module">
-<h2>Materials Module<a class="headerlink" href="#Materials-Module" title="Permalink to this headline">¶</a></h2>
+<h2>Materials Module<a class="headerlink" href="#Materials-Module" title="Permalink to this headline">#</a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">materials</span></code> module was added to OpenPNM in V2. It solves the problem that often the network topology and the geometry are coupled. For instance, a sandstone might have an average pore size of 20 um, and they should be spaced apart 100 um. The pore sizes are dictated by the Geometry class and the spacing is controlled by the Network class. Thus, in order to get an accurate network model, users must define these both correctly. The aim of the Materials module was to create a network and
 geometry at the same time to remove this possible confusion. Classes in the Materials module actually return a Project object, which contains <em>both</em> the network and the geometry, with all properties predefined as needed. The Voronoi fibers class does this as well.</p>
 </section>
 <section id="Setting-up-Network-and-Geometry">
-<h2>Setting up Network and Geometry<a class="headerlink" href="#Setting-up-Network-and-Geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Setting up Network and Geometry<a class="headerlink" href="#Setting-up-Network-and-Geometry" title="Permalink to this headline">#</a></h2>
 <p>We first import the OpenPNM code, including a utility submodule which has useful functions for working with the <code class="docutils literal notranslate"><span class="pre">Voronoi</span></code> classes:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -863,9 +856,9 @@ derive. The <code class="docutils literal notranslate"><span class="pre">shape</
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
  Object Name     Object ID
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
- test_net        &lt;openpnm.network.DelaunayVoronoiDual at 0x7f6478d99b80&gt;
- test_del        &lt;openpnm.materials.DelaunayGeometry at 0x7f6478cf1e50&gt;
- test_vor        &lt;openpnm.materials.VoronoiGeometry at 0x7f64638df310&gt;
+ test_net        &lt;openpnm.network.DelaunayVoronoiDual at 0x7fea8ffa7f40&gt;
+ test_del        &lt;openpnm.materials.DelaunayGeometry at 0x7fea8ff2bb30&gt;
+ test_vor        &lt;openpnm.materials.VoronoiGeometry at 0x7fea7ac3db80&gt;
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 </pre></div></div>
 </div>
@@ -930,7 +923,6 @@ openpnm.network.DelaunayVoronoiDual : test_net
 20    throat.surface                                100
 21    throat.test_del                               371
 22    throat.test_vor                               0
-23    throat.voronoi                                0
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -1071,7 +1063,7 @@ routines and it is recommended that a smaller network is tested first on your ma
 </div>
 <p>Two images are actually stored as private attributes on the delaunay geometry object: <code class="docutils literal notranslate"><span class="pre">_fiber_image</span></code> and <code class="docutils literal notranslate"><span class="pre">_hull_image</span></code>. The fiber image is a binary image with 1 representing the fiber and 0 the void space. The hull image represents the convex hulls surrounding each pore and is labelled with the original pore index (which may change after trimming). These images can be exported as tiff stacks and visualized in paraview, as well as being used to populate liquid filled porous networks. An
 example of such an image is shown below and is taken from <a class="reference external" href="https://onlinelibrary.wiley.com/doi/abs/10.1002/fuce.201500168">Tranter et. al 2016</a></p>
-<p><img alt="340c1c73cb684327a10062d52630b8d0" src="https://imgur.com/whiKAVG.png" /></p>
+<p><img alt="b4f5a0f6a83945be89a146e54a326678" src="https://imgur.com/whiKAVG.png" /></p>
 </section>
 </section>
 
@@ -1085,8 +1077,9 @@ example of such an image is shown below and is taken from <a class="reference ex
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1097,7 +1090,7 @@ example of such an image is shown below and is taken from <a class="reference ex
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -19,6 +19,7 @@ LabelMixin
             LabelMixin.num_pores
             LabelMixin.num_throats
             LabelMixin.pores
+            LabelMixin.props
             LabelMixin.set_label
             LabelMixin.throats
    

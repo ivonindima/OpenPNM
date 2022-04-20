@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Adjusting Pore Size Distributions &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Adjusting Pore Size Distributions &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -786,7 +779,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Adjusting-Pore-Size-Distributions">
-<h1>Adjusting Pore Size Distributions<a class="headerlink" href="#Adjusting-Pore-Size-Distributions" title="Permalink to this headline">¶</a></h1>
+<h1>Adjusting Pore Size Distributions<a class="headerlink" href="#Adjusting-Pore-Size-Distributions" title="Permalink to this headline">#</a></h1>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -836,10 +829,10 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Generating-pore-size-distributions">
-<h2>Generating pore size distributions<a class="headerlink" href="#Generating-pore-size-distributions" title="Permalink to this headline">¶</a></h2>
+<h2>Generating pore size distributions<a class="headerlink" href="#Generating-pore-size-distributions" title="Permalink to this headline">#</a></h2>
 <p>Now that we have a network, we can assign pore sizes. This <em>can</em> be done manually but generating numbers from any of the distributions in <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code>, but OpenPNM has several predefined <strong>pore-scale</strong> models for this purpose. The follow code block will illustrate boths, although the latter is preferred.</p>
 <section id="Using-scipy.stats-classes-directly">
-<h3>Using scipy.stats classes directly<a class="headerlink" href="#Using-scipy.stats-classes-directly" title="Permalink to this headline">¶</a></h3>
+<h3>Using scipy.stats classes directly<a class="headerlink" href="#Using-scipy.stats-classes-directly" title="Permalink to this headline">#</a></h3>
 <p>Let’s start by fetching a statistical <em>class</em> from the <code class="docutils literal notranslate"><span class="pre">scipy.stats</span></code> module, in this case the <code class="docutils literal notranslate"><span class="pre">weibull_min</span></code>:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -936,7 +929,7 @@ support
 </div>
 </section>
 <section id="Using-pre-defined-pore-scale-models-in-OpenPNM">
-<h3>Using pre-defined pore-scale models in OpenPNM<a class="headerlink" href="#Using-pre-defined-pore-scale-models-in-OpenPNM" title="Permalink to this headline">¶</a></h3>
+<h3>Using pre-defined pore-scale models in OpenPNM<a class="headerlink" href="#Using-pre-defined-pore-scale-models-in-OpenPNM" title="Permalink to this headline">#</a></h3>
 <p>The advantage of using the built-in models from OpenPNM is that (a) you can regenerate the distribution programmatically (<code class="docutils literal notranslate"><span class="pre">geom.regenerate_models</span></code>), (b) you can save the project to file and the model information will be retained, and (c) you can change parameters on the model to parametric studies very easily.</p>
 <p>For this demo we’ll remove the values created above, and start fresh:</p>
 <div class="nbinput nblast docutils container">
@@ -1026,7 +1019,7 @@ support
 </section>
 </section>
 <section id="Adding-throat-sizes">
-<h2>Adding throat sizes<a class="headerlink" href="#Adding-throat-sizes" title="Permalink to this headline">¶</a></h2>
+<h2>Adding throat sizes<a class="headerlink" href="#Adding-throat-sizes" title="Permalink to this headline">#</a></h2>
 <p>Now that we’ve settled on pores sizes, we can assign throat sizes. The throats should always be less than or equal to the size of the two pores they connect…otherwise they’re not really throats.</p>
 <blockquote>
 <div><p>OpenPNM will not break if this happens, but you’d need to check the consistency of the results very carefully.</p>
@@ -1083,8 +1076,9 @@ support
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1095,7 +1089,7 @@ support
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

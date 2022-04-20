@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Installation &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Installation &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/jquery.js"></script>
     <script src="../_static/underscore.js"></script>
@@ -53,7 +50,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
             <label class="sr-only">GitHub</label></a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
-        </li>
-        <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
             <label class="sr-only">Twitter</label></a>
         </li>
@@ -172,7 +165,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -228,7 +221,7 @@
               <div>
                 
   <section id="installation">
-<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h1>
+<span id="id1"></span><h1>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">#</a></h1>
 <p>OpenPNM depends heavily on the SciPy Stack. The best way to get a fully
 functional environment is the <a class="reference external" href="https://www.anaconda.com/products/individual#Downloads">Anaconda
 distribution</a>.
@@ -243,12 +236,12 @@ and can be installed by typing the following at the <em>conda</em> prompt:</p>
 in a full installation and some features won’t work (e.g., outputing to
 paraview).</p>
 <section id="installing-the-dev-version">
-<h2>Installing the dev version<a class="headerlink" href="#installing-the-dev-version" title="Permalink to this headline">¶</a></h2>
+<h2>Installing the dev version<a class="headerlink" href="#installing-the-dev-version" title="Permalink to this headline">#</a></h2>
 <p>We frequently publish new releases every couple of months, but if you
 still want to use the latest features available on the <cite>dev</cite> branch,
 (but not yet officially released), you have two options:</p>
 <section id="the-easy-way">
-<h3>The easy way<a class="headerlink" href="#the-easy-way" title="Permalink to this headline">¶</a></h3>
+<h3>The easy way<a class="headerlink" href="#the-easy-way" title="Permalink to this headline">#</a></h3>
 <p>If you’re looking for an easy way to install the development version of
 <code class="docutils literal notranslate"><span class="pre">openpnm</span></code> and use the latest features, you can install it using:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ pip install git+https://github.com/PMEAL/OpenPNM.git@dev
@@ -263,7 +256,7 @@ need to first uninstall your OpenPNM and then rerun the command above.</p>
 </div>
 </section>
 <section id="the-hard-but-correct-way">
-<h3>The hard (but correct) way<a class="headerlink" href="#the-hard-but-correct-way" title="Permalink to this headline">¶</a></h3>
+<h3>The hard (but correct) way<a class="headerlink" href="#the-hard-but-correct-way" title="Permalink to this headline">#</a></h3>
 <p>If you are a OpenPNM contributor or want to easily get the new updates as
 they roll in, you need to properly clone our repo and install it locally.
 It’s not as difficult as it sounds, just follow these steps:</p>
@@ -277,8 +270,7 @@ It’s not as difficult as it sounds, just follow these steps:</p>
 </pre></div>
 </div>
 <p>Install <code class="docutils literal notranslate"><span class="pre">openpnm</span></code> dependencies:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install --file=requirements/conda_requirements.txt
-$ pip install -r requirements/pip_requirements.txt
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ conda install --file requirements/conda_requirements.txt -c conda-forge --override-channels
 </pre></div>
 </div>
 <p>Install <code class="docutils literal notranslate"><span class="pre">openpnm</span></code> in “editable” mode:</p>
@@ -294,24 +286,25 @@ to the root folder of <code class="docutils literal notranslate"><span class="pr
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>For the development version of <code class="docutils literal notranslate"><span class="pre">openpnm</span></code> to work, you need to first remove
-the <code class="docutils literal notranslate"><span class="pre">openpnm</span></code> that you’ve previously installed using <code class="docutils literal notranslate"><span class="pre">pip</span></code> or <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
+the <code class="docutils literal notranslate"><span class="pre">openpnm</span></code> that you’ve previously installed using <code class="docutils literal notranslate"><span class="pre">pip</span></code> (via
+<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">uninstall</span> <span class="pre">openpnm</span></code>) or <code class="docutils literal notranslate"><span class="pre">conda</span></code> (via <code class="docutils literal notranslate"><span class="pre">conda</span> <span class="pre">remove</span> <span class="pre">openpnm</span></code>).</p>
 </div>
 </section>
 </section>
 <section id="where-s-my-conda-prompt">
-<h2>Where’s my <code class="docutils literal notranslate"><span class="pre">conda</span></code> prompt?<a class="headerlink" href="#where-s-my-conda-prompt" title="Permalink to this headline">¶</a></h2>
+<h2>Where’s my <code class="docutils literal notranslate"><span class="pre">conda</span></code> prompt?<a class="headerlink" href="#where-s-my-conda-prompt" title="Permalink to this headline">#</a></h2>
 <p>All the commands in this page need to be typed in the <code class="docutils literal notranslate"><span class="pre">conda</span></code> prompt.</p>
 <div class="tabbed-set docutils">
-<input checked="checked" id="43652dd0-f9ce-4b03-a77c-9945bb7c5268" name="825ce9d0-aef3-4285-99b6-970c55ab6536" type="radio">
-</input><label class="tabbed-label" for="43652dd0-f9ce-4b03-a77c-9945bb7c5268">
+<input checked="checked" id="f624e1c9-0a96-477b-b007-49d9585b6838" name="1191cb0d-aa57-4c78-93fd-ce95d6c6ae6d" type="radio">
+</input><label class="tabbed-label" for="f624e1c9-0a96-477b-b007-49d9585b6838">
 Windows</label><div class="tabbed-content docutils">
 <p>On Windows you should have a shortcut to the “Anaconda prompt” in the
 Anaconda program group in the start menu. This will open a Windows
 command console with access to the Python features added by <em>conda</em>,
 such as installing things via <code class="docutils literal notranslate"><span class="pre">conda</span></code>.</p>
 </div>
-<input id="df44e6cc-10f1-4b01-8c6f-132105501d95" name="825ce9d0-aef3-4285-99b6-970c55ab6536" type="radio">
-</input><label class="tabbed-label" for="df44e6cc-10f1-4b01-8c6f-132105501d95">
+<input id="72661996-9090-4d22-aaef-fde999d235a8" name="1191cb0d-aa57-4c78-93fd-ce95d6c6ae6d" type="radio">
+</input><label class="tabbed-label" for="72661996-9090-4d22-aaef-fde999d235a8">
 Mac and Linux</label><div class="tabbed-content docutils">
 <p>On Mac or Linux, you need to open a normal terminal window, then type
 <code class="docutils literal notranslate"><span class="pre">source</span> <span class="pre">activate</span> <span class="pre">env</span></code> where you replace <code class="docutils literal notranslate"><span class="pre">env</span></code> with the name of
@@ -333,8 +326,9 @@ the base environment which is the default.</p>
       </div>
     </div>
   
-    <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -345,7 +339,7 @@ the base environment which is the default.</p>
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

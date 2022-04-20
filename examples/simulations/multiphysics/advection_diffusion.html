@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Advection-Diffusion &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Advection-Diffusion &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -825,7 +818,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Advection-Diffusion">
-<h1>Advection-Diffusion<a class="headerlink" href="#Advection-Diffusion" title="Permalink to this headline">¶</a></h1>
+<h1>Advection-Diffusion<a class="headerlink" href="#Advection-Diffusion" title="Permalink to this headline">#</a></h1>
 <p>In this example, we will learn how to perform an advection-diffusion simulation of a given chemical species through a <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> network. The algorithm can be applied to more complex networks in the same manner as described in this example. For the sake of simplicity, a one layer 3D cubic network is used here. On <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code>, 4 different space discretization schemes for the advection-diffusion problem are available and consist of:</p>
 <ol class="arabic simple">
 <li><p>Upwind</p></li>
@@ -835,7 +828,7 @@ div.rendered_html tbody tr:hover {
 </ol>
 <p>Depending on the Peclet number characterizing the transport (ratio of advective to diffusive fluxes), the solutions obtained using these schemes may differ. In order to achive a high numerical accuracy, the user should use either the <code class="docutils literal notranslate"><span class="pre">powerlaw</span></code> or the <code class="docutils literal notranslate"><span class="pre">exponential</span></code> schemes.</p>
 <section id="Generating-network">
-<h2>Generating network<a class="headerlink" href="#Generating-network" title="Permalink to this headline">¶</a></h2>
+<h2>Generating network<a class="headerlink" href="#Generating-network" title="Permalink to this headline">#</a></h2>
 <p>First, we need to generate a <code class="docutils literal notranslate"><span class="pre">Cubic</span></code> network. For now, we stick to a one layer 3d network, but you might as well try more complex networks!</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -856,7 +849,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Adding-geometry">
-<h2>Adding geometry<a class="headerlink" href="#Adding-geometry" title="Permalink to this headline">¶</a></h2>
+<h2>Adding geometry<a class="headerlink" href="#Adding-geometry" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to add a geometry to the generated network. A geometry contains information about size of the pores/throats in a network. <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> has tons of prebuilt geometries that represent the microstructure of different materials such as Toray090 carbon papers, sand stone, electrospun fibers, etc. For now, we stick to a sample geometry called <code class="docutils literal notranslate"><span class="pre">SpheresAndCylinders</span></code> that assigns random values to pore/throat diameters.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
@@ -868,7 +861,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Adding-phase">
-<h2>Adding phase<a class="headerlink" href="#Adding-phase" title="Permalink to this headline">¶</a></h2>
+<h2>Adding phase<a class="headerlink" href="#Adding-phase" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to add a phase to our simulation. A phase object(s) contain(s) thermophysical information about the working fluid(s) in the simulation. <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> has tons of prebuilt phases as well! For this simulation, we use air as our working fluid.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -893,7 +886,7 @@ Input <span class="ansi-green-fg">In [3]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Adding-physics">
-<h2>Adding physics<a class="headerlink" href="#Adding-physics" title="Permalink to this headline">¶</a></h2>
+<h2>Adding physics<a class="headerlink" href="#Adding-physics" title="Permalink to this headline">#</a></h2>
 <p>Finally, we need to add a physics. A physics object contains information about the working fluid in the simulation that depend on the geometry of the network. A good example is diffusive conductance, which not only depends on the thermophysical properties of the working fluid, but also depends on the geometry of pores/throats.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
@@ -919,7 +912,7 @@ Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&
 </section>
 </section>
 <section id="Performing-Stokes-flow">
-<h1>Performing Stokes flow<a class="headerlink" href="#Performing-Stokes-flow" title="Permalink to this headline">¶</a></h1>
+<h1>Performing Stokes flow<a class="headerlink" href="#Performing-Stokes-flow" title="Permalink to this headline">#</a></h1>
 <p>Note that the advection diffusion algorithm assumes that velocity field is given. Naturally, we solve Stokes flow inside a pore network model to obtain the pressure field, and eventually the velocity field. Therefore, we need to run the <code class="docutils literal notranslate"><span class="pre">StokesFlow</span></code> algorithm prior to running our advection diffusion. There’s a separate tutorial on how to run <code class="docutils literal notranslate"><span class="pre">StokesFlow</span></code> in <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code>, but here’s a simple code snippet that does the job for us.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -970,7 +963,7 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </pre></div></div>
 </div>
 <section id="Performing-advection-diffusion">
-<h2>Performing advection-diffusion<a class="headerlink" href="#Performing-advection-diffusion" title="Permalink to this headline">¶</a></h2>
+<h2>Performing advection-diffusion<a class="headerlink" href="#Performing-advection-diffusion" title="Permalink to this headline">#</a></h2>
 <p>Now that everything is set up, it’s time to perform our advection-diffusion simulation. For this purpose, we need to add corresponding algorithm to our simulation. As mentioned above, <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> supports 4 different discretizations that may be used with the <code class="docutils literal notranslate"><span class="pre">AdvectionDiffusion</span></code> and <code class="docutils literal notranslate"><span class="pre">Dispersion</span></code> algorithms. Setting the discretization scheme can be performed when defining the physics model as follows:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1021,7 +1014,7 @@ Input <span class="ansi-green-fg">In [8]</span>, in <span class="ansi-cyan-fg">&
 <p>Note that you can also specify the discretization scheme by modifying the <code class="docutils literal notranslate"><span class="pre">settings</span></code> of our <code class="docutils literal notranslate"><span class="pre">AdvectionDiffusion</span></code> algorithm. You can choose between <code class="docutils literal notranslate"><span class="pre">upwind</span></code>, <code class="docutils literal notranslate"><span class="pre">hybrid</span></code>, <code class="docutils literal notranslate"><span class="pre">powerlaw</span></code>, and <code class="docutils literal notranslate"><span class="pre">exponential</span></code>. It is important to note that the scheme specified within the algorithm’s settings is only used when calling the <code class="docutils literal notranslate"><span class="pre">rate</span></code> method for post processing.</p>
 </section>
 <section id="Adding-boundary-conditions">
-<h2>Adding boundary conditions<a class="headerlink" href="#Adding-boundary-conditions" title="Permalink to this headline">¶</a></h2>
+<h2>Adding boundary conditions<a class="headerlink" href="#Adding-boundary-conditions" title="Permalink to this headline">#</a></h2>
 <p>Next, we need to add some boundary conditions to the simulation. By default, <code class="docutils literal notranslate"><span class="pre">OpenPNM</span></code> assumes zero flux for the boundary pores.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1053,7 +1046,7 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
 <p><code class="docutils literal notranslate"><span class="pre">set_value_BC</span></code> applies the so-called “Dirichlet” boundary condition to the specified pores. Note that unless you want to apply a single value to all of the specified pores (like we just did), you must pass a list (or <code class="docutils literal notranslate"><span class="pre">ndarray</span></code>) as the <code class="docutils literal notranslate"><span class="pre">values</span></code> parameter.</p>
 </section>
 <section id="Running-the-algorithm">
-<h2>Running the algorithm<a class="headerlink" href="#Running-the-algorithm" title="Permalink to this headline">¶</a></h2>
+<h2>Running the algorithm<a class="headerlink" href="#Running-the-algorithm" title="Permalink to this headline">#</a></h2>
 <p>Now, it’s time to run the algorithm. This is done by calling the <code class="docutils literal notranslate"><span class="pre">run</span></code> method attached to the algorithm object.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1079,7 +1072,7 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Post-processing">
-<h1>Post processing<a class="headerlink" href="#Post-processing" title="Permalink to this headline">¶</a></h1>
+<h1>Post processing<a class="headerlink" href="#Post-processing" title="Permalink to this headline">#</a></h1>
 <p>When an algorithm is successfully run, the results are attached to the same object. To access the results, you need to know the quantity for which the algorithm was solving. For instance, <code class="docutils literal notranslate"><span class="pre">AdvectionDiffusion</span></code> solves for the quantity <code class="docutils literal notranslate"><span class="pre">pore.concentration</span></code>, which is somewhat intuitive. However, if you ever forget it, or wanted to manually check the quantity, you can take a look at the algorithm <code class="docutils literal notranslate"><span class="pre">settings</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1125,7 +1118,7 @@ Input <span class="ansi-green-fg">In [12]</span>, in <span class="ansi-cyan-fg">
 </pre></div></div>
 </div>
 <section id="Heatmap">
-<h2>Heatmap<a class="headerlink" href="#Heatmap" title="Permalink to this headline">¶</a></h2>
+<h2>Heatmap<a class="headerlink" href="#Heatmap" title="Permalink to this headline">#</a></h2>
 <p>Since the network is 2d, we can simply reshape the results in form of a 2d array similar to the shape of the network and plot the heatmap of it using <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
@@ -1198,8 +1191,9 @@ Input <span class="ansi-green-fg">In [14]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1210,7 +1204,7 @@ Input <span class="ansi-green-fg">In [14]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

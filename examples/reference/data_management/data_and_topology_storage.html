@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Storage of Network Data and Topology &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Storage of Network Data and Topology &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -852,7 +845,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Storage-of-Network-Data-and-Topology">
-<h1>Storage of Network Data and Topology<a class="headerlink" href="#Storage-of-Network-Data-and-Topology" title="Permalink to this headline">¶</a></h1>
+<h1>Storage of Network Data and Topology<a class="headerlink" href="#Storage-of-Network-Data-and-Topology" title="Permalink to this headline">#</a></h1>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
 </pre></div>
@@ -865,7 +858,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Spreadsheet-Analogy">
-<h2>Spreadsheet Analogy<a class="headerlink" href="#Spreadsheet-Analogy" title="Permalink to this headline">¶</a></h2>
+<h2>Spreadsheet Analogy<a class="headerlink" href="#Spreadsheet-Analogy" title="Permalink to this headline">#</a></h2>
 <p>The best analogy for explaining data storage in OpenPNM is the humble spreadsheet. According to this analogy, each pore (or throat) corresponds to a row and each property corresponds to a column.</p>
 <p>Consider the following network with 4 pores, 3 throats:</p>
 <div class="nbinput nblast docutils container">
@@ -920,8 +913,8 @@ div.rendered_html tbody tr:hover {
   <thead>
     <tr style="text-align: right;">
       <th></th>
-      <th>pore.seed</th>
       <th>pore.diameter</th>
+      <th>pore.seed</th>
       <th>pore.max_size</th>
       <th>pore.volume</th>
     </tr>
@@ -1043,12 +1036,12 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Numpy-Arrays-Stored-in-Dictionaries">
-<h2>Numpy Arrays Stored in Dictionaries<a class="headerlink" href="#Numpy-Arrays-Stored-in-Dictionaries" title="Permalink to this headline">¶</a></h2>
+<h2>Numpy Arrays Stored in Dictionaries<a class="headerlink" href="#Numpy-Arrays-Stored-in-Dictionaries" title="Permalink to this headline">#</a></h2>
 <p>Although the spreadsheet analogy described above is very close to reality, OpenPNM does not actually use <code class="docutils literal notranslate"><span class="pre">pandas</span></code> DataFrames, or any other spreadsheet data structure. Instead, it uses the basic Python <em>dictionary</em>, filled with Numpy arrays to accomplish a nearly identical behavior, but with a bit more flexibility.</p>
 <p>Each OpenPNM object (e.g. networks, algorithms, etc) is actually a customized (a.k.a. <a class="reference external" href="https://realpython.com/python-data-classes/#inheritance">subclassed</a>) Python <a class="reference external" href="https://realpython.com/python-dicts/">dictionary</a> which allows data to be stored and accessed by name, with a syntax like <code class="docutils literal notranslate"><span class="pre">network['pore.diameter']</span></code>. This is analogous (actually indistinguishable) to extracting a column from a spreadsheet as outlined above. Once the data array is retrieved from the dictionary, it is then a
 simple matter of working with a Numpy array, which use familiar array indexing, so the diameter of pore 0 is found be accessing element 0 of the array stored under the ‘pore.diameter’ key. This is elaborated upon below.</p>
 <section id="Quick-Overview-of-Dictionaries">
-<h3>Quick Overview of Dictionaries<a class="headerlink" href="#Quick-Overview-of-Dictionaries" title="Permalink to this headline">¶</a></h3>
+<h3>Quick Overview of Dictionaries<a class="headerlink" href="#Quick-Overview-of-Dictionaries" title="Permalink to this headline">#</a></h3>
 <p>The internet contains many <a class="reference external" href="https://realpython.com/python-dicts/">tutorials</a> on Python “dicts”. To summarize, they are general purpose data contains where <em>items</em> can be stored by name, as follows:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1109,7 +1102,7 @@ dict_keys([&#39;item 1&#39;, &#39;item 2&#39;, &#39;another item&#39;])
 </div></blockquote>
 </section>
 <section id="Quick-Overview-of-Numpy-Arrays">
-<h3>Quick Overview of Numpy Arrays<a class="headerlink" href="#Quick-Overview-of-Numpy-Arrays" title="Permalink to this headline">¶</a></h3>
+<h3>Quick Overview of Numpy Arrays<a class="headerlink" href="#Quick-Overview-of-Numpy-Arrays" title="Permalink to this headline">#</a></h3>
 <p>OpenPNM uses <em>dictionaries</em> or <code class="docutils literal notranslate"><span class="pre">dict</span></code>’s to store an assortment of <a class="reference external" href="https://docs.scipy.org/doc/numpy/user/">Numpy arrays</a> that each contain a specific type of pore or throat data.</p>
 <p>There are many <a class="reference external" href="https://realpython.com/numpy-array-programming/">tutorials</a> on the internet explaining the various features and benefits of Numpy arrays. To summarize, they are familiar to numerical arrays in any other language.</p>
 <p>Let’s extract a Numpy array from the <code class="docutils literal notranslate"><span class="pre">geo</span></code> object and play with it:</p>
@@ -1186,10 +1179,10 @@ array([0.55759468, 0.50138169])
 </div></blockquote>
 </section>
 <section id="Rules-to-Maintain-Data-Integrity">
-<h3>Rules to Maintain Data Integrity<a class="headerlink" href="#Rules-to-Maintain-Data-Integrity" title="Permalink to this headline">¶</a></h3>
+<h3>Rules to Maintain Data Integrity<a class="headerlink" href="#Rules-to-Maintain-Data-Integrity" title="Permalink to this headline">#</a></h3>
 <p>Several rules have been implemented to control the integrity of the data:</p>
 <section id="All-Values-are-Converted-to-Numpy-Arrays">
-<h4>All Values are Converted to Numpy Arrays<a class="headerlink" href="#All-Values-are-Converted-to-Numpy-Arrays" title="Permalink to this headline">¶</a></h4>
+<h4>All Values are Converted to Numpy Arrays<a class="headerlink" href="#All-Values-are-Converted-to-Numpy-Arrays" title="Permalink to this headline">#</a></h4>
 <p>Only Numpy arrays can be stored in an OpenPNM object, and any data that is written into one of the OpenPNM object dicionaries will be converted to a Numpy array. This is done to ensure that all mathematically operations throughout the code can be consistently done using vectorization. Note that any subclasses of Numpy arrays, such as Dask arrays or Unyt arrays are also acceptable.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -1211,7 +1204,7 @@ array([0.55759468, 0.50138169])
 <p>This illustrates that the basic python list-type has been converted to a Numpy array when stored in the dictionary</p>
 </section>
 <section id="Any-Scalars-are-Expanded-to-a-Full-Length-Vector">
-<h4>Any Scalars are Expanded to a Full-Length Vector<a class="headerlink" href="#Any-Scalars-are-Expanded-to-a-Full-Length-Vector" title="Permalink to this headline">¶</a></h4>
+<h4>Any Scalars are Expanded to a Full-Length Vector<a class="headerlink" href="#Any-Scalars-are-Expanded-to-a-Full-Length-Vector" title="Permalink to this headline">#</a></h4>
 <p>For the sake of consistency only arrays of length <em>Np</em> or <em>Nt</em> are allowed in the dictionary. Assigning a scalar value to a dictionary results in the creation of a full length vector, either <em>Np</em> or <em>Nt</em> long, depending on the name of the array.. This effectively applies the scalar value to all locations in the network.**</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[15]:
@@ -1233,7 +1226,7 @@ array([0.55759468, 0.50138169])
 <p>Note how the scalar value has been cast to an array of 4 elements long, one for each pore in the network.</p>
 </section>
 <section id="Dictionary-Keys-Must-Start-With-‘pore’-or-‘throat’">
-<h4>Dictionary Keys Must Start With ‘pore’ or ‘throat’<a class="headerlink" href="#Dictionary-Keys-Must-Start-With-‘pore’-or-‘throat’" title="Permalink to this headline">¶</a></h4>
+<h4>Dictionary Keys Must Start With ‘pore’ or ‘throat’<a class="headerlink" href="#Dictionary-Keys-Must-Start-With-‘pore’-or-‘throat’" title="Permalink to this headline">#</a></h4>
 <p>All array names must begin with either <em>‘pore.’</em> or <em>‘throat.’</em> which serves to identify the type of information they contain.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[16]:
@@ -1256,7 +1249,7 @@ This will throw an exception since the dict name cannot start with foo
 </div>
 </section>
 <section id="Nesting-Dictionary-Names-are-Allowed">
-<h4>Nesting Dictionary Names are Allowed<a class="headerlink" href="#Nesting-Dictionary-Names-are-Allowed" title="Permalink to this headline">¶</a></h4>
+<h4>Nesting Dictionary Names are Allowed<a class="headerlink" href="#Nesting-Dictionary-Names-are-Allowed" title="Permalink to this headline">#</a></h4>
 <p>It’s possible to create nested properties by assigning a dictionary containing numpy arrays</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[17]:
@@ -1316,7 +1309,7 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 </div>
 </section>
 <section id="Boolean-Arrays-are-Treated-as-Labels">
-<h4>Boolean Arrays are Treated as Labels<a class="headerlink" href="#Boolean-Arrays-are-Treated-as-Labels" title="Permalink to this headline">¶</a></h4>
+<h4>Boolean Arrays are Treated as Labels<a class="headerlink" href="#Boolean-Arrays-are-Treated-as-Labels" title="Permalink to this headline">#</a></h4>
 <p>Any Boolean data will be treated as a <em>label</em> while all other numerical data is treated as a <em>property</em>.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
@@ -1346,7 +1339,7 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 <p>You can see that <code class="docutils literal notranslate"><span class="pre">'pore.label'</span></code> shows up in this list automatically since it is of Boolean type. For more information on using labels see <a class="reference internal" href="using_and_creating_labels.html"><span class="doc">the tutorial on Using and Creating Labels</span></a>.</p>
 </section>
 <section id="Dictionary-Keys-with-a-Leading-Underscore-are-Hidden">
-<h4>Dictionary Keys with a Leading Underscore are Hidden<a class="headerlink" href="#Dictionary-Keys-with-a-Leading-Underscore-are-Hidden" title="Permalink to this headline">¶</a></h4>
+<h4>Dictionary Keys with a Leading Underscore are Hidden<a class="headerlink" href="#Dictionary-Keys-with-a-Leading-Underscore-are-Hidden" title="Permalink to this headline">#</a></h4>
 <p>Following the Python convention, if a piece of data is not really meant to be seen or used by the user, it can be pre-pended with an underscore and it will no appear in any output.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[21]:
@@ -1378,7 +1371,7 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 </section>
 </section>
 <section id="Representing-Topology">
-<h2>Representing Topology<a class="headerlink" href="#Representing-Topology" title="Permalink to this headline">¶</a></h2>
+<h2>Representing Topology<a class="headerlink" href="#Representing-Topology" title="Permalink to this headline">#</a></h2>
 <p>Consider the following simple random network:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
@@ -1404,7 +1397,7 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.PathCollection at 0x7fe634f2fd60&gt;
+&lt;matplotlib.collections.PathCollection at 0x7f1b24a59a90&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1439,13 +1432,13 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 </div>
 <p>Inspection of this <em>Nt-by-2</em> array shows that each row contains the pore indices corresponding to that throat.</p>
 <section id="Sparse-Adjacency-Matrices">
-<h3>Sparse Adjacency Matrices<a class="headerlink" href="#Sparse-Adjacency-Matrices" title="Permalink to this headline">¶</a></h3>
+<h3>Sparse Adjacency Matrices<a class="headerlink" href="#Sparse-Adjacency-Matrices" title="Permalink to this headline">#</a></h3>
 <p>The topology storage scheme described above is actually an <a class="reference external" href="http://en.wikipedia.org/wiki/Adjacency_matrix">adjacency matrix</a>, in a <a class="reference external" href="http://en.wikipedia.org/wiki/Sparse_matrix">sparse storage format</a> known as IJV or COO.</p>
 <p>An adjacency matrix is a <em>Np</em>-by-<em>Np</em> matrix with non-zero values at location (<em>i</em>, <em>j</em>) indicating that pores <em>i</em> and <em>j</em> are connected.</p>
 <p>An important feature of the adjacency matrix is that it is highly sparse (mostly zeros) and can be stored with a variety of <a class="reference external" href="https://docs.scipy.org/doc/scipy/reference/sparse.html">sparse storage schemes</a> offered by Scipy. OpenPNM stores the adjacency matrix in the ‘COO’ format, which essentially stores the coordinates (I,J) of the nonzero elements in an two-colume wide array.</p>
 <p>Thus the throat property called <code class="docutils literal notranslate"><span class="pre">'throat.conns'</span></code> is an <em>Nt</em>-by-2 array that gives the index of the two pores on either end of a given throat.</p>
 <section id="Additional-Thoughts-on-Sparse-Storage">
-<h4>Additional Thoughts on Sparse Storage<a class="headerlink" href="#Additional-Thoughts-on-Sparse-Storage" title="Permalink to this headline">¶</a></h4>
+<h4>Additional Thoughts on Sparse Storage<a class="headerlink" href="#Additional-Thoughts-on-Sparse-Storage" title="Permalink to this headline">#</a></h4>
 <ul class="simple">
 <li><p>In pore networks there is (usually) no difference between traversing from pore <em>i</em> to pore <em>j</em> or from pore <em>j</em> to pore <em>i</em>, so a 1 is also found at location (<em>j</em>, <em>i</em>) and the matrix is symmetrical.</p></li>
 <li><p>Since the adjacency matrix is symmetric, it is redundant to store the entire matrix when only the upper triangular part is necessary. The <code class="docutils literal notranslate"><span class="pre">'throat.conns'</span></code> array only stores the upper triangular information, and <em>i</em> is always less than <em>j</em>.</p></li>
@@ -1455,7 +1448,7 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 </section>
 </section>
 <section id="Topology-Rules">
-<h3>Topology Rules<a class="headerlink" href="#Topology-Rules" title="Permalink to this headline">¶</a></h3>
+<h3>Topology Rules<a class="headerlink" href="#Topology-Rules" title="Permalink to this headline">#</a></h3>
 <p>The only topology definitions required by OpenPNM are:</p>
 <ol class="arabic simple">
 <li><p>A throat connects exactly two pores, no more and no less</p></li>
@@ -1468,7 +1461,7 @@ The request for pore.concentration returns a dictionary with both arrays, but th
 </ol>
 </section>
 <section id="Historical-Aside">
-<h3>Historical Aside<a class="headerlink" href="#Historical-Aside" title="Permalink to this headline">¶</a></h3>
+<h3>Historical Aside<a class="headerlink" href="#Historical-Aside" title="Permalink to this headline">#</a></h3>
 <p>During the development of OpenPNM, it was debated whether existing Python graph theory packages (such as <a class="reference external" href="http://graph-tool.skewed.de/">graph-tool</a> or <a class="reference external" href="http://networkx.github.io/">NetworkX</a>) should be used to store the network topology. It was decided that network property data should be simply stored as <a class="reference external" href="http://www.numpy.org/">Numpy ND-arrays</a> as discussed above for the primary reason that this format makes the data storage very transparent and familiar since all engineers are used to
 working with arrays (i.e. vectors), and also very efficiently since this allows code vectorization. Fortuitously, around the same time as this discussion, Scipy introduced the <a class="reference external" href="http://docs.scipy.org/doc/scipy/reference/sparse.csgraph.html">compressed sparse graph library</a>, which contains numerous graph theory algorithms that take Numpy arrays as arguments. Therefore, OpenPNM’s topology model is implemented using Numpy arrays, leveraging the <code class="docutils literal notranslate"><span class="pre">scipy.sparse.csgraph</span></code> library. Most importantly,
 this approach is perfectly in tune with the ‘spreadsheet’ model of data storage.</p>
@@ -1486,8 +1479,9 @@ this approach is perfectly in tune with the ‘spreadsheet’ model of data stor
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1498,7 +1492,7 @@ this approach is perfectly in tune with the ‘spreadsheet’ model of data stor
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Tutorial 3 - Advanced &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Tutorial 3 - Advanced &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -847,9 +840,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Tutorial-3---Advanced">
-<h1>Tutorial 3 - Advanced<a class="headerlink" href="#Tutorial-3---Advanced" title="Permalink to this headline">¶</a></h1>
+<h1>Tutorial 3 - Advanced<a class="headerlink" href="#Tutorial-3---Advanced" title="Permalink to this headline">#</a></h1>
 <section id="Tutorial-3-of-3:-Advanced-Topics-and-Usage">
-<h2>Tutorial 3 of 3: Advanced Topics and Usage<a class="headerlink" href="#Tutorial-3-of-3:-Advanced-Topics-and-Usage" title="Permalink to this headline">¶</a></h2>
+<h2>Tutorial 3 of 3: Advanced Topics and Usage<a class="headerlink" href="#Tutorial-3-of-3:-Advanced-Topics-and-Usage" title="Permalink to this headline">#</a></h2>
 <p><strong>Learning Outcomes</strong></p>
 <ul class="simple">
 <li><p>Use different methods to add boundary pores to a network</p></li>
@@ -861,7 +854,7 @@ div.rendered_html tbody tr:hover {
 </ul>
 </section>
 <section id="Build-and-Manipulate-Network-Topology">
-<h2>Build and Manipulate Network Topology<a class="headerlink" href="#Build-and-Manipulate-Network-Topology" title="Permalink to this headline">¶</a></h2>
+<h2>Build and Manipulate Network Topology<a class="headerlink" href="#Build-and-Manipulate-Network-Topology" title="Permalink to this headline">#</a></h2>
 <p>For the present tutorial, we’ll keep the topology simple to help keep the focus on other aspects of OpenPNM.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -884,7 +877,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Adding-Boundary-Pores">
-<h2>Adding Boundary Pores<a class="headerlink" href="#Adding-Boundary-Pores" title="Permalink to this headline">¶</a></h2>
+<h2>Adding Boundary Pores<a class="headerlink" href="#Adding-Boundary-Pores" title="Permalink to this headline">#</a></h2>
 <p>When performing transport simulations it is often useful to have ‘boundary’ pores attached to the surface(s) of the network where boundary conditions can be applied. When using the <strong>Cubic</strong> class, two methods are available for doing this: <code class="docutils literal notranslate"><span class="pre">add_boundaries</span></code>, which is specific for the <strong>Cubic</strong> class, and <code class="docutils literal notranslate"><span class="pre">add_boundary_pores</span></code>, which is a generic method that can also be used on other network types and which is inherited from <strong>GenericNetwork</strong>. The first method automatically adds boundaries to
 ALL six faces of the network and offsets them from the network by 1/2 of the value provided as the network <code class="docutils literal notranslate"><span class="pre">spacing</span></code>. The second method provides total control over which boundary pores are created and where they are positioned, but requires the user to specify to which pores the boundary pores should be attached to. Let’s explore these two options:</p>
 <div class="nbinput nblast docutils container">
@@ -912,7 +905,7 @@ ALL six faces of the network and offsets them from the network by 1/2 of the val
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7fb05036fca0&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7f19762ec970&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -922,7 +915,7 @@ ALL six faces of the network and offsets them from the network by 1/2 of the val
 <img alt="../../../_images/examples_reference_uncategorized_intro_to_openpnm_advanced_6_1.svg" src="../../../_images/examples_reference_uncategorized_intro_to_openpnm_advanced_6_1.svg" /></div>
 </div>
 <section id="Adding-and-Removing-Pores-and-Throats">
-<h3>Adding and Removing Pores and Throats<a class="headerlink" href="#Adding-and-Removing-Pores-and-Throats" title="Permalink to this headline">¶</a></h3>
+<h3>Adding and Removing Pores and Throats<a class="headerlink" href="#Adding-and-Removing-Pores-and-Throats" title="Permalink to this headline">#</a></h3>
 <p>OpenPNM uses a list-based data storage scheme for all properties, including topological connections. One of the benefits of this approach is that adding and removing pores and throats from the network is essentially as simple as adding or removing rows from the data arrays. The one exception to this ‘simplicity’ is that the <code class="docutils literal notranslate"><span class="pre">'throat.conns'</span></code> array must be treated carefully when trimming pores, so OpenPNM provides the <code class="docutils literal notranslate"><span class="pre">extend</span></code> and <code class="docutils literal notranslate"><span class="pre">trim</span></code> functions for adding and removing, respectively. To
 demonstrate, let’s reduce the coordination number of the network to create a more random structure:</p>
 <div class="nbinput nblast docutils container">
@@ -1000,7 +993,7 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7fb04c58a760&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Path3DCollection at 0x7f19715098b0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1012,7 +1005,7 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </section>
 </section>
 <section id="Define-Geometry-Objects">
-<h2>Define Geometry Objects<a class="headerlink" href="#Define-Geometry-Objects" title="Permalink to this headline">¶</a></h2>
+<h2>Define Geometry Objects<a class="headerlink" href="#Define-Geometry-Objects" title="Permalink to this headline">#</a></h2>
 <p>The boundary pores we’ve added to the network should be treated a little bit differently. Specifically, they should have no volume or length (as they are not physically representative of real pores). To do this, we create two separate <strong>Geometry</strong> objects, one for internal pores and one for the boundaries:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1045,7 +1038,7 @@ Input <span class="ansi-green-fg">In [8]</span>, in <span class="ansi-cyan-fg">&
 <p>The <strong>SpheresAndCylinders</strong> class is preloaded with the pore-scale models to calculate all the necessary size information (pore diameter, pore.volume, throat lengths, throat.diameter, etc). The <strong>Boundary</strong> class is speciall and is only used for the boundary pores. In this class, geometrical properties are set to small fixed values such that they don’t affect the simulation results.</p>
 </section>
 <section id="Define-Multiple-Phase-Objects">
-<h2>Define Multiple Phase Objects<a class="headerlink" href="#Define-Multiple-Phase-Objects" title="Permalink to this headline">¶</a></h2>
+<h2>Define Multiple Phase Objects<a class="headerlink" href="#Define-Multiple-Phase-Objects" title="Permalink to this headline">#</a></h2>
 <p>In order to simulate relative permeability of air through a partially water-filled network, we need to create each <strong>Phase</strong> object. OpenPNM includes pre-defined classes for each of these common fluids:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1074,7 +1067,7 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
 </pre></div></div>
 </div>
 <section id="Aside:-Creating-a-Custom-Phase-Class">
-<h3>Aside: Creating a Custom Phase Class<a class="headerlink" href="#Aside:-Creating-a-Custom-Phase-Class" title="Permalink to this headline">¶</a></h3>
+<h3>Aside: Creating a Custom Phase Class<a class="headerlink" href="#Aside:-Creating-a-Custom-Phase-Class" title="Permalink to this headline">#</a></h3>
 <p>In many cases you will want to create your own fluid, such as an oil or brine, which may be commonly used in your research. OpenPNM cannot predict all the possible scenarios, but luckily it is easy to create a custom <strong>Phase</strong> class as follows:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[10]:
@@ -1140,7 +1133,7 @@ Input <span class="ansi-green-fg">In [11]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Define-Physics-Objects-for-Each-Geometry-and-Each-Phase">
-<h2>Define Physics Objects for Each Geometry and Each Phase<a class="headerlink" href="#Define-Physics-Objects-for-Each-Geometry-and-Each-Phase" title="Permalink to this headline">¶</a></h2>
+<h2>Define Physics Objects for Each Geometry and Each Phase<a class="headerlink" href="#Define-Physics-Objects-for-Each-Geometry-and-Each-Phase" title="Permalink to this headline">#</a></h2>
 <p>In the tutorial #2 we created two <strong>Physics</strong> object, one for each of the two <strong>Geometry</strong> objects used to handle the stratified layers. In this tutorial, the internal pores and the boundary pores each have their own <strong>Geometry</strong>, but there are two <strong>Phases</strong>, which also each require a unique <strong>Physics</strong>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1172,7 +1165,7 @@ Input <span class="ansi-green-fg">In [12]</span>, in <span class="ansi-cyan-fg">
 <div><p>To reiterate, <em>one</em> <strong>Physics</strong> object is required for each <strong>Geometry</strong> <em>AND</em> each <strong>Phase</strong>, so the number can grow to become annoying very quickly Some useful tips for easing this situation are given below.</p>
 </div></blockquote>
 <section id="Create-a-Custom-Pore-Scale-Physics-Model">
-<h3>Create a Custom Pore-Scale Physics Model<a class="headerlink" href="#Create-a-Custom-Pore-Scale-Physics-Model" title="Permalink to this headline">¶</a></h3>
+<h3>Create a Custom Pore-Scale Physics Model<a class="headerlink" href="#Create-a-Custom-Pore-Scale-Physics-Model" title="Permalink to this headline">#</a></h3>
 <p>Perhaps the most distinguishing feature between pore-network modeling papers is the pore-scale physics models employed. Accordingly, OpenPNM was designed to allow for easy customization in this regard, so that you can create your own models to augment or replace the ones included in the OpenPNM <em>models</em> libraries. For demonstration, let’s implement the capillary pressure model proposed by <a class="reference external" href="http://dx.doi.org/10.1006/jcis.1994.1402">Mason and Morrow in 1994</a>. They studied the entry pressure of
 non-wetting fluid into a throat formed by spheres, and found that the converging-diverging geometry increased the capillary pressure required to penetrate the throat. As a simple approximation they proposed <span class="math notranslate nohighlight">\(P_c = -2 \sigma \cdot cos(2/3 \theta) / R_t\)</span></p>
 <p>Pore-scale models are written as basic function definitions:</p>
@@ -1204,7 +1197,7 @@ non-wetting fluid into a throat formed by spheres, and found that the converging
 </ul>
 </section>
 <section id="Copy-Models-Between-Physics-Objects">
-<h3>Copy Models Between Physics Objects<a class="headerlink" href="#Copy-Models-Between-Physics-Objects" title="Permalink to this headline">¶</a></h3>
+<h3>Copy Models Between Physics Objects<a class="headerlink" href="#Copy-Models-Between-Physics-Objects" title="Permalink to this headline">#</a></h3>
 <p>As mentioned above, the need to specify a separate <strong>Physics</strong> object for each <strong>Geometry</strong> and <strong>Phase</strong> can become tedious. It is possible to <em>copy</em> the pore-scale models assigned to one object onto another object. First, let’s assign the models we need to <code class="docutils literal notranslate"><span class="pre">phys_water_internal</span></code>:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -1304,7 +1297,7 @@ Input <span class="ansi-green-fg">In [17]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Adjust-Pore-Scale-Model-Parameters">
-<h3>Adjust Pore-Scale Model Parameters<a class="headerlink" href="#Adjust-Pore-Scale-Model-Parameters" title="Permalink to this headline">¶</a></h3>
+<h3>Adjust Pore-Scale Model Parameters<a class="headerlink" href="#Adjust-Pore-Scale-Model-Parameters" title="Permalink to this headline">#</a></h3>
 <p>The pore-scale models are stored in a <strong>ModelsDict</strong> object that is itself stored under the <code class="docutils literal notranslate"><span class="pre">models</span></code> attribute of each object. This arrangement is somewhat convoluted, but it enables integrated storage of models on the object’s wo which they apply. The models on an object can be inspected with <code class="docutils literal notranslate"><span class="pre">print(phys_water_internal)</span></code>, which shows a list of all the pore-scale properties that are computed by a model, and some information about the model’s <em>regeneration</em> mode.</p>
 <p>Each model in the <strong>ModelsDict</strong> can be individually inspected by accessing it using the dictionary key corresponding to <em>pore-property</em> that it calculates, i.e. <code class="docutils literal notranslate"><span class="pre">print(phys_water_internal)['throat.capillary_pressure'])</span></code>. This shows a list of all the parameters associated with that model. It is possible to edit these parameters directly:</p>
 <div class="nbinput docutils container">
@@ -1334,9 +1327,9 @@ Input <span class="ansi-green-fg">In [18]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Perform-Multiphase-Transport-Simulations">
-<h2>Perform Multiphase Transport Simulations<a class="headerlink" href="#Perform-Multiphase-Transport-Simulations" title="Permalink to this headline">¶</a></h2>
+<h2>Perform Multiphase Transport Simulations<a class="headerlink" href="#Perform-Multiphase-Transport-Simulations" title="Permalink to this headline">#</a></h2>
 <section id="Use-the-Built-In-Drainage-Algorithm-to-Generate-an-Invading-Phase-Configuration">
-<h3>Use the Built-In Drainage Algorithm to Generate an Invading Phase Configuration<a class="headerlink" href="#Use-the-Built-In-Drainage-Algorithm-to-Generate-an-Invading-Phase-Configuration" title="Permalink to this headline">¶</a></h3>
+<h3>Use the Built-In Drainage Algorithm to Generate an Invading Phase Configuration<a class="headerlink" href="#Use-the-Built-In-Drainage-Algorithm-to-Generate-an-Invading-Phase-Configuration" title="Permalink to this headline">#</a></h3>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[19]:
 </pre></div>
@@ -1369,7 +1362,7 @@ Input <span class="ansi-green-fg">In [19]</span>, in <span class="ansi-cyan-fg">
 </ul>
 </section>
 <section id="Set-Pores-and-Throats-to-Invaded">
-<h3>Set Pores and Throats to Invaded<a class="headerlink" href="#Set-Pores-and-Throats-to-Invaded" title="Permalink to this headline">¶</a></h3>
+<h3>Set Pores and Throats to Invaded<a class="headerlink" href="#Set-Pores-and-Throats-to-Invaded" title="Permalink to this headline">#</a></h3>
 <p>After running, the <code class="docutils literal notranslate"><span class="pre">mip</span></code> object possesses an array containing the pressure at which each pore and throat was invaded, stored as <code class="docutils literal notranslate"><span class="pre">'pore.inv_Pc'</span></code> and <code class="docutils literal notranslate"><span class="pre">'throat.inv_Pc'</span></code>. These arrays can be used to obtain a list of which pores and throats are invaded by water, using Boolean logic:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[20]:
@@ -1424,7 +1417,7 @@ Input <span class="ansi-green-fg">In [21]</span>, in <span class="ansi-cyan-fg">
 </ul>
 </section>
 <section id="Calculate-Relative-Permeability-of-Each-Phase">
-<h3>Calculate Relative Permeability of Each Phase<a class="headerlink" href="#Calculate-Relative-Permeability-of-Each-Phase" title="Permalink to this headline">¶</a></h3>
+<h3>Calculate Relative Permeability of Each Phase<a class="headerlink" href="#Calculate-Relative-Permeability-of-Each-Phase" title="Permalink to this headline">#</a></h3>
 <p>We are now ready to calculate the relative permeability of the domain under partially flooded conditions. Instantiate an <strong>StokesFlow</strong> object:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[22]:
@@ -1520,8 +1513,9 @@ throats using <code class="docutils literal notranslate"><span class="pre">Vp</s
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1532,7 +1526,7 @@ throats using <code class="docutils literal notranslate"><span class="pre">Vp</s
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

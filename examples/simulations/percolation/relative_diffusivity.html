@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Relative Diffusivity &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Relative Diffusivity &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -789,9 +782,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Relative-Diffusivity">
-<h1>Relative Diffusivity<a class="headerlink" href="#Relative-Diffusivity" title="Permalink to this headline">¶</a></h1>
+<h1>Relative Diffusivity<a class="headerlink" href="#Relative-Diffusivity" title="Permalink to this headline">#</a></h1>
 <section id="Generating-the-Network,-adding-Geometry-and-creating-Phases">
-<h2>Generating the Network, adding Geometry and creating Phases<a class="headerlink" href="#Generating-the-Network,-adding-Geometry-and-creating-Phases" title="Permalink to this headline">¶</a></h2>
+<h2>Generating the Network, adding Geometry and creating Phases<a class="headerlink" href="#Generating-the-Network,-adding-Geometry-and-creating-Phases" title="Permalink to this headline">#</a></h2>
 <p>This example is about calculation of relative diffusivity of phases in a multiphase transport. The term <strong>relative</strong> indicates the existence of another phase in the medium. The concept of relative property (permeability) in multiphase transport was applied in <a class="reference external" href="https://github.com/PMEAL/OpenPNM/tree/examples_galore/examples/notebooks/algorithms/multiphase">relative permeability example</a> for a flow problem. In this example the transport mechanism is defined as diffusion. Start by importing
 OpenPNM and some other useful packages:</p>
 <div class="nbinput nblast docutils container">
@@ -841,7 +834,7 @@ Input <span class="ansi-green-fg">In [2]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Define-the-Pore-Scale-Physics">
-<h2>Define the Pore-Scale Physics<a class="headerlink" href="#Define-the-Pore-Scale-Physics" title="Permalink to this headline">¶</a></h2>
+<h2>Define the Pore-Scale Physics<a class="headerlink" href="#Define-the-Pore-Scale-Physics" title="Permalink to this headline">#</a></h2>
 <p>For this simulation the <strong>Standard</strong> physics object can be used as it contains capillary pressure for use in the percolation algorithm and diffusive conductance for use in the <code class="docutils literal notranslate"><span class="pre">FickianDiffusion</span></code> algorithm.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[3]:
@@ -868,7 +861,7 @@ Input <span class="ansi-green-fg">In [3]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Set-up-and-run-the-Percolation-Algorithm">
-<h2>Set up and run the Percolation Algorithm<a class="headerlink" href="#Set-up-and-run-the-Percolation-Algorithm" title="Permalink to this headline">¶</a></h2>
+<h2>Set up and run the Percolation Algorithm<a class="headerlink" href="#Set-up-and-run-the-Percolation-Algorithm" title="Permalink to this headline">#</a></h2>
 <p>In order to simulate a partially saturated material we first invade some non-wetting phase. This will be accomplished using the <code class="docutils literal notranslate"><span class="pre">InvasonPercolation</span></code> or <code class="docutils literal notranslate"><span class="pre">OrdinaryPercolation</span></code> <strong>Algorithm</strong>. In both algorithms the invading phase invades the network based on the capillary pressure of the throats in the network. These two algorithms have difference in their percolation algorithm and results. The results that we are going to work with are the pores and throats occupancies and saturation of
 phases. These can be obtained from both methods. If we choose IP, occupancies can be directly extracted from the results for a saturation point. If we choose OP, occupancies and saturation can be extracted from the results for a capillary pressure point. Here, we choose OP algorithm to provide an example of how to work with OP results and saturation.</p>
 <div class="nbinput docutils container">
@@ -924,7 +917,7 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Run-a-Fickian-Diffusion-Algorithm-for-each-step-of-the-invasion-process">
-<h2>Run a Fickian Diffusion Algorithm for each step of the invasion process<a class="headerlink" href="#Run-a-Fickian-Diffusion-Algorithm-for-each-step-of-the-invasion-process" title="Permalink to this headline">¶</a></h2>
+<h2>Run a Fickian Diffusion Algorithm for each step of the invasion process<a class="headerlink" href="#Run-a-Fickian-Diffusion-Algorithm-for-each-step-of-the-invasion-process" title="Permalink to this headline">#</a></h2>
 <p>We now need to model how the presence of the phases affects the diffusive conductivity of the network. Currently the <strong>Physics</strong> objects have a property called <code class="docutils literal notranslate"><span class="pre">throat.diffusive_conductance</span></code> but this model does not account for the occupancy of each phase and assumes that the phase occupies every pore-throat-pore conduit. OpenPNM has a number of multiphase models including a conduit conductance that multiplies the single phase conductance by a factor (default 0.000001) when the phase associated
 with the physics object is not present. The model has a mode which defaults to ‘strict’ which applies the conductivity reduction if any one of the connected pores or connecting throat is unoccupied.</p>
 <div class="nbinput docutils container">
@@ -1026,7 +1019,7 @@ Input <span class="ansi-green-fg">In [7]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Plot-the-Relative-Diffusivity-Curves-for-each-direction-and-Phase">
-<h2>Plot the Relative Diffusivity Curves for each direction and Phase<a class="headerlink" href="#Plot-the-Relative-Diffusivity-Curves-for-each-direction-and-Phase" title="Permalink to this headline">¶</a></h2>
+<h2>Plot the Relative Diffusivity Curves for each direction and Phase<a class="headerlink" href="#Plot-the-Relative-Diffusivity-Curves-for-each-direction-and-Phase" title="Permalink to this headline">#</a></h2>
 <p>Now we convert the data to Numpy arrays for fast and easy plotting. The relative diffusivity values of each phase is the ratio of its effective diffusivity over its effective diffusivity for f</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1122,8 +1115,9 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1134,7 +1128,7 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

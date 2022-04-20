@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Part 1: Import Networks from Statoil Files &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Part 1: Import Networks from Statoil Files &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -808,7 +801,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Part-1:-Import-Networks-from-Statoil-Files">
-<h1>Part 1: Import Networks from Statoil Files<a class="headerlink" href="#Part-1:-Import-Networks-from-Statoil-Files" title="Permalink to this headline">¶</a></h1>
+<h1>Part 1: Import Networks from Statoil Files<a class="headerlink" href="#Part-1:-Import-Networks-from-Statoil-Files" title="Permalink to this headline">#</a></h1>
 <p>This example explains how to use the OpenPNM.Utilies.IO.Statoil class to import a network produced by the Maximal Ball network extraction code developed by Martin Blunt’s group at Imperial College London. The code is available from him upon request, but they offer a small library of pre-extracted networks on their <a class="reference external" href="https://www.imperial.ac.uk/engineering/departments/earth-science/research/research-groups/perm/research/pore-scale-modelling/micro-ct-images-and-networks/">website</a>.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -900,9 +893,9 @@ Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&
 </pre></div></div>
 </div>
 <p>The resulting network is shown below:</p>
-<p><img alt="ce907c70f17940c5b4d2b4217dacaf71" src="http://i.imgur.com/771T36M.png" /></p>
+<p><img alt="7bef11ee84d54d3f8ad3ea557c6e7daf" src="http://i.imgur.com/771T36M.png" /></p>
 <section id="Clean-up-network-topology">
-<h2>Clean up network topology<a class="headerlink" href="#Clean-up-network-topology" title="Permalink to this headline">¶</a></h2>
+<h2>Clean up network topology<a class="headerlink" href="#Clean-up-network-topology" title="Permalink to this headline">#</a></h2>
 <p>Although it’s not clear in the network image, there are a number of isolated and disconnected pores in the network. These are either naturally part of the sandstone, or artifacts of the Maximal Ball algorithm. In any event, these must be removed before proceeding since they cause problems for the matrix solver. The easiest way to find these is to use the <code class="docutils literal notranslate"><span class="pre">check_network_health</span></code> function on the network object. This will return a dictionary with several key attributes, including a list of which
 pores are isolated. These can then be trimmed using the <code class="docutils literal notranslate"><span class="pre">trim</span></code> function in the <code class="docutils literal notranslate"><span class="pre">topotools</span></code> module.</p>
 <div class="nbinput docutils container">
@@ -933,15 +926,15 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Dealing-with-Inlet-and-Outlet-Pores">
-<h2>Dealing with Inlet and Outlet Pores<a class="headerlink" href="#Dealing-with-Inlet-and-Outlet-Pores" title="Permalink to this headline">¶</a></h2>
+<h2>Dealing with Inlet and Outlet Pores<a class="headerlink" href="#Dealing-with-Inlet-and-Outlet-Pores" title="Permalink to this headline">#</a></h2>
 <p>When importing Statoil networks, OpenPNM must perform some ‘optimizations’ to make the network compatible. The main problem is that the original network contains a large number of throats connecting actual internal pores to fictitious ‘reservoir’ pores. OpenPNM strips away all these throats since ‘headless throats’ break the graph theory representation. OpenPNM then labels the real internal pores as either ‘inlet’ or ‘outlet’ if they were connected to one of these fictitious reservoirs.</p>
 <p>It is fairly simple to add a new pores to each end of the domain and stitch tehm to the internal pores labelled ‘inlet’ and ‘outlet’, but this introduces a subsequent complication that the new pores don’t have any geometry properties. For this example, we will not add boundary pores, but just the pores on the inlet and outlet faces.</p>
 </section>
 </section>
 <section id="Part-2:-Calculating-Permeability-of-the-Network">
-<h1>Part 2: Calculating Permeability of the Network<a class="headerlink" href="#Part-2:-Calculating-Permeability-of-the-Network" title="Permalink to this headline">¶</a></h1>
+<h1>Part 2: Calculating Permeability of the Network<a class="headerlink" href="#Part-2:-Calculating-Permeability-of-the-Network" title="Permalink to this headline">#</a></h1>
 <section id="Setup-Geometry,-Phase,-and-Physics-Objects">
-<h2>Setup Geometry, Phase, and Physics Objects<a class="headerlink" href="#Setup-Geometry,-Phase,-and-Physics-Objects" title="Permalink to this headline">¶</a></h2>
+<h2>Setup Geometry, Phase, and Physics Objects<a class="headerlink" href="#Setup-Geometry,-Phase,-and-Physics-Objects" title="Permalink to this headline">#</a></h2>
 <p>In OpenPNM 2+ it is optional to define Geometry and Physics objects (These are really only necessary for simulations with diverse geometrical properties in different regions, resulting in different physical processes in each region, such as multiscale networks for instance). It is still necessary to define <strong>Phase</strong> objects:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -966,7 +959,7 @@ Input <span class="ansi-green-fg">In [6]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Apply-Pore-Scale-Models">
-<h2>Apply Pore-Scale Models<a class="headerlink" href="#Apply-Pore-Scale-Models" title="Permalink to this headline">¶</a></h2>
+<h2>Apply Pore-Scale Models<a class="headerlink" href="#Apply-Pore-Scale-Models" title="Permalink to this headline">#</a></h2>
 <p>We must add the hagen-poiseuille model for calculating the conductance. In OpenPNM 2+ it is possible to add Physics models to Phase objects, which is often simpler than than applying the same model to multiple Physics.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -1015,7 +1008,7 @@ Input <span class="ansi-green-fg">In [8]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Run-StokesFlow-Algorithm">
-<h2>Run StokesFlow Algorithm<a class="headerlink" href="#Run-StokesFlow-Algorithm" title="Permalink to this headline">¶</a></h2>
+<h2>Run StokesFlow Algorithm<a class="headerlink" href="#Run-StokesFlow-Algorithm" title="Permalink to this headline">#</a></h2>
 <p>Finally, we can create a <strong>StokesFlow</strong> object to run some fluid flow simulations:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1044,10 +1037,10 @@ Input <span class="ansi-green-fg">In [9]</span>, in <span class="ansi-cyan-fg">&
 </pre></div></div>
 </div>
 <p>The resulting pressure field can be visualized in Paraview, giving the following:</p>
-<p><img alt="b8baefa6b5304c47a19ddd1b27e92727" src="https://i.imgur.com/AIK6FbJ.png" /></p>
+<p><img alt="0c40bc5a0a73435e8523ac6ee5efcc8a" src="https://i.imgur.com/AIK6FbJ.png" /></p>
 </section>
 <section id="Determination-of-Permeability-Coefficient">
-<h2>Determination of Permeability Coefficient<a class="headerlink" href="#Determination-of-Permeability-Coefficient" title="Permalink to this headline">¶</a></h2>
+<h2>Determination of Permeability Coefficient<a class="headerlink" href="#Determination-of-Permeability-Coefficient" title="Permalink to this headline">#</a></h2>
 <p>The way to calculate K is the determine each of the values in Darcy’s law manually and solve for K, such that</p>
 <div class="math notranslate nohighlight">
 \[K = \frac{Q\mu L} {\Delta P A}\]</div>
@@ -1098,8 +1091,9 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1110,7 +1104,7 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

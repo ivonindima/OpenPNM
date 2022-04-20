@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Stitch Two Networks with Different Spacing &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Stitch Two Networks with Different Spacing &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -826,7 +819,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Stitch-Two-Networks-with-Different-Spacing">
-<h1>Stitch Two Networks with Different Spacing<a class="headerlink" href="#Stitch-Two-Networks-with-Different-Spacing" title="Permalink to this headline">¶</a></h1>
+<h1>Stitch Two Networks with Different Spacing<a class="headerlink" href="#Stitch-Two-Networks-with-Different-Spacing" title="Permalink to this headline">#</a></h1>
 <p>This tutorial explains how to use the stitch function to not only combine two networks into a single domain, but to have OpenPNM automatically creat throats between the two domains based on the spatial proximity of pores on each network.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -849,7 +842,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Generate-Two-Networks-with-Different-Spacing">
-<h2>Generate Two Networks with Different Spacing<a class="headerlink" href="#Generate-Two-Networks-with-Different-Spacing" title="Permalink to this headline">¶</a></h2>
+<h2>Generate Two Networks with Different Spacing<a class="headerlink" href="#Generate-Two-Networks-with-Different-Spacing" title="Permalink to this headline">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[2]:
 </pre></div>
@@ -870,7 +863,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Position-Networks-Appropriately,-then-Stitch-Together">
-<h2>Position Networks Appropriately, then Stitch Together<a class="headerlink" href="#Position-Networks-Appropriately,-then-Stitch-Together" title="Permalink to this headline">¶</a></h2>
+<h2>Position Networks Appropriately, then Stitch Together<a class="headerlink" href="#Position-Networks-Appropriately,-then-Stitch-Together" title="Permalink to this headline">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[4]:
 </pre></div>
@@ -895,7 +888,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Quickly-Visualize-the-Network">
-<h2>Quickly Visualize the Network<a class="headerlink" href="#Quickly-Visualize-the-Network" title="Permalink to this headline">¶</a></h2>
+<h2>Quickly Visualize the Network<a class="headerlink" href="#Quickly-Visualize-the-Network" title="Permalink to this headline">#</a></h2>
 <p>Let’s just make sure things are working as planned using OpenPNMs basic visualization tools:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -914,7 +907,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Create-Geometry-Objects-for-Each-Layer">
-<h2>Create Geometry Objects for Each Layer<a class="headerlink" href="#Create-Geometry-Objects-for-Each-Layer" title="Permalink to this headline">¶</a></h2>
+<h2>Create Geometry Objects for Each Layer<a class="headerlink" href="#Create-Geometry-Objects-for-Each-Layer" title="Permalink to this headline">#</a></h2>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
 </pre></div>
@@ -929,7 +922,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </div>
 <section id="Add-Geometrical-Properties-to-the-Small-Domain">
-<h3>Add Geometrical Properties to the <em>Small</em> Domain<a class="headerlink" href="#Add-Geometrical-Properties-to-the-Small-Domain" title="Permalink to this headline">¶</a></h3>
+<h3>Add Geometrical Properties to the <em>Small</em> Domain<a class="headerlink" href="#Add-Geometrical-Properties-to-the-Small-Domain" title="Permalink to this headline">#</a></h3>
 <p>The <em>small</em> domain will be treated as a continua, so instead of assigning pore sizes we want the ‘pore’ to be same size as the lattice cell.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -949,7 +942,7 @@ div.rendered_html tbody tr:hover {
 </div>
 </section>
 <section id="Add-Geometrical-Properties-to-the-Large-Domain">
-<h3>Add Geometrical Properties to the <em>Large</em> Domain<a class="headerlink" href="#Add-Geometrical-Properties-to-the-Large-Domain" title="Permalink to this headline">¶</a></h3>
+<h3>Add Geometrical Properties to the <em>Large</em> Domain<a class="headerlink" href="#Add-Geometrical-Properties-to-the-Large-Domain" title="Permalink to this headline">#</a></h3>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
 </pre></div>
@@ -972,7 +965,7 @@ div.rendered_html tbody tr:hover {
 </section>
 </section>
 <section id="Create-Phase-and-Physics-Objects">
-<h2>Create Phase and Physics Objects<a class="headerlink" href="#Create-Phase-and-Physics-Objects" title="Permalink to this headline">¶</a></h2>
+<h2>Create Phase and Physics Objects<a class="headerlink" href="#Create-Phase-and-Physics-Objects" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
 </pre></div>
@@ -1054,7 +1047,7 @@ Input <span class="ansi-green-fg">In [11]</span>, in <span class="ansi-cyan-fg">
 </div>
 <p>Note that this extra line is NOT a pore-scale model, so it will be over-written when the <code class="docutils literal notranslate"><span class="pre">phys_sm</span></code> object is regenerated.</p>
 <section id="Add-a-Reaction-Term-to-the-Small-Layer">
-<h3>Add a Reaction Term to the Small Layer<a class="headerlink" href="#Add-a-Reaction-Term-to-the-Small-Layer" title="Permalink to this headline">¶</a></h3>
+<h3>Add a Reaction Term to the Small Layer<a class="headerlink" href="#Add-a-Reaction-Term-to-the-Small-Layer" title="Permalink to this headline">#</a></h3>
 <p>A standard n-th order chemical reaction is $ r=k <span class="math">\cdot `x^b $, or more generally: $ r = A_1 :nbsphinx-math:</span>cdot <cite>x^{A_2} + A_3 $. This model is available in ``OpenPNM.Physics.models.generic_source_terms`</cite>, and we must specify values for each of the constants.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[12]:
@@ -1091,7 +1084,7 @@ Input <span class="ansi-green-fg">In [12]</span>, in <span class="ansi-cyan-fg">
 </section>
 </section>
 <section id="Perform-a-Diffusion-Calculation">
-<h2>Perform a Diffusion Calculation<a class="headerlink" href="#Perform-a-Diffusion-Calculation" title="Permalink to this headline">¶</a></h2>
+<h2>Perform a Diffusion Calculation<a class="headerlink" href="#Perform-a-Diffusion-Calculation" title="Permalink to this headline">#</a></h2>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[13]:
 </pre></div>
@@ -1124,7 +1117,7 @@ Input <span class="ansi-green-fg">In [13]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Visualize-the-Concentration-Distribution">
-<h2>Visualize the Concentration Distribution<a class="headerlink" href="#Visualize-the-Concentration-Distribution" title="Permalink to this headline">¶</a></h2>
+<h2>Visualize the Concentration Distribution<a class="headerlink" href="#Visualize-the-Concentration-Distribution" title="Permalink to this headline">#</a></h2>
 <p>And the result would look something like this:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[14]:
@@ -1170,8 +1163,9 @@ Input <span class="ansi-green-fg">In [14]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1182,7 +1176,7 @@ Input <span class="ansi-green-fg">In [14]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

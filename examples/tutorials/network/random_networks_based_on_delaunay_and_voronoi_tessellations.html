@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Delaunay and Voronoi Tessalation &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Delaunay and Voronoi Tessalation &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -784,9 +777,9 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Delaunay-and-Voronoi-Tessalation">
-<h1>Delaunay and Voronoi Tessalation<a class="headerlink" href="#Delaunay-and-Voronoi-Tessalation" title="Permalink to this headline">¶</a></h1>
+<h1>Delaunay and Voronoi Tessalation<a class="headerlink" href="#Delaunay-and-Voronoi-Tessalation" title="Permalink to this headline">#</a></h1>
 <section id="Generate-Random-Networks-Based-on-Delaunay-Triangulations,-Voronoi-Tessellations,-or-Both">
-<h2>Generate Random Networks Based on Delaunay Triangulations, Voronoi Tessellations, or Both<a class="headerlink" href="#Generate-Random-Networks-Based-on-Delaunay-Triangulations,-Voronoi-Tessellations,-or-Both" title="Permalink to this headline">¶</a></h2>
+<h2>Generate Random Networks Based on Delaunay Triangulations, Voronoi Tessellations, or Both<a class="headerlink" href="#Generate-Random-Networks-Based-on-Delaunay-Triangulations,-Voronoi-Tessellations,-or-Both" title="Permalink to this headline">#</a></h2>
 <p>A random network offers several advantages over the traditional Cubic arrangement: the topology is more ‘natural’ looking, and a wider pore size distribution can be achieved since pores are not constrained by the lattice spacing. Random networks can be tricky to generate however, since the connectivity between pores is difficult to determine or define. One surprisingly simple option is to use Delaunay triangulation to connect base points (which become pore centers) that are randomly distributed
 in space. The Voronoi tessellation is a complementary graph that arises directly from the Delaunay graph which also connects essentially randomly distributed points in space into a network. OpenPNM offers both of these types of network, plus the ability to create a network containing <em>both</em> including interconnections between Delaunay and Voronoi networks via the <code class="docutils literal notranslate"><span class="pre">DelaunayVoronoiDual</span></code> class. In fact, creating the dual, interconnected network is the starting point, and any unwanted elements can
 be easily trimmed.</p>
@@ -818,30 +811,29 @@ openpnm.network.DelaunayVoronoiDual : net_01
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 #     Properties                                    Valid Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-1     pore.coords                                     777 / 777
-2     throat.conns                                   4364 / 4364
+1     pore.coords                                     786 / 786
+2     throat.conns                                   4422 / 4422
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 #     Labels                                        Assigned Locations
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-1     pore.all                                      777
-2     pore.back                                     56
-3     pore.bottom                                   62
-4     pore.boundary                                 323
-5     pore.delaunay                                 222
-6     pore.front                                    65
-7     pore.internal                                 454
-8     pore.left                                     74
-9     pore.right                                    56
-10    pore.surface                                  189
+1     pore.all                                      786
+2     pore.back                                     62
+3     pore.bottom                                   74
+4     pore.boundary                                 325
+5     pore.delaunay                                 223
+6     pore.front                                    68
+7     pore.internal                                 461
+8     pore.left                                     59
+9     pore.right                                    53
+10    pore.surface                                  190
 11    pore.top                                      65
-12    pore.voronoi                                  555
-13    throat.all                                    4364
-14    throat.boundary                               967
-15    throat.delaunay                               652
-16    throat.interconnect                           2606
-17    throat.internal                               2581
-18    throat.surface                                816
-19    throat.voronoi                                1106
+12    pore.voronoi                                  563
+13    throat.all                                    4422
+14    throat.boundary                               972
+15    throat.delaunay                               660
+16    throat.interconnect                           2640
+17    throat.internal                               2629
+18    throat.surface                                821
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -866,7 +858,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7ff8764f1b50&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f309ada9c40&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -898,7 +890,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7ff876369fa0&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f309aed2a60&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -911,7 +903,7 @@ Parameters                          Values
 <p>The green lines are internal connections, and red lines are connections between internal notes and boundary nodes.</p>
 </section>
 <section id="Delaunay-Network">
-<h2>Delaunay Network<a class="headerlink" href="#Delaunay-Network" title="Permalink to this headline">¶</a></h2>
+<h2>Delaunay Network<a class="headerlink" href="#Delaunay-Network" title="Permalink to this headline">#</a></h2>
 <p>As the name suggests, the VoronoiDelaunayDual contains both the Delaunay triangulation and the Voronoi tessellation within the same topology. It is simple to delete one network (or the other) by trimming all of the other network’s pores, which also removes all connected throats including the interconnections:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -939,7 +931,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7ff87659aca0&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f309afa9490&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -951,7 +943,7 @@ Parameters                          Values
 </div>
 </section>
 <section id="Create-Random-Networks-of-Spherical-or-Cylindrical-Shape">
-<h2>Create Random Networks of Spherical or Cylindrical Shape<a class="headerlink" href="#Create-Random-Networks-of-Spherical-or-Cylindrical-Shape" title="Permalink to this headline">¶</a></h2>
+<h2>Create Random Networks of Spherical or Cylindrical Shape<a class="headerlink" href="#Create-Random-Networks-of-Spherical-or-Cylindrical-Shape" title="Permalink to this headline">#</a></h2>
 <p>Many porous materials come in spherical or cylindrical shapes, such as catalyst pellets. The <code class="docutils literal notranslate"><span class="pre">DelaunayVoronoiDual</span></code> Network class can produce these geometries by specifying the <code class="docutils literal notranslate"><span class="pre">domain_size</span></code> in cylindrical [r, z] or spherical [r] coordinates:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[7]:
@@ -968,7 +960,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7ff876550790&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f309ad2d700&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -993,7 +985,7 @@ Parameters                          Values
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7ff86d832760&gt;
+&lt;mpl_toolkits.mplot3d.art3d.Line3DCollection at 0x7f3098353280&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -1006,7 +998,7 @@ Parameters                          Values
 <p>Note that the cylindrical and spherical networks don’t look very nice when too few points are used, so at least about 200 is recommended.</p>
 </section>
 <section id="Assign-Pore-Sizes-to-the-Random-Network">
-<h2>Assign Pore Sizes to the Random Network<a class="headerlink" href="#Assign-Pore-Sizes-to-the-Random-Network" title="Permalink to this headline">¶</a></h2>
+<h2>Assign Pore Sizes to the Random Network<a class="headerlink" href="#Assign-Pore-Sizes-to-the-Random-Network" title="Permalink to this headline">#</a></h2>
 <p>With pore centers randomly distributed in space it becomes challenging to know what pore size to assign to each location. Assigning pores that are too large results in overlaps, which makes it impossible to properly account for porosity and transport lengths. OpenPNM includes a Geometry model called <code class="docutils literal notranslate"><span class="pre">largest_sphere</span></code> that solves this problem. Let’s assign the largest possible pore size to each Voronoi node in the <code class="docutils literal notranslate"><span class="pre">sph</span></code> network just created:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[9]:
@@ -1063,8 +1055,9 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1075,7 +1068,7 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

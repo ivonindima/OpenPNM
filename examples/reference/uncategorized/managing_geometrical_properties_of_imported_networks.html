@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Geometry of Imported Networks &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Geometry of Imported Networks &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -769,7 +762,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Geometry-of-Imported-Networks">
-<h1>Geometry of Imported Networks<a class="headerlink" href="#Geometry-of-Imported-Networks" title="Permalink to this headline">¶</a></h1>
+<h1>Geometry of Imported Networks<a class="headerlink" href="#Geometry-of-Imported-Networks" title="Permalink to this headline">#</a></h1>
 <p>The <code class="docutils literal notranslate"><span class="pre">Imported</span></code> geometry class is used to store the geometrical properties of imported networks. When importing an extracted network into OpenPNM using any of the <code class="docutils literal notranslate"><span class="pre">io</span></code> classes, all the geometrical and topological properties are lumped together on the <em>network</em> object. OpenPNM is generally designed such that geometrical properties are stored on a <em>geometry</em> object, so this class address this issue. The main function of the <code class="docutils literal notranslate"><span class="pre">Imported</span></code> class is to automatically strip the geometrical properties
 off of the network and transfer them onto itself.</p>
 <blockquote>
@@ -824,7 +817,7 @@ locations. Therefore, the <code class="docutils literal notranslate"><span class
 </div>
 <div class="output_area docutils container">
 <div class="highlight"><pre>
-&lt;matplotlib.collections.LineCollection at 0x7f92feb302e0&gt;
+&lt;matplotlib.collections.LineCollection at 0x7f1f6cffe4f0&gt;
 </pre></div></div>
 </div>
 <div class="nboutput nblast docutils container">
@@ -881,7 +874,6 @@ openpnm.network.Delaunay : net_01
 11    throat.all                                    270
 12    throat.boundary                               0
 13    throat.internal                               270
-14    throat.surface                                0
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -970,7 +962,7 @@ Cannot create pore.diameter when pore.diameter is already defined
 </div>
 <p>The solution is to remove the geometrical information from the network <em>before</em> adding the boundary pores, and place them on their own geometry. In this example it is easy to transfer the <code class="docutils literal notranslate"><span class="pre">'pore.diameter'</span></code> array, but in the case of a real extracted network there could be quite a few arrays to move. OpenPNM has a facility for doing this: the <code class="docutils literal notranslate"><span class="pre">Imported</span></code> geometry class.</p>
 <section id="Using-the-Imported-Geometry-Class">
-<h2>Using the Imported Geometry Class<a class="headerlink" href="#Using-the-Imported-Geometry-Class" title="Permalink to this headline">¶</a></h2>
+<h2>Using the Imported Geometry Class<a class="headerlink" href="#Using-the-Imported-Geometry-Class" title="Permalink to this headline">#</a></h2>
 <p>Let’s create a network and add a geometric properties again, this time <em>before</em> adding boundary pores.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1017,11 +1009,6 @@ openpnm.geometry.Imported : geo_01
 6     throat.hydraulic_size_factors.pore2             301 / 301
 7     throat.hydraulic_size_factors.th...             301 / 301
 8     throat.length                                   301 / 301
-――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-#     Labels                                        Assigned Locations
-――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-1     pore.all                                      135
-2     throat.all                                    301
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -1086,11 +1073,6 @@ openpnm.geometry.GenericGeometry : geo_02
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 1     pore.diameter                                     1 / 1
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-#     Labels                                        Assigned Locations
-――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
-1     pore.all                                      1
-2     throat.all                                    0
-――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 Parameters                          Values
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
 ――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――
@@ -1148,8 +1130,9 @@ Parameters                          Values
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1160,7 +1143,7 @@ Parameters                          Values
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     

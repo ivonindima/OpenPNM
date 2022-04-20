@@ -6,33 +6,30 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>Pore Scale Models &#8212; OpenPNM 2.8.2.dev117 documentation</title>
+    <title>Pore Scale Models &#8212; OpenPNM 2.8.2.dev1116 documentation</title>
     
-    <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../../../_static/styles/theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
 <link href="../../../_static/styles/pydata-sphinx-theme.css?digest=1999514e3f237ded88cf" rel="stylesheet">
-  
+
     
-    <link rel="stylesheet"
-      href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
-    <link rel="preload" as="font" type="font/woff2" crossorigin
-      href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
-  
-    
-      
-  
-    
+  <link rel="stylesheet"
+    href="../../../_static/vendor/fontawesome/5.13.0/css/all.min.css">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-solid-900.woff2">
+  <link rel="preload" as="font" type="font/woff2" crossorigin
+    href="../../../_static/vendor/fontawesome/5.13.0/webfonts/fa-brands-400.woff2">
+
     <link rel="stylesheet" type="text/css" href="../../../_static/pygments.css" />
-    <link rel="stylesheet" type="text/css" href="../../../_static/styles/pydata-sphinx-theme.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/copybutton.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/plot_directive.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-main.c949a650a448cc0ae9fd3441c0e17fb0.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/panels-variables.06eb56fa6e07937060861dad626602ad.css" />
     <link rel="stylesheet" type="text/css" href="../../../_static/css/custom.css" />
     
-    <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
-  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf">
+
     <script data-url_root="../../../" id="documentation_options" src="../../../_static/documentation_options.js"></script>
     <script src="../../../_static/jquery.js"></script>
     <script src="../../../_static/underscore.js"></script>
@@ -55,7 +52,7 @@
     <!-- Google Analytics -->
     
   </head>
-  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="80">
+  <body data-spy="scroll" data-target="#bd-toc-nav" data-offset="60">
     
     <div class="container-fluid" id="banner"></div>
 
@@ -129,10 +126,6 @@
         <li class="nav-item">
           <a class="nav-link" href="https://github.com/PMEAL/OpenPNM" rel="noopener" target="_blank" title="GitHub"><span><i class="fab fa-github-square"></i></span>
             <label class="sr-only">GitHub</label></a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://openpnm.substack.com/" rel="noopener" target="_blank" title="Substack"><span><i class="fas fa-envelope-square"></i></span>
-            <label class="sr-only">Substack</label></a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="https://twitter.com/OpenPNM" rel="noopener" target="_blank" title="Twitter"><span><i class="fab fa-twitter-square"></i></span>
@@ -488,7 +481,7 @@
               
               <div class="toc-item">
                 
-<div class="tocsection onthispage pt-5 pb-3">
+<div class="tocsection onthispage mt-5 pt-1 pb-3">
     <i class="fas fa-list"></i> On this page
 </div>
 
@@ -791,7 +784,7 @@ div.rendered_html tbody tr:hover {
 }
 </style>
 <section id="Pore-Scale-Models">
-<h1>Pore Scale Models<a class="headerlink" href="#Pore-Scale-Models" title="Permalink to this headline">¶</a></h1>
+<h1>Pore Scale Models<a class="headerlink" href="#Pore-Scale-Models" title="Permalink to this headline">#</a></h1>
 <div class="line-block">
 <div class="line">Pore scale models are one of the more important facets of OpenPNM, but they can be a bit confusing at first, since they work ‘behind-the-scenes’.</div>
 <div class="line">They offer 3 main advantages:</div>
@@ -811,7 +804,7 @@ div.rendered_html tbody tr:hover {
 <p>Now say you want to re-run the diffusion simulation at different temperature. This would require recalculating <span class="math notranslate nohighlight">\(D_{AB}\)</span>, followed by updating the diffusive conductance.</p>
 <p>Using pore-scale models in OpenPNM allows for simple and reliable updating of these properties, for instance within a for-loop where temperature is being varied.</p>
 <section id="Using-Existing-Pore-Scale-Models">
-<h2>Using Existing Pore-Scale Models<a class="headerlink" href="#Using-Existing-Pore-Scale-Models" title="Permalink to this headline">¶</a></h2>
+<h2>Using Existing Pore-Scale Models<a class="headerlink" href="#Using-Existing-Pore-Scale-Models" title="Permalink to this headline">#</a></h2>
 <p>The first advantage listed above is that OpenPNM includes a library of pre-written model. In this example below we can will apply the Fuller model, without having to worry about mis-typing the equation.</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[1]:
@@ -914,7 +907,7 @@ Input <span class="ansi-green-fg">In [4]</span>, in <span class="ansi-cyan-fg">&
 </pre></div></div>
 </div>
 <section id="Updating-parameter-on-an-existing-model">
-<h3>Updating parameter on an existing model<a class="headerlink" href="#Updating-parameter-on-an-existing-model" title="Permalink to this headline">¶</a></h3>
+<h3>Updating parameter on an existing model<a class="headerlink" href="#Updating-parameter-on-an-existing-model" title="Permalink to this headline">#</a></h3>
 <p>It’s also easy to change parameters of a model since they are all stored on the object (<code class="docutils literal notranslate"><span class="pre">air</span></code> in this case), meaning you don’t have to reassign a new model get new parameters (although that would work). The models and their parameters are stored under the <code class="docutils literal notranslate"><span class="pre">models</span></code> attribute of each object. This is a dictionary with each model stored under the key match the <code class="docutils literal notranslate"><span class="pre">propname</span></code> to which is was assigned. For instance, to adjust the diffusion volumes of the Fuller model:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[5]:
@@ -944,7 +937,7 @@ Input <span class="ansi-green-fg">In [5]</span>, in <span class="ansi-cyan-fg">&
 </div>
 </section>
 <section id="Replacing-an-existing-model-with-another">
-<h3>Replacing an existing model with another<a class="headerlink" href="#Replacing-an-existing-model-with-another" title="Permalink to this headline">¶</a></h3>
+<h3>Replacing an existing model with another<a class="headerlink" href="#Replacing-an-existing-model-with-another" title="Permalink to this headline">#</a></h3>
 <p>Let’s say for some reason that the Fuller model is not suitable. It’s easy to go ‘shopping’ in the models library to retrieve a new model and replace the existing one. In the cell below we grab the Chapman-Enskog model and simply assign it to the same <code class="docutils literal notranslate"><span class="pre">propname</span></code> that the Fuller model was previously.</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[6]:
@@ -1003,7 +996,7 @@ Input <span class="ansi-green-fg">In [7]</span>, in <span class="ansi-cyan-fg">&
 </section>
 </section>
 <section id="Changing-dependent-properties">
-<h2>Changing dependent properties<a class="headerlink" href="#Changing-dependent-properties" title="Permalink to this headline">¶</a></h2>
+<h2>Changing dependent properties<a class="headerlink" href="#Changing-dependent-properties" title="Permalink to this headline">#</a></h2>
 <p>Now consider that you want to find the diffusion rate at higher temperature. This requires recalculating the diffusion coefficient on <code class="docutils literal notranslate"><span class="pre">air</span></code>, then updating the diffusive conductivity on <code class="docutils literal notranslate"><span class="pre">phys</span></code>, and finally re-running the simulation. Using pore-scale models this can be done as follows:</p>
 <div class="nbinput docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[8]:
@@ -1081,7 +1074,7 @@ Input <span class="ansi-green-fg">In [10]</span>, in <span class="ansi-cyan-fg">
 </div>
 </section>
 <section id="Creating-Custom-Models">
-<h2>Creating Custom Models<a class="headerlink" href="#Creating-Custom-Models" title="Permalink to this headline">¶</a></h2>
+<h2>Creating Custom Models<a class="headerlink" href="#Creating-Custom-Models" title="Permalink to this headline">#</a></h2>
 <p>Lastly, let’s illustrate the ease with which a custom pore-scale model can be defined and used. Let’s create a very basic (and incorrect) model:</p>
 <div class="nbinput nblast docutils container">
 <div class="prompt highlight-none notranslate"><div class="highlight"><pre><span></span>[11]:
@@ -1146,8 +1139,9 @@ Input <span class="ansi-green-fg">In [12]</span>, in <span class="ansi-cyan-fg">
       </div>
     </div>
   
-    <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
-  <footer class="footer mt-5 mt-md-0">
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../../../_static/scripts/pydata-sphinx-theme.js?digest=1999514e3f237ded88cf"></script>
+<footer class="footer mt-5 mt-md-0">
   <div class="container">
     
     <div class="footer-item">
@@ -1158,7 +1152,7 @@ Input <span class="ansi-green-fg">In [12]</span>, in <span class="ansi-cyan-fg">
     
     <div class="footer-item">
       <p class="sphinx-version">
-Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.4.0.<br>
+Created using <a href="http://sphinx-doc.org/">Sphinx</a> 4.5.0.<br>
 </p>
     </div>
     
